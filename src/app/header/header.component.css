@@ -1,0 +1,7 @@
+.a{
+    cursor: pointer;
+}
+.dropdown{
+    left: 60%;
+    transform: translateX(-60%);    
+}
