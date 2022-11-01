@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit} from '@angular/core';
 import { NgForm} from '@angular/forms'
+import { AlertsService } from 'src/app/shared/alert.service';
 import { ContactPost } from './form.model';
 
 @Component({
@@ -12,7 +13,7 @@ export class FormComponent implements OnInit{
   disableButton:boolean=false;
   error=null;
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, private alertService:AlertsService) { }
 
   ngOnInit(): void {
     this.onInitCheck()
@@ -29,7 +30,9 @@ export class FormComponent implements OnInit{
       post
       ).subscribe(resData=>{
         console.log(resData);
+        this.alertService.riseAlert('success','Thanks! Message sent')
       },error =>{
+        this.alertService.riseAlert('error','An error occurred :C')
         console.log(error.message)
       });
   }
