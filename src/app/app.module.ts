@@ -14,6 +14,8 @@ import { NavComponent } from './nav/nav.component';
 import { FormComponent } from './contact/form/form.component';
 import { FormsModule } from '@angular/forms';
 import { AlertsService } from './shared/alert.service';
+import { DetailComponent } from './projects/detail/detail.component';
+import { ProjectsService } from './projects/projects.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { AlertsService } from './shared/alert.service';
     ProjectsComponent,
     HomeComponent,
     NavComponent,
-    FormComponent
+    FormComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { AlertsService } from './shared/alert.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [AlertsService],
+  providers: [AlertsService,ProjectsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
