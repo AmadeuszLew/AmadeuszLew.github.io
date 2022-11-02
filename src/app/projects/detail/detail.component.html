@@ -1,12 +1,11 @@
 <div class="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
     <section class="w-full">
         <h2 class="secondary-title">{{project.projectTitle}}</h2>
+        <img src="../../../assets/projects/left-arrow.png" alt="home" class="w-4 h-4 hover:cursor-pointer" routerLink="/">
         <h6 class="text-2xl mt-8">Features:</h6>
         <span class="text-sm">To view image in full size hover on it :D</span>
-        <!-- <p class="section-paragraph">{{project.description}}</p> -->
-
         <div *ngFor="let feature of project.features" class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 ">
-            <img src="{{feature.featurePhoto}}" 
+            <img src="{{feature.featurePhoto}}" alt="feature photo" 
             class="w-full border rounded-2xl h-36 lg:h-72 object-cover 
             hover:bg-slate-700 hover:object-contain md:hover:h-screen md:hover:col-span-2">
             <div  class="w-full bg-nav  p-2 md:px-6 object-cover bg-slate-700 rounded-2xl">
