@@ -1,6 +1,6 @@
     <section class="w-full">
         <h2 id="clients" class="secondary-title ml-4">Projects</h2>
-        <p class="section-paragraph mx-4 break-all">To see more about project u are interested in just click it! <br> for live version click on the project name</p>
+        <p class="section-paragraph mx-4 break-all">To see more about project You are interested in just click it! <br> for live version click on the project name</p>
         <!-- Projects -->
         <div class="space-y-12 my-16">
             <div *ngFor="let project of projects" 
@@ -20,23 +20,5 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="flex items-center ">
-                <div class="">
-                     <div *ngFor="let project of projects" class="gird gap-4 md:gap-16 border border-nav rounded-2xl" >
-                            Project logo w-full border border-nav rounded-2xl my-6 p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap"
-                            <div class="mb-6 lg:mb-0 col-span-6">
-                                <img src="{{project.projectLogo}}" alt="project 1 company logo">
-                            </div>
-                            Project info flex flex-wrap justify-center text-center lg:text-left lg:block
-                            <div class="col-span-6">
-                                <h3 class="text-white text-3xl font-semibold">{{project.title}}</h3>
-                                <div  class="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
-                                    <div *ngFor="let technology of project.technologies" class="badge">{{technology}}</div>
-                                </div>
-                                <p class="text-secondary">{{project.descriptionPreview}}</p>
-                            </div>
-                        </div>
-                </div>
-            </div> -->
         </div>
     </section>
