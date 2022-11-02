@@ -5,7 +5,7 @@ import { ProjectDetail } from "./projectDetail.model";
 export class ProjectsService {
     private projects:Project[]=[
         new Project('./assets/projects/pogon_mogilno.png','TMS- team management system',['Vue 2','Vuetify','Axios'],'Made by team of four people. Two of us are responsible for the front end, and 2 for the back-end. Unfortunately, my front-end friend had a covid at the time of creating the beta version which is now live I managed to make almost all the work, leaving him only to do "teams view" which is 1 of 8','full description','https://tmspanel.grinddev.pl',['somephotos']),
-        new Project('./assets/projects/lenny_logo.png','Sneakers shop',['UI/UX','Angular','Bootstrap 5','Typescript','Firebase','RxJS'],"Simple shop sample developed for small sellers, focused on limited sneakers. In beta version client's are able to login, add items to cart. Designed to look great both on small devices, and computers.",'full description','',['some photos']),
+        new Project('./assets/projects/lenny_logo.png','Sneakers shop',['UI/UX','Angular','Bootstrap 5','Typescript','Firebase','RxJS'],"Simple shop developed for small sellers, focused on limited sneakers. In beta version client's are able to login, add items to cart. Designed to look great both on small devices, and computers.",'full description','',['some photos']),
         new Project('./assets/projects/stockx.png','Stockx Fix Extension',['JavaScript','Tampermonkey','DOM manipulation'],'Stockx is a middleman in selling sneakers. The bug on their site accures for over a year, so I have decided to fix it myself. Listed prices of users without VATID are divided on backend by 1.05, and this change does not not reflect on the user side. So when someone list something for 100$, real price he listed is 95$, and user have no idea of it to the point he sells the item.','full description','',['some photos']),
         new Project('./assets/projects/okay1.png','Portfolio site',['Angular','Tailwind','Typescript'],'This site is also made with angular, with tailwind making it look great and responsive. Includes form, backend necessary to send email without exposing login credentials, dialogs, and everything You can see','full description','',['some photos']),
         new Project('./assets/projects/controler.png','GameHere',['Angular','Bootstrap','Typescript','Sockets'],'Gaming site containing tik-tak-toe, snake and many more...','full description','',['somephotos']),
@@ -27,23 +27,32 @@ export class ProjectsService {
             new Feature('../assets/projects/TMS/single_training.png','Single training view',"Here user can send notifications to players participating in selected training and view more details about the training"),
         ]),
         new ProjectDetail('Sneakers shop',[
-            new Feature('../assets/projects/TMS/architecture.png','Architecture','The UI page is a combination of Vue and Vuetify that provide high user-side responsiveness and readability. The application server side consists of several modules. The SQLite database is responsible for data storage.Communication with the database takes place thanks to the Django framework.We are using the rest framework to share and receive data between the user interface and the application server.'),
-            new Feature('','','')
+            new Feature('../assets/projects/SneakerShop/main_page.png','Main page','I have tried to keep it as simple as possible. Fallowing F/Z rule, cart and logging page is on the right up corner. Left up corner logo is also link to homepage. Product models are made to be sortable by main category and model '),
+            new Feature('../assets/projects/SneakerShop/product_page.png','Product page','Product page is made as simple as it is possible, for the biggest readability'),
+            new Feature('../assets/projects/SneakerShop/login.png','Login page','Users can login and register using email and password'),
+            new Feature('../assets/projects/SneakerShop/login_firebase.png','Firebase accounts','Firebase is responsible for managing and storing users credentials. Site has auto-login to do not lost state on refresh and auto-logout when token expires'),
+            new Feature('../assets/projects/SneakerShop/cart_no_item.png','Empty cart page','Empty cart page is made to be user friendly, contains only 2 items cart with animated bubbles (pure css), and button encouraging user to get back to main page and add something'),
+            new Feature('../assets/projects/SneakerShop/cart_item.png','Item cart page','Cart page will contain sum of items, animations on delete, and many more'),
+            new Feature('../assets/projects/SneakerShop/features.png','Features','Product models are made to be sortable by main category and model so it can be sortable. I have also implemented viewing information about size availability.'),
+            new Feature('../assets/projects/SneakerShop/main_page_sm.png','Mobile main page','Main page for the mobile have navbar moved from the top to bottom to be easier and more mobile friendly.'),
+            new Feature('../assets/projects/SneakerShop/main_page_sm_sidebar.png','Mobile main page sidebar','Sidebar buttons are moved to menu on the left, activated by the hamburger-icon'),
+            new Feature('../assets/projects/more.jpg','More coming...','I am still working on this project. Items now are stored just in local storage, there is no user data. Goal is to store items on firebase, connect users to database, and add payment. UI is not finished also, it need to be polished off'),
+        ]),
+        new ProjectDetail('Stockx Fix Extension',[
+            new Feature('../assets/projects/stockx/all_items_without.png','List view without extension','Image showing how stockx looks without extension. Plugin makes sure there is no top warning reminding user to ship items, and if there is, it deletes it. In his place plugin inserts his navigation with two buttons enabling user to check prices'),
+            new Feature('../assets/projects/stockx/all_items.png','Check all items button','Function activated by clicking left button on top navbar. Highlight items where user price is not really the lowest'),
+            new Feature('../assets/projects/stockx/item_without.png','Item view without extension','Image showing how stockx looks without extension. Plugin after user clicking to check adds two fields.'),
+            new Feature('../assets/projects/stockx/item_with.png','Item view after using extension','Fields added by plugin calculates real price that user should have inserted to get lowest ask, and displays it on the DOM. Another field is calculating user payout, so he can immediately know is it even worth it to place ask')
         ]),
         new ProjectDetail('Portfolio site',[
-            new Feature('../assets/projects/TMS/architecture.png','Architecture','The UI page is a combination of Vue and Vuetify that provide high user-side responsiveness and readability. The application server side consists of several modules. The SQLite database is responsible for data storage.Communication with the database takes place thanks to the Django framework.We are using the rest framework to share and receive data between the user interface and the application server.'),
-            new Feature('','','')
+            new Feature('../assets/projects/ten.png','Well...','You are already on this site :D. Feel free to contact me with your feedback'),
+            new Feature('../assets/projects/more.jpg','More coming','I am still working on this site. I want to make it dual-language using pipe, add more animations to make it more user friendly, work on mobile version of images, make it more visible on Google, and more... ')
         ]),
         new ProjectDetail('GameHere',[
             new Feature('../assets/sorry.jpg','Sorry','This site does not exit for now :C'),
         ]),
         new ProjectDetail('Many more',[
-            new Feature('../assets/projects/TMS/architecture.png','Architecture','The UI page is a combination of Vue and Vuetify that provide high user-side responsiveness and readability. The application server side consists of several modules. The SQLite database is responsible for data storage.Communication with the database takes place thanks to the Django framework.We are using the rest framework to share and receive data between the user interface and the application server.'),
-            new Feature('','','')
-        ]),
-        new ProjectDetail('Stockx Fix Extension',[
-            new Feature('../assets/projects/TMS/architecture.png','Architecture','The UI page is a combination of Vue and Vuetify that provide high user-side responsiveness and readability. The application server side consists of several modules. The SQLite database is responsible for data storage.Communication with the database takes place thanks to the Django framework.We are using the rest framework to share and receive data between the user interface and the application server.'),
-            new Feature('','','')
+            new Feature('../assets/man_icon.png','Visit my github :D','click the link to get to my github'),
         ]),
     ];
     
