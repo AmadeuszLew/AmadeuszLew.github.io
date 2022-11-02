@@ -1,97 +1,42 @@
     <section class="w-full">
-        <h2 id="clients" class="secondary-title">Projects</h2>
-        <p class="section-paragraph">To see more about project u are interested in just click it!</p>
+        <h2 id="clients" class="secondary-title ml-4">Projects</h2>
+        <p class="section-paragraph mx-4 break-all">To see more about project u are interested in just click it! <br> for live version click on the project name</p>
         <!-- Projects -->
         <div class="space-y-12 my-16">
-            <div class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
+            <div *ngFor="let project of projects" 
+            class="w-full border border-nav p-9 lg:px-16 lg:py-10 lg:space-x-16 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap"
+            routerLink="/{{project.projectTitle}}">
                 <!-- Project logo -->
-                <div class="mb-6 lg:mb-0">
-                    <img src="./assets/pogon_mogilno.png" alt="project 1 company logo">
+                <div class="mb-6 lg:mb-0 ml-0">
+                    <img src="{{project.projectLogo}}" alt="project 1 company logo" class="md:w-3/5 lg:w-4/5">
                 </div>
                 <!-- Project info -->
-                <div class="flex flex-wrap justify-center text-center lg:text-left lg:block">
-                    <h3 class="text-white text-3xl font-semibold">TMS- team management system </h3>
-                    <h6 class="text-white text-lg font-semibold"> https://tmspanel.grinddev.pl</h6>
-                    <div class="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
-                        <div class="badge">Vue 2</div>
-                        <div class="badge">Vuetify</div>
-                        <div class="badge">Axios</div>
+                <div class="flex-1 flex-wrap justify-center text-center lg:text-left lg:block">
+                    <h3 class="text-white text-3xl font-semibold">{{project.projectTitle}}</h3>
+                    <a class="text-white text-sm" href="{{project.projectLink}}">{{project.projectLink}}</a>
+                    <div  class="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
+                        <div *ngFor="let technology of project.technologies" class="badge">{{technology}}</div>
+                        <p class="text-secondary ">{{project.descriptionPreview}}</p>
                     </div>
-                    <p class="text-secondary"> four people. Two of us are responsible for the front end, and 2 for the back-end. Unfortunately, my front-end friend had a covid at the time of creating the beta version which is now live <br>I managed to make almost all the work, leaving him only to do 'teams view' which is 1 of 8</p>
                 </div>
             </div>
-            <div class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
-                <!-- Project logo -->
-                <div class="mb-6 lg:mb-0">
-                    <img src="./assets/lenny_logo.png" alt="project 2 company logo">
+            <!-- <div class="flex items-center ">
+                <div class="">
+                     <div *ngFor="let project of projects" class="gird gap-4 md:gap-16 border border-nav rounded-2xl" >
+                            Project logo w-full border border-nav rounded-2xl my-6 p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap"
+                            <div class="mb-6 lg:mb-0 col-span-6">
+                                <img src="{{project.projectLogo}}" alt="project 1 company logo">
+                            </div>
+                            Project info flex flex-wrap justify-center text-center lg:text-left lg:block
+                            <div class="col-span-6">
+                                <h3 class="text-white text-3xl font-semibold">{{project.title}}</h3>
+                                <div  class="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
+                                    <div *ngFor="let technology of project.technologies" class="badge">{{technology}}</div>
+                                </div>
+                                <p class="text-secondary">{{project.descriptionPreview}}</p>
+                            </div>
+                        </div>
                 </div>
-                <!-- Project info -->
-                <div class="flex flex-wrap justify-center text-center lg:text-left lg:block">
-                    <h3 class="text-white text-3xl font-semibold">Sneakers shop</h3>
-                    <div class="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
-                        <div class="badge">UI/UX</div>
-                        <div class="badge">Angular</div>
-                        <div class="badge">Bootstrap 5</div>
-                        <div class="badge">Typescript</div>
-                        <div class="badge">Firebase</div>
-                        <div class="badge">RxJS</div>
-                    </div>
-                    <p class="text-secondary">Simple shop sample developed for small sellers, focused on limited sneakers. In beta version client's are able to login, add items to cart. Designed to look great both on small devices, and computers.</p>
-                </div>
-            </div>
-            <div class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
-                <!-- Project logo -->
-                <div class="mb-6 lg:mb-0">
-                    <img src="./assets/okay1.png" alt="project 1 company logo">
-                </div>
-                <!-- Project info -->
-                <div class="flex flex-wrap justify-center text-center lg:text-left lg:block">
-                    <h3 class="text-white text-3xl font-semibold">Portfolio site</h3>
-                    <div class="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
-                        <div class="badge">Angular</div>
-                        <div class="badge">Tailwind</div>
-                        <div class="badge">Typescript</div>
-                    </div>
-                    <p class="text-secondary">This site is also made in angular, compared with tailwind making it look great and responsive. Includes form, backend necessary to send email without exposing login credentials, dialogs, and everything You can see</p>
-                </div>
-            </div>
-            <div class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
-                <!-- Project logo -->
-                <div class="mb-6 lg:mb-0 w-80">
-                    <img src="./assets/controler.png" alt="project 1 company logo">
-                </div>
-                <!-- Project info -->
-                <div class="flex flex-wrap justify-center text-center lg:text-left lg:block">
-                    <h3 class="text-white text-3xl font-semibold">GameHere</h3>
-                    <div class="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
-                        <div class="badge">Angular</div>
-                        <div class="badge">Bootstrap</div>
-                        <div class="badge">Typescript</div>
-                        <div class="badge">Sockets</div>
-                    </div>
-                    <p class="text-secondary">Gaming site containing tik-tak-toe, snake and many more...</p>
-                </div>
-            </div>
-            <div class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
-                <!-- Project logo -->
-                <div class="mb-6 lg:mb-0 w-80">
-                    <img src="./assets/github.svg" alt="project 1 company logo">
-                </div>
-                <!-- Project info -->
-                <div class="flex flex-wrap justify-center text-center lg:text-left lg:block">
-                    <h3 class="text-white text-3xl font-semibold">More...</h3>
-                    <div class="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
-                        <div class="badge">JavaScript</div>
-                        <div class="badge">Python</div>
-                        <div class="badge">Django</div>
-                        <div class="badge">MySQL</div>
-                        <div class="badge">C++</div>
-                        <div class="badge">Angular</div>
-                        <div class="badge">Bootstrap</div>
-                        <div class="badge">Typescript</div>
-                    </div>
-                    <p class="text-secondary">Many more made in time of my engineering studies. Check them out on my github!</p>
-                </div>
-            </div>
+            </div> -->
         </div>
     </section>
