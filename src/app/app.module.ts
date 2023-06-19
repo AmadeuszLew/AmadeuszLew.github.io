@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { AlertsService } from './shared/alert.service';
 import { DetailComponent } from './projects/detail/detail.component';
 import { ProjectsService } from './projects/projects.service';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ProjectsService } from './projects/projects.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatIconModule
   ],
   providers: [AlertsService,ProjectsService],
   bootstrap: [AppComponent]

@@ -1,12 +1,13 @@
 <form (ngSubmit)="onSubmitForm(f)" #f="ngForm">
+  <fieldset [disabled]="true">
     <div class="w-full">
         <h2 id="hire" class="secondary-title">Contact me</h2>
-        <p class="section-paragraph">Feel free to to contact me any time, through any method below.</p>
+        <p class="section-paragraph">Feel free to to contact me any time through email or phone. Contact form is temporary disabled</p>
         <div class="space-y-12">
             <div>
                 <label class="text-white block mb-6 text-xl font-bold">Company</label>
                 <p *ngIf="!company.valid && company.touched" class="text-rose-800 mt-1">Please enter company name</p>
-                <input 
+                <input
                     class="w-full border border-input-border bg-input px-4 py-4"
                     name="company"
                     required
@@ -17,7 +18,7 @@
             <div>
                 <label class="text-white block mb-6 text-xl font-bold">Email</label>
                 <p *ngIf="!email.valid && email.touched" class="text-rose-800">Please enter valid email</p>
-                <input 
+                <input
                     class="w-full border border-input-border bg-input px-4 py-4"
                     name="email"
                     required
@@ -29,7 +30,7 @@
             <div>
                 <label class="text-white block mb-6 text-xl font-bold">Message</label>
                 <p *ngIf="!message.valid && message.touched" class="text-rose-800">Please enter valid email</p>
-                <textarea 
+                <textarea
                     class="w-full border border-input-border bg-input px-4 py-4 h-56 resize-none"
                     name="message"
                     required
@@ -38,11 +39,12 @@
                 ></textarea>
             </div>
             <p *ngIf="disableButton" class="section-paragraph">You have already contacted me few times, thanks</p>
-            <button 
-                class="px-6 py-2 bg-theme text-white font-bold disabled:opacity-25" 
+            <button
+                class="px-6 py-2 bg-theme text-white font-bold disabled:opacity-25"
                 type="submit"
                 [disabled]="!f.valid || disableButton"
             >Contact</button>
         </div>
     </div>
+  </fieldset>
 </form>

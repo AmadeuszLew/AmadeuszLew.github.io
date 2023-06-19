@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { NgForm} from '@angular/forms'
 import { AlertsService } from 'src/app/shared/alert.service';
 import { ContactPost } from './form.model';
@@ -10,6 +10,7 @@ import { ContactPost } from './form.model';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit{
+  @Input() contactFormActive: boolean = false;
   disableButton:boolean=false;
   error=null;
 
@@ -57,6 +58,6 @@ export class FormComponent implements OnInit{
         this.disableButton=true
       }
     }
-    
+
   }
 }
