@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { NavService } from '../nav/nav.service';
+import { Component } from '@angular/core';
+import { LeftNavigationService } from '../left-navigation/left-navigation.service';
+import { PageSectionNames } from '../shared';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,8 @@ import { NavService } from '../nav/nav.service';
 })
 export class HeaderComponent  {
   show: boolean = false;
-  constructor(private navService:NavService) {}
+  PageSectionNames = PageSectionNames;
+  constructor(private navService:LeftNavigationService) {}
   scroll(el:string){
     this.navService.scroll(el)
     if(this.show){

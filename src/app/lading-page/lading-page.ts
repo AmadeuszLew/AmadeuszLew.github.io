@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import {PageSectionNames} from "../shared";
 
 @Component({
   selector: 'app-body',
-  templateUrl: './body.component.html',
-  styleUrls: ['./body.component.css']
+  templateUrl: './lading-page.html',
+  styleUrls: ['./lading-page.css']
 })
-export class BodyComponent implements OnInit {
-
+export class LadingPage implements OnInit {
+  PageSectionNames = PageSectionNames;
   constructor() { }
 
   ngOnInit(): void {
@@ -15,12 +16,12 @@ export class BodyComponent implements OnInit {
   //   const titles = [...document.querySelectorAll('h1, h2')].sort((a, b) => {
   //     return Math.abs(a.getBoundingClientRect().top) - Math.abs(b.getBoundingClientRect().top);
   //   });
-  
+
   //   document.querySelectorAll(".selected-circle").forEach(c => c.classList.remove("selected-circle"));
-    
+
   //   document.querySelectorAll(".nav-dot")[[...document.querySelectorAll('h1, h2')].indexOf(titles[0])].classList.add("selected-circle");
   // }
-  
+
   // updateList();
   // window.addEventListener('scroll', () => {
   //     updateList();
