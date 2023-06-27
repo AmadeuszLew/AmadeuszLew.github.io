@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { NavService } from '../nav/nav.service';
+import { Component } from '@angular/core';
+import { NavigationService } from '../shared/navigation.service';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +8,9 @@ import { NavService } from '../nav/nav.service';
 })
 export class HomeComponent {
 
-  constructor(private navService:NavService) { }
+  constructor(private navigationService:NavigationService) {}
 
-  scroll(el:string){
-    this.navService.scroll(el)
+  scroll(element: string) {
+    this.navigationService.scroll(element);
   }
 }

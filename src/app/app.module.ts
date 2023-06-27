@@ -5,29 +5,28 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { BodyComponent } from './body/body.component';
+import { LadingPage } from './lading-page/lading-page';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { HomeComponent } from './home/home.component';
-import { NavComponent } from './nav/nav.component';
+import { LeftNavigationComponent } from './left-navigation/left-navigation.component';
 import { FormComponent } from './contact/form/form.component';
 import { FormsModule } from '@angular/forms';
 import { AlertsService } from './shared/alert.service';
 import { DetailComponent } from './projects/detail/detail.component';
 import { ProjectsService } from './projects/projects.service';
 import { MatIconModule } from '@angular/material/icon';
-
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    BodyComponent,
+    LadingPage,
     AboutComponent,
     ContactComponent,
     ProjectsComponent,
     HomeComponent,
-    NavComponent,
+    LeftNavigationComponent,
     FormComponent,
     DetailComponent
   ],
