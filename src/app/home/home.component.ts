@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LeftNavigationService } from '../left-navigation/left-navigation.service';
+import { NavigationService } from '../shared/navigation.service';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +8,9 @@ import { LeftNavigationService } from '../left-navigation/left-navigation.servic
 })
 export class HomeComponent {
 
-  constructor(private navService:LeftNavigationService) { }
+  constructor(private navigationService:NavigationService) {}
 
-  scroll(el:string){
-    this.navService.scroll(el)
+  scroll(element: string) {
+    this.navigationService.scroll(element);
   }
 }

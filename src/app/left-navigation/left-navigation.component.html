@@ -1,19 +1,19 @@
 <nav class="inline-block lg:mr-24 lg:w-4 fixed left-percentage hidden xl:block">
     <div class="absolute left-50 transform -translate-x-1/2 space-y-6 mt-36">
         <a (click)="scroll(pageSectionNames.Home)" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body"
-           [ngClass]="{'bg-blue-500': leftNavigationService.activeComponentId === pageSectionNames.Home}">
+           [ngClass]="activeSection === pageSectionNames.Home ? 'bg-blue-500' : '' ">
             <span class="bg-black px-2 py-1 leftNavigationService.activeComponentId ml-10 opacity-0">Home</span>
         </a>
         <a (click)="scroll(pageSectionNames.AboutMe)" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body"
-           [ngClass]="{'bg-blue-500': leftNavigationService.activeComponentId === pageSectionNames.AboutMe}">
+           [ngClass]="activeSection === pageSectionNames.AboutMe ? 'bg-blue-500' : '' ">
             <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">About</span>
         </a>
         <a (click)="scroll(pageSectionNames.Projects)" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body"
-           [ngClass]="{'bg-blue-500': leftNavigationService.activeComponentId === pageSectionNames.Projects}">
+           [ngClass]="activeSection === pageSectionNames.Projects ? 'bg-blue-500' : '' ">
             <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Projects</span>
         </a>
         <a (click)="scroll(pageSectionNames.ContactMe)" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav"
-           [ngClass]="{'bg-blue-500': leftNavigationService.activeComponentId === pageSectionNames.ContactMe}">
+           [ngClass]="activeSection === pageSectionNames.ContactMe ? 'bg-blue-500' : '' ">
             <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Contact</span>
         </a>
     </div>

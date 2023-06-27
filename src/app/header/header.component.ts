@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LeftNavigationService } from '../left-navigation/left-navigation.service';
+import { NavigationService } from '../shared/navigation.service';
 import { PageSectionNames } from '../shared';
 
 @Component({
@@ -10,9 +10,9 @@ import { PageSectionNames } from '../shared';
 export class HeaderComponent  {
   show: boolean = false;
   PageSectionNames = PageSectionNames;
-  constructor(private navService:LeftNavigationService) {}
+  constructor(private navigationService:NavigationService) {}
   scroll(el:string){
-    this.navService.scroll(el)
+    this.navigationService.scroll(el)
     if(this.show){
       this.show=false;
     }

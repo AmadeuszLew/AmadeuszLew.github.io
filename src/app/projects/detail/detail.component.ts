@@ -16,7 +16,7 @@ export class DetailComponent implements OnInit {
   ngOnInit(): void {
     let id=this.route.snapshot.params['id'];
     this.project=this.projectService.getSingleProject(id)!
-     // Creates the array with inactive state initially for all category items. 
+     // Creates the array with inactive state initially for all category items.
     this.viewFullSizePhoto = Array(this.project.features.length).fill(false);
   }
   viewPhotoFunc(index:number) {

@@ -1,6 +1,6 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { PageSectionNames } from '../shared';
-import {LeftNavigationService} from "./left-navigation.service";
+import {NavigationService} from "../shared/navigation.service";
 
 
 @Component({
@@ -8,18 +8,38 @@ import {LeftNavigationService} from "./left-navigation.service";
   templateUrl: './left-navigation.component.html',
   styleUrls: ['./left-navigation.component.css']
 })
-export class LeftNavigationComponent implements OnInit {
+export class LeftNavigationComponent {
   pageSectionNames = PageSectionNames;
+  activeSection: string = this.pageSectionNames.Home;
 
-  constructor(public leftNavigationService:LeftNavigationService, private elementRef: ElementRef) { }
-
-
-  scroll(el:string){
-    this.leftNavigationService.scroll(el)
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.setActiveSection();
   }
-  ngOnInit(): void {
-    const nativeElement = this.elementRef.nativeElement;
-    this.leftNavigationService.observeElement(nativeElement);
+  constructor(private navigationService:NavigationService) { }
+  scroll(element: string) {
+    this.navigationService.scroll(element)
+  }
+
+  setActiveSection() {
+    let scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const homePos = document.getElementById(this.pageSectionNames.Home)?.offsetTop || 0;
+    const aboutPos = document.getElementById(this.pageSectionNames.AboutMe)?.offsetTop || 0;
+    const projectsPos = document.getElementById(this.pageSectionNames.Projects)?.offsetTop || 0;
+    const contactPos = document.getElementById(this.pageSectionNames.ContactMe)?.offsetTop || 0;
+
+    scrollPos = scrollPos + 220;
+    if (scrollPos >= homePos && scrollPos < aboutPos) {
+      this.activeSection = this.pageSectionNames.Home;
+    } else if (scrollPos >= aboutPos && scrollPos < projectsPos) {
+      this.activeSection = this.pageSectionNames.AboutMe;
+    } else if (scrollPos >= projectsPos && scrollPos < contactPos) {
+      this.activeSection = this.pageSectionNames.Projects;
+    } else if (scrollPos >= contactPos) {
+      this.activeSection = this.pageSectionNames.ContactMe;
+    } else {
+      this.activeSection = '';
+    }
   }
 
 }
