@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { LadingPageComponent } from './lading-page/lading-page.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -22,7 +22,7 @@ import { ProjectsListComponent } from "./projects/projects-list/projects-list.co
   declarations: [
     AppComponent,
     HeaderComponent,
-    LadingPageComponent,
+    LandingPageComponent,
     AboutComponent,
     ContactComponent,
     ProjectsComponent,

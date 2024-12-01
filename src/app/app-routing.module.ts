@@ -1,15 +1,16 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { LadingPageComponent } from './lading-page/lading-page.component';
-import { DetailComponent } from './projects/project-detail-view/detail.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {LandingPageComponent} from './landing-page/landing-page.component';
+import {DetailComponent} from './projects/project-detail-view/detail.component';
 
 const routes: Routes = [
-  {path:'',component:LadingPageComponent},
-  {path:':id',component:DetailComponent}
+    {path: '', component: LandingPageComponent},
+    {path: ':id', component: DetailComponent}
 ];
 
- @NgModule({
-  imports: [RouterModule.forRoot(routes,{ scrollPositionRestoration: 'enabled' })],
-  exports: [RouterModule]
+@NgModule({
+    imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled', anchorScrolling: 'enabled'})],
+    exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
