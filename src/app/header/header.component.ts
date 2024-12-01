@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavigationService } from '../shared/navigation.service';
+import { NavigationService,  } from '../shared/navigation.service';
 import { PageSectionNames } from '../shared';
 
 @Component({
@@ -8,7 +8,7 @@ import { PageSectionNames } from '../shared';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent  {
-  show: boolean = false;
+  show = false;
   PageSectionNames = PageSectionNames;
   constructor(private navigationService:NavigationService) {}
   scroll(el:string){

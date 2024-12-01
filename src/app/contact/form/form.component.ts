@@ -2,16 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import {Component, Input, OnInit} from '@angular/core';
 import { NgForm} from '@angular/forms'
 import { AlertsService } from 'src/app/shared/alert.service';
-import { ContactPost } from './form.model';
+import { ContactPost } from '../model/form.model';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit{
-  @Input() contactFormActive: boolean = false;
-  disableButton:boolean=false;
+  @Input() contactFormActive = false;
+  disableButton=false;
   error=null;
 
   constructor(private http:HttpClient, private alertService:AlertsService) { }
@@ -40,13 +39,13 @@ export class FormComponent implements OnInit{
 
   //managing spam attempts by little
   disableSpamButtonFunc(){
-    let spam=localStorage.getItem('Irregardless')
+    const spam=localStorage.getItem('Irregardless')
     if(spam !== null){//if there was item in local storage
       if (+spam>3){
         this.disableButton=true
         return
       }
-      let number = +spam + 1
+      const number = +spam + 1
       localStorage.setItem('Irregardless',number.toString())
     }else{//if there was no item in local storage, set it
       localStorage.setItem('Irregardless','1')

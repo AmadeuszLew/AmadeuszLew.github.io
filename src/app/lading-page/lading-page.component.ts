@@ -3,9 +3,8 @@ import {PageSectionNames} from "../shared";
 
 @Component({
   selector: 'app-body',
-  templateUrl: './lading-page.html',
-  styleUrls: ['./lading-page.css']
+  templateUrl: './lading-page.component.html',
 })
-export class LadingPage {
+export class LadingPageComponent {
   PageSectionNames = PageSectionNames;
 }

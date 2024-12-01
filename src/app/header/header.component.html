@@ -5,27 +5,59 @@
         </div>
         <!-- medium screen menu -->
         <div class="hidden md:flex space-x-12 items-center">
-            <a (click)="scroll(PageSectionNames.Home)" class="text-selected-text"><button>Home</button></a>
-            <a (click)="scroll(PageSectionNames.AboutMe)" ><button>About</button></a>
-            <a (click)="scroll(PageSectionNames.Projects)"><button>Projects</button></a>
-            <a (click)="scroll(PageSectionNames.ContactMe)"><button class="px-6 py-2 bg-theme font-bold">Contact me</button></a>
+            <a (click)="scroll(PageSectionNames.Home)"
+               (keydown.enter)="scroll(PageSectionNames.Home)"
+               tabindex="0"
+               class="text-selected-text">
+              <button>Home</button>
+            </a>
+            <a (click)="scroll(PageSectionNames.AboutMe)"
+               (keydown.enter)="scroll(PageSectionNames.AboutMe)"
+               tabindex="1">
+              <button>About</button>
+            </a>
+            <a (click)="scroll(PageSectionNames.Projects)"
+               (keydown.enter)="scroll(PageSectionNames.Projects)"
+               tabindex="2">
+              <button>Projects</button>
+            </a>
+            <a (click)="scroll(PageSectionNames.ContactMe)"
+               (keydown.enter)="scroll(PageSectionNames.ContactMe)"
+               tabindex="3">
+              <button class="px-6 py-2 bg-theme font-bold">Contact me</button>
+            </a>
         </div>
         <!-- small screen menu -->
         <div class="relative md:hidden">
-            <div (click)='toggle()'  class="relative w-fit py-2 rounded-md flex justify-between items-center cursor-pointer">
+            <div (click)='toggle()'
+                 (keydown.enter)="toggle()"
+                 tabindex="4"
+                 class="relative w-fit py-2 rounded-md flex justify-between items-center cursor-pointer">
                 <img src = "./assets/hamburger-menu.svg" alt="mobile menu" class="h-8 w-10"/>
             </div>
             <div *ngIf="show" class="absolute mx-2 border border-1 border-neutral-400 rounded-md cursor-pointer dropdown">
-                <div (click)="scroll('home')" class="py-2 px-2 w-full hover:bg-neutral-600" >
+                <div (click)="scroll(PageSectionNames.Home)"
+                     (keydown.enter)="scroll(PageSectionNames.Home)"
+                     class="py-2 px-2 w-full hover:bg-neutral-600"
+                     tabindex="5">
                     Home
                 </div>
-                <div (click)="scroll('aboutMe')" class="py-2  px-2 w-full hover:bg-neutral-600">
+                <div (click)="scroll(PageSectionNames.AboutMe)"
+                     (keydown.enter)="scroll(PageSectionNames.AboutMe)"
+                     class="py-2  px-2 w-full hover:bg-neutral-600"
+                     tabindex="6">
                     About
                 </div>
-                <div (click)="scroll('projects')" class="py-2 px-2 w-full hover:bg-neutral-600">
+                <div (click)="scroll(PageSectionNames.Projects)"
+                     (keydown.enter)="scroll(PageSectionNames.Projects)"
+                     class="py-2 px-2 w-full hover:bg-neutral-600"
+                     tabindex="7">
                     Projects
                 </div>
-                <div (click)="scroll('contactMe')" class="py-2 px-2 w-full hover:bg-neutral-600">
+                <div (click)="scroll(PageSectionNames.ContactMe)"
+                     (keydown.enter)="scroll(PageSectionNames.ContactMe)"
+                     class="py-2 px-2 w-full hover:bg-neutral-600"
+                     tabindex="8">
                     Contact
                 </div>
             </div>
