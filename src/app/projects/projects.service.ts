@@ -8,6 +8,7 @@ export class ProjectsService {
         new Project('./assets/projects/stockx.png', 'Stockx Fix Extension', ['JavaScript', 'Tampermonkey', 'DOM manipulation'], 'Stockx is a middleman in selling sneakers. The bug on their site accrues for over a year, so I have decided to fix it myself. Listed prices of users without VATID are divided on backend by 1.05, and this change does not reflect on the user side. So when someone lists something for 100$, the real price he listed is 95$, and the user has no idea of it to the point he sells the item.', 'full description', '', ['some photos']),
         new Project('./assets/projects/okay1.png', 'Portfolio site', ['Angular', 'Tailwind', 'Typescript'], 'This site is also made with angular, thanks to tailwind it is responsive and clear. The code is kept clean and maintainable.', 'full description', '', ['some photos']),
         new Project('./assets/projects/controler.png', 'GameHere', ['Angular', 'Bootstrap', 'Typescript', 'Sockets'], 'Gaming site containing tik-tak-toe, snake and many more...', 'full description', '', ['somephotos']),
+        new Project('./assets/projects/cdi.png', 'Comarch Digital Insurance', ['Private'], 'Comarch Digital Insurance (CDI) is a comprehensive digital platform designed for the insurance industry. It enables insurance companies to streamline their operations by automating processes such as policy creation, underwriting, claims management, and customer service. CDI is highly customizable and can be integrated with external services like digital signatures, electronic identification, and other tools to enhance its functionality', 'full description', 'https://www.comarch.pl/finanse/ubezpieczenia/comarch-digital-insurance/', ['somephotos']),
         new Project('./assets/projects/github.png', 'Many more', ['JavaScript', 'Python', 'Django', 'MySQL', 'C++', 'Angular', 'Bootstrap', 'Typescript'], 'Many more were made in the time of my engineering studies. Check them out on my GitHub!', 'full description', '', ['somephotos']),
     ]
     private projectsDetail: ProjectDetail[] = [
@@ -49,6 +50,13 @@ export class ProjectsService {
         ]),
         new ProjectDetail('GameHere', [
             {featurePhoto: '../assets/sorry.jpg', featureTitle: 'Sorry', featureDescription: 'This website does not exit for now :C'},
+        ]),
+        new ProjectDetail('Comarch Digital Insurance', [
+          {featurePhoto: '../assets/projects/cdi/cdi_1.png', featureTitle: 'Health insurance support', featureDescription: 'It simplifies the management of health insurance policies by offering tools for agents, brokers, and back-office employee'},
+          {featurePhoto: '../assets/projects/cdi/cdi_2.png', featureTitle: 'Automated claims processing', featureDescription: 'Integration with Comarch Insurance Claims allows for smooth claim handling'},
+          {featurePhoto: '../assets/projects/cdi/cdi_3.png', featureTitle: 'Compliance with regulations', featureDescription: 'CDI adheres to industry standards like GDPR, IDD (Insurance Distribution Directive), and PRIIPS (Packaged Retail and Insurance-Based Investment Products)​'},
+          {featurePhoto: '../assets/projects/cdi/cdi_4.png', featureTitle: 'Cloud deployment', featureDescription: 'The platform can be deployed in the cloud, offering scalability and accessibility​'},
+          {featurePhoto: '../assets/projects/cdi/cdi_5.png', featureTitle: 'AI integration', featureDescription: 'While AI is not built directly into CDI, Comarch offers a separate AI Framework that can be used for data-driven decisions and process automation'},
         ]),
         new ProjectDetail('Many more', [
             {featurePhoto: '../assets/man_icon.png', featureTitle: 'Visit my GitHub :D', featureDescription: 'click the link to get to my GitHub.'},
