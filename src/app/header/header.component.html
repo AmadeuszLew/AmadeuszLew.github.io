@@ -35,7 +35,7 @@
                  class="relative w-fit py-2 rounded-md flex justify-between items-center cursor-pointer">
                 <img src = "./assets/hamburger-menu.svg" alt="mobile menu" class="h-8 w-10"/>
             </div>
-            <div *ngIf="show" class="absolute mx-2 border border-1 border-neutral-400 rounded-md cursor-pointer dropdown">
+            <div *ngIf="show" class="absolute mx-2 border border-1 border-neutral-400 rounded-md cursor-pointer dropdown bg-body">
                 <div (click)="navigateTo(PageSectionNames.Home)"
                      (keydown.enter)="navigateTo(PageSectionNames.Home)"
                      class="py-2 px-2 w-full hover:bg-neutral-600"
