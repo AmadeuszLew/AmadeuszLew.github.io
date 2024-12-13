@@ -1,24 +1,26 @@
-import { Component } from '@angular/core';
-import { NavigationService } from '../shared/navigation.service';
-import { PageSectionNames } from '../shared';
+import {Component} from '@angular/core';
+import {NavigationService,} from '../shared/navigation.service';
+import {PageSectionNames} from '../shared';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.css']
 })
-export class HeaderComponent  {
-  show: boolean = false;
-  PageSectionNames = PageSectionNames;
-  constructor(private navigationService:NavigationService) {}
-  scroll(el:string){
-    this.navigationService.scroll(el)
-    if(this.show){
-      this.show=false;
+export class HeaderComponent {
+    show = false;
+    PageSectionNames = PageSectionNames;
+
+    constructor(private navigationService: NavigationService) {
     }
-  }
-  toggle(){
-    this.show=!this.show
-  }
+
+    navigateTo(el: string): void {
+        this.navigationService.navigateToElementOnMainPage(el)
+        this.show = false
+    }
+
+    toggle(): void {
+        this.show = !this.show
+    }
 
 }

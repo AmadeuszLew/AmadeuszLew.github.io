@@ -1,7 +1,7 @@
-import Swal from 'sweetalert2'
+import Swal, {SweetAlertIcon} from 'sweetalert2'
 
 export class AlertsService{
-    riseAlert(icon:any,title:any){
+    riseAlert(icon:SweetAlertIcon,title:string):void{
       Swal.mixin({
         toast: true,
         position: 'top-end',

@@ -1,42 +1,51 @@
 <form (ngSubmit)="onSubmitForm(f)" #f="ngForm">
   <fieldset [disabled]="true">
     <div class="w-full">
-        <h2 id="hire" class="secondary-title">Contact me</h2>
+        <h2 class="secondary-title">Contact me</h2>
         <p class="section-paragraph">Contact form is temporary disabled. Feel free to to contact me any time through email or phone.</p>
         <div class="space-y-12">
             <div>
-                <label class="text-white block mb-6 text-xl font-bold">Company</label>
-                <p *ngIf="!company.valid && company.touched" class="text-rose-800 mt-1">Please enter company name</p>
-                <input
-                    class="w-full border border-input-border bg-input px-4 py-4"
-                    name="company"
-                    required
-                    ngModel
-                    #company="ngModel"
-                >
+                <label class="text-white block mb-6 text-xl font-bold">
+                  Company
+                  <p *ngIf="!company.valid && company.touched" class="text-rose-800 mt-1">Please enter company name</p>
+                  <input
+                      class="w-full border border-input-border bg-input px-4 py-4"
+                      name="company"
+                      required
+                      ngModel
+                      #company="ngModel"
+                      [placeholder]="'temporary disabled'"
+                  >
+                </label>
             </div>
             <div>
-                <label class="text-white block mb-6 text-xl font-bold">Email</label>
-                <p *ngIf="!email.valid && email.touched" class="text-rose-800">Please enter valid email</p>
-                <input
-                    class="w-full border border-input-border bg-input px-4 py-4"
-                    name="email"
-                    required
-                    ngModel
-                    email
-                    #email="ngModel"
-                >
+                <label class="text-white block mb-6 text-xl font-bold">
+                  Email
+                  <p *ngIf="!email.valid && email.touched" class="text-rose-800">Please enter valid email</p>
+                  <input
+                      class="w-full border border-input-border bg-input px-4 py-4"
+                      name="email"
+                      required
+                      ngModel
+                      email
+                      #email="ngModel"
+                      [placeholder]="'temporary disabled'"
+                  >
+                </label>
             </div>
             <div>
-                <label class="text-white block mb-6 text-xl font-bold">Message</label>
-                <p *ngIf="!message.valid && message.touched" class="text-rose-800">Please enter valid email</p>
-                <textarea
-                    class="w-full border border-input-border bg-input px-4 py-4 h-56 resize-none"
-                    name="message"
-                    required
-                    ngModel
-                    #message="ngModel"
+                <label class="text-white block mb-6 text-xl font-bold">
+                  Message
+                  <p *ngIf="!message.valid && message.touched" class="text-rose-800">Please enter valid email</p>
+                  <textarea
+                      class="w-full border border-input-border bg-input px-4 py-4 h-56 resize-none"
+                      name="message"
+                      required
+                      ngModel
+                      #message="ngModel"
+                      [placeholder]="'temporary disabled'"
                 ></textarea>
+                </label>
             </div>
             <p *ngIf="disableButton" class="section-paragraph">You have already contacted me few times, thanks</p>
             <button

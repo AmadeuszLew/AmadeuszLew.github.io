@@ -2,10 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http'
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { LadingPage } from './lading-page/lading-page';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -14,21 +13,25 @@ import { LeftNavigationComponent } from './left-navigation/left-navigation.compo
 import { FormComponent } from './contact/form/form.component';
 import { FormsModule } from '@angular/forms';
 import { AlertsService } from './shared/alert.service';
-import { DetailComponent } from './projects/detail/detail.component';
+import { DetailComponent } from './projects/project-detail-view/detail.component';
 import { ProjectsService } from './projects/projects.service';
 import { MatIconModule } from '@angular/material/icon';
+import { SingleProjectComponent } from './projects/single-project/single-project.component';
+import { ProjectsListComponent } from "./projects/projects-list/projects-list.component";
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LadingPage,
+    LandingPageComponent,
     AboutComponent,
     ContactComponent,
     ProjectsComponent,
     HomeComponent,
     LeftNavigationComponent,
     FormComponent,
-    DetailComponent
+    DetailComponent,
+    ProjectsListComponent,
+    SingleProjectComponent
   ],
   imports: [
     BrowserModule,

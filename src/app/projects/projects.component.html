@@ -1,24 +1,8 @@
     <section class="w-full">
-        <h2 id="clients" class="secondary-title ml-4">Projects</h2>
-        <p class="section-paragraph mx-4 break-all">To see more about project You are interested in just click it! <br> for live version click on the project name</p>
-        <!-- Projects -->
-        <div class="space-y-12 my-16">
-            <div *ngFor="let project of projects"
-            class="w-full border border-nav p-9 lg:px-16 lg:py-10 lg:space-x-16 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap cursor-pointer"
-            routerLink="/{{project.projectTitle}}">
-                <!-- Project logo -->
-                <div class="mb-6 lg:mb-0 ml-0">
-                    <img src="{{project.projectLogo}}" alt="project 1 company logo" class="md:w-3/5 lg:w-4/5">
-                </div>
-                <!-- Project info -->
-                <div class="flex-1 flex-wrap justify-center text-center lg:text-left lg:block">
-                    <h3 class="text-white text-3xl font-semibold">{{project.projectTitle}}</h3>
-                    <a class="text-white text-sm" href="{{project.projectLink}}">{{project.projectLink}}</a>
-                    <div  class="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
-                        <div *ngFor="let technology of project.technologies" class="badge">{{technology}}</div>
-                        <p class="text-secondary ">{{project.descriptionPreview}}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h2 class="secondary-title">Projects</h2>
+        <p class="section-paragraph break-all">
+          To see more about project You are interested in just click it!
+          <br> for live version click on the project name
+        </p>
+        <app-projects-list [projects]="projects"></app-projects-list>
     </section>
