@@ -6,7 +6,7 @@ export class AlertsService{
         toast: true,
         position: 'top-end',
         showConfirmButton: false,
-        timer: 2000,
+        timer: 1000,
         timerProgressBar: true,
         icon: icon,
         title: title,

@@ -1,6 +1,7 @@
-<div class="relative inline-block text-left">
+<div class="relative inline-block text-left ">
   <button
-    class="flex items-center justify-between w-24 px-4 py-2 bg-blue-500 border border-black rounded-lg shadow-sm hover:bg-gray-200"
+    class="flex items-center justify-between"
+    [ngClass]="mobile ? 'w-6 mt-2 mr-2' : 'w-24 px-4 py-2  bg-blue-500 border border-black rounded-lg shadow-sm hover:bg-gray-200'"
     type="button"
     (click)="toggleShow()"
     (keydown.enter)="toggleShow()"
@@ -10,11 +11,12 @@
       <img
         src="{{'https://flagcdn.com/w40/' + selectedLanguage.flag + '.png'}}"
         alt="{{selectedLanguage.alt}}"
-        class="w-5 h-5"
+        class="w-6 h-6"
+        [ngClass]="mobile ? 'rounded-full' : ''"
       />
-      <span class="text-sm font-medium text-gray-800 ">{{ selectedLanguage.name }}</span>
+      <span *ngIf="!mobile" class="text-sm font-medium text-gray-800 ">{{ selectedLanguage.name }}</span>
     </span>
-    <svg
+    <svg *ngIf="!mobile"
       xmlns="http://www.w3.org/2000/svg"
       class="w-4 h-4 text-gray-500"
       viewBox="0 0 20 20"
@@ -28,11 +30,12 @@
     </svg>
   </button>
 
-  <div *ngIf="showSelector"
-    class="absolute right-0 z-10 mt-2 w-18 bg-white border border-gray-300 rounded-lg shadow-lg"
+  <div *ngIf="showSelector && !hideExpanded"
+    class="absolute right-0 z-10 mt-2 w-24 bg-white border border-gray-300 rounded-lg shadow-lg"
   >
     <ul class="py-1 text-sm text-gray-700">
       <li *ngFor="let language of languages"
+          [ngClass]="language.isSelected ? 'bg-selected-text' : ''"
           (click)="switchLanguage(language.name)"
           (keydown.enter)="switchLanguage(language.name)"
           tabindex="1">

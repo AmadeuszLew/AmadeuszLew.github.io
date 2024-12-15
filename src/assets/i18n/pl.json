@@ -1,235 +1,223 @@
 {
-  "WELCOME_PAGE_GREETING": "Hej,",
+  "WELCOME_PAGE_GREETING": "Witaj,",
   "WELCOME_PAGE_TEXT": "poznajmy się",
-  "VIEW_ABOUT_ME": "O mnie",
+  "VIEW_ABOUT_ME": "Wyświetl mój profil",
+  "LANGUAGE_CHANGED": "Język zmieniony",
   "LEFT_MENU_BUTTON_ABOUT": "O mnie",
   "LEFT_MENU_BUTTON_PROJECTS": "Projekty",
-  "LEFT_MENU_BUTTON_CONTACT_ME": "Skontaktuj się",
+  "LEFT_MENU_BUTTON_CONTACT_ME": "Kontakt",
   "BUTTON_HOME": "Strona główna",
   "BUTTON_ABOUT": "O mnie",
   "BUTTON_PROJECTS": "Projekty",
-  "BUTTON_CONTACT_ME": "Skontaktuj się",
-  "LABEL_CONTACT_ME": "Skontaktuj się",
+  "PROJECTS_TITLE": "Projekty",
+  "BUTTON_CONTACT_ME": "Kontakt",
+  "LABEL_CONTACT_ME": "Skontaktuj się ze mną",
+  "LABEL_COMPANY": "Firma",
+  "LABEL_EMAIL": "E-mail",
+  "LABEL_MESSAGE": "Wiadomość",
   "CITY": "Miasto",
   "PHONE": "Telefon",
-  "PROJECTS_TITLE":"Projekty",
-  "LABEL_COMPANY": "Nazwa firmy",
-  "LABEL_EMAIL": "Email",
-  "LABEL_MESSAGE": "Wiadomość",
-  "TEMPORARY_DISABLED": "Tymczasowo niedostępne",
-  "ENTER_VALID_EMAIL": "Proszę podać poprawny adres e-mail",
-  "CONTACT_FORM_TEXT": "Formularz kontaktowy jest tymczasowo niedostępny. Skontaktuj się ze mną w każdej chwili za pomocą e-maila lub telefonu.",
-  "COMPANY_FORM_DESCRIPTION": "Proszę wpisać nazwę firmy",
+  "TEMPORARY_DISABLED": "Tymczasowo wyłączone",
+  "ENTER_VALID_EMAIL": "Proszę wprowadzić poprawny adres e-mail",
+  "CONTACT_FORM_TEXT": "Formularz kontaktowy jest tymczasowo wyłączony. Możesz się ze mną skontaktować w dowolnym momencie przez e-mail lub telefon.",
+  "COMPANY_FORM_DESCRIPTION": "Proszę wprowadzić nazwę firmy",
   "ABOUT_ME_TITLE": "O mnie",
-  "ABOUT_ME_INTRO": "Cześć! Nazywam się",
-  "ABOUT_ME_NAME": "Amadeusz",
-  "ABOUT_ME_PROFESSION": " jestem doświadczonym specjalistą IT z doświadczeniem w",
-  "ABOUT_ME_DEGREE": "tworzeniu oprogramowania i tytułem inżyniera",
-  "ABOUT_ME_EXPERIENCE": "Od 1 grudnia 2023 roku pracuję jako programista, zaczynając jako",
+  "ABOUT_ME_INTRO": "Cześć! Mam na imię",
+  "ABOUT_ME_NAME": "Amadeus",
+  "ABOUT_ME_PROFESSION": "i jestem doświadczonym specjalistą IT z wykształceniem w dziedzinie",
+  "ABOUT_ME_DEGREE": "Rozwoju Oprogramowania i dyplomem inżynierskim",
+  "ABOUT_ME_EXPERIENCE": "Od 1 grudnia 2023 roku jestem zatrudniony jako programista, rozpoczynając jako",
   "ABOUT_ME_ANGULAR_ROLE": "Programista Angular",
-  "ABOUT_ME_GROWTH": "a rozwijając się w",
-  "ABOUT_ME_FULLSTACK_ROLE": "rolę full-stack",
-  "ABOUT_ME_CURRENT_ROLE": "Obecnie specjalizuję się w",
+  "ABOUT_ME_GROWTH": "i rozwijając się w kierunku",
+  "ABOUT_ME_FULLSTACK_ROLE": "roli fullstack",
+  "ABOUT_ME_CURRENT_ROLE": "Aktualnie specjalizuję się w",
   "ABOUT_ME_JAVA_SPECIALTY": "Java EE",
-  "ABOUT_ME_PROJECT_DESC": "i współtworzę",
-  "ABOUT_ME_PROJECT_CORE": "główny projekt \"rdzeń\"",
-  "ABOUT_ME_CUSTOMER_IMPLEMENTATIONS": "który stanowi podstawę różnych implementacji dla klientów. Moim głównym celem jest rozwiązanie stworzone dla",
+  "ABOUT_ME_PROJECT_DESC": "i współpracuję przy",
+  "ABOUT_ME_PROJECT_CORE": "dużym projekcie bazowym",
+  "ABOUT_ME_CUSTOMER_IMPLEMENTATIONS": "który stanowi podstawę dla różnych wdrożeń klienckich. Mój główny fokus to rozwiązanie opracowane dla",
   "ABOUT_ME_SWISS_LIFE": "Swiss Life",
-  "ABOUT_ME_AXA_JOURNEY": "choć moja podróż rozpoczęła się od współpracy z",
+  "ABOUT_ME_AXA_JOURNEY": "choć moja przygoda rozpoczęła się od pracy nad",
   "ABOUT_ME_AXA_SITE": "AXA",
-  "ABOUT_ME_SKILLS_DEV_1": "Te doświadczenia pozwoliły mi rozwijać umiejętności zarówno w",
-  "ABOUT_ME_SKILLS_DEV_2": "frontendzie, jak i backendzie, ",
-  "ABOUT_ME_SKILLS_DEV_3": "co umożliwia mi stawianie czoła różnorodnym wyzwaniom w zakresie tworzenia aplikacji webowych.",
+  "ABOUT_ME_SKILLS_DEV_1": "Te doświadczenia ukształtowały moje umiejętności zarówno w zakresie",
+  "ABOUT_ME_SKILLS_DEV_2": "frontend, jak i backend, ",
+  "ABOUT_ME_SKILLS_DEV_3": "pozwalając mi mierzyć się z różnymi wyzwaniami w dziedzinie tworzenia aplikacji webowych.",
   "ABOUT_ME_THANK_YOU": "Dziękuję za odwiedzenie mojej strony!",
-  "ABOUT_ME_PASSION": "Mam ogromną pasję do programowania, ponieważ pozwala mi ono uwolnić kreatywność i realizować nowe pomysły.",
-  "ABOUT_ME_EXPERIENCE_IMPACT": "Na przestrzeni lat moja wiedza obejmuje zarówno",
+  "ABOUT_ME_PASSION": "Mam głęboką pasję do programowania, ponieważ pozwala mi to uwolnić kreatywność i ożywiać nowe pomysły.",
+  "ABOUT_ME_EXPERIENCE_IMPACT": "Przez lata moja wiedza rozrosła się, obejmując zarówno",
   "ABOUT_ME_FRONTEND": "frontend",
-  "ABOUT_ME_AND": "i",
+  "ABOUT_ME_AND": "jak i",
   "ABOUT_ME_BACKEND": "backend",
-  "ABOUT_ME_LARGE_PROJECTS": "co pozwala mi pracować nad",
-  "ABOUT_ME_CORE_PROJECTS": "kilkuset milionowymi projektami",
-  "ABOUT_ME_CORE_PROJECTS_IMPACT": " które mają realny wpływ na rzeczywistość.",
-  "ABOUT_ME_FOCUS_TECH": "Moje główne technologie to HTML, CSS, JavaScript, MongoDB, TypeScript, Tailwind, Angular, mongoDb i Java EE, a także doświadczenie z różnymi frameworkami",
-  "ABOUT_ME_NETWORK_EXP": "Poza programowaniem pracowałem także jako specjalista ds. sieci, zdobywając cenne doświadczenia w zakresie infrastruktury systemowej.",
-  "ABOUT_ME_CODING_PASSION": "Jednak największą radość daje mi programowanie, w którym eksploruję nieograniczone możliwości, współpracuję z utalentowanymi zespołami i stale rozwijam swoje umiejętności, aby sprostać nowym wyzwaniom.",
-  "SEE_MORE_PROJECT": "Aby zobaczyć więcej szczegółów o interesującym Cię projekcie, kliknij na niego!",
-  "FOR_LIFE_VERSION": "Aby przejść do wersji live, kliknij link, a zostaniesz przekierowany.",
-  "VIEW_FULL_IMAGE": "Aby zobaczyć obraz w pełnym rozmiarze, kliknij go :D",
+  "ABOUT_ME_LARGE_PROJECTS": "rozwój, umożliwiając mi pracę przy",
+  "ABOUT_ME_CORE_PROJECTS": "dużych projektach bazowych",
+  "ABOUT_ME_CORE_PROJECTS_IMPACT": " o rzeczywistym wpływie. ",
+  "ABOUT_ME_FOCUS_TECH": "Mój główny fokus obejmuje technologie takie jak HTML, CSS, JavaScript, MongoDB, TypeScript, Tailwind, Angular i Java EE, mam również doświadczenie w frameworkach takich jak Bootstrap i Vue.",
+  "ABOUT_ME_NETWORK_EXP": "Poza programowaniem pracowałem również jako specjalista ds. sieci w branży IT, zdobywając cenne spostrzeżenia dotyczące infrastruktury systemowej.",
+  "ABOUT_ME_CODING_PASSION": "Jednak moją prawdziwą radością jest programowanie, gdzie odkrywam nieograniczone możliwości, współpracuję z utalentowanymi zespołami i nieustannie rozwijam swoje umiejętności, podejmując nowe wyzwania.",
+  "SEE_MORE_PROJECT": "Aby zobaczyć więcej informacji o projekcie, który Cię interesuje, po prostu kliknij go!",
+  "FOR_LIFE_VERSION": "aby zobaczyć wersję na żywo, kliknij link, zostaniesz przekierowany",
+  "VIEW_FULL_IMAGE": "Aby wyświetlić obraz w pełnym rozmiarze, kliknij go :D",
   "projects": {
     "TMS-team-management-system": {
       "title": "TMS - System Zarządzania Zespołem",
-      "description": "Stworzony przez czteroosobowy zespół. Dwóch z nas zajmuje się frontendem, a dwóch backendem. Niestety, mój kolega frontendowiec zachorował na covid podczas tworzenia wersji beta, która jest obecnie dostępna, przez co cały frontend poza testami został wykonany przeze mnie. To wersja MVP, ale działa dla klientów zarządzających zespołami."
+      "description": "Stworzony przez czteroosobowy zespół. Dwóch z nas odpowiadało za frontend, a dwóch za backend. Niestety, mój kolega od frontendu był chory na COVID podczas tworzenia wersji beta, która jest już dostępna. To wersja MVP, która sprawdza się u klientów zajmujących się zarządzaniem zespołem."
     },
     "sneakers-shop": {
-      "title": "Sklep z Sneakerami",
-      "description": "Prosty sklep zaprojektowany dla małych sprzedawców, którzy skupiają się na limitowanych modelach sneakerów. W wersji beta klienci mogą się logować, dodawać produkty do koszyka i finalizować zakupy z opcją płatności przez PayPal. Projekt ciągle jest rozwijany."
+      "title": "Sklep z Butami",
+      "description": "Prosty sklep stworzony dla małych sprzedawców specjalizujących się w limitowanych sneakersach. W wersji beta klienci mogą się zalogować, dodawać produkty do koszyka i finalizować zakup z opcją płatności przez PayPal. W przyszłości planujemy dodać więcej funkcji."
     },
     "stockx-fix-extension": {
       "title": "Rozszerzenie StockX Fix",
-      "description": "Rozszerzenie Tampermonkey, które poprawia układ strony StockX, automatycznie ukrywając sekcje witryny. Umożliwia także dodawanie przedmiotów do koszyka użytkownika z zewnętrznych stron."
+      "description": "Małe rozszerzenie Tampermonkey, które poprawia układ StockX, automatycznie ukrywając sekcje strony. Pozwala również dodawać produkty do koszyka ze stron zewnętrznych."
     },
     "portfolio-site": {
       "title": "Strona Portfolio",
-      "description": "To moje osobiste portfolio, prezentujące wszystkie moje dotychczasowe prace i projekty. Zbudowane z Angulara i Tailwind CSS, aby stworzyć responsywną i lekką stronę."
+      "description": "To moja osobista strona portfolio prezentująca wszystkie moje poprzednie prace i projekty. Została stworzona przy użyciu Angular i Tailwind CSS, aby utworzyć responsywną i lekką stronę internetową."
     },
     "comarch-digital-insurance": {
-      "title": "Comarch Digital Insurance",
-      "description": "Comarch Digital Insurance (CDI) to kompleksowa cyfrowa platforma zaprojektowana dla branży ubezpieczeniowej. Umożliwia firmom ubezpieczeniowym usprawnienie ich operacji poprzez automatyzację procesów, takich jak tworzenie polis, underwriting, zarządzanie roszczeniami i obsługa klienta."
+      "title": "Comarch Cyfrowe Ubezpieczenia",
+      "description": "Comarch Cyfrowe Ubezpieczenia (CDI) to kompleksowa cyfrowa platforma przeznaczona dla branży ubezpieczeniowej. Umożliwia firmom ubezpieczeniowym usprawnienie działalności poprzez automatyzację procesów takich jak tworzenie polis, underwriting, zarządzanie roszczeniami i obsługa klienta. CDI jest wysoce konfigurowalne i może być zintegrowane z usługami zewnętrznymi, takimi jak podpisy cyfrowe, identyfikacja elektroniczna i inne narzędzia, aby zwiększyć jego funkcjonalność."
     },
     "many-more": {
-      "title": "Wiele innych projektów",
-      "description": "Wiele innych małych projektów, od skryptów w JavaScript i Pythonie po aplikacje Angular. Sprawdź mój GitHub, aby zobaczyć pełną listę."
+      "title": "Jeszcze więcej projektów",
+      "description": "Kilka innych małych projektów, począwszy od skryptów JavaScript i Python, po aplikacje Angular i nie tylko. Sprawdź mojego GitHuba, aby zobaczyć pełną listę."
     }
   },
   "projectDetail": {
     "TMS": {
       "architecture": {
         "title": "Architektura",
-        "description": "Strona UI to połączenie Vue i Vuetify, które zapewniają wysoką responsywność po stronie użytkownika i czytelność. Strona serwera aplikacji składa się z kilku modułów. Baza danych SQLite odpowiada za przechowywanie danych. Komunikacja z bazą danych odbywa się dzięki frameworkowi Django. Korzystamy z frameworka REST do wymiany danych między interfejsem użytkownika a serwerem aplikacji."
+        "description": "Interfejs użytkownika to kombinacja Vue i Vuetify, zapewniająca wysoką responsywność i czytelność po stronie użytkownika. Strona serwerowa składa się z kilku modułów. Baza danych SQLite odpowiada za przechowywanie danych. Komunikacja z bazą danych odbywa się za pomocą frameworka Django. Używamy rest frameworka do udostępniania i odbierania danych między interfejsem użytkownika a serwerem aplikacji."
       },
       "dashboard": {
-        "title": "Panel trenera",
-        "description": "Widok zawierający ostatnie 3 mecze drużyny po lewej stronie. Obecność na ostatnich treningach po prawej. Tabela z szczegółowymi informacjami o wynikach każdego zawodnika w wybranym meczu na dole. Widok ten ma pomóc trenerom w szybkim sprawdzeniu stanu ostatnich kilku dni."
+        "title": "Deska trenerska",
+        "description": "Widok zawierający 3 ostatnie mecze drużyny po lewej stronie. Obecność na ostatnich treningach po prawej stronie. Tabela ze szczegółowymi informacjami o wyniku każdego zawodnika w wybranym meczu na dole. Ten widok ma pomóc trenerom szybko sprawdzić status ostatnich kilku dni."
       },
       "matches": {
         "title": "Widok meczów",
-        "description": "Główny widok zawierający wszystkie mecze. Użytkownik może dodać mecz w 3 krokach, dodając wydarzenie->mecze drużyn->wyniki graczy. Obsługa błędów obejmuje każdą nieprawidłową dane wejściowe. W przypadku błędu użytkownik może dodać brakujące elementy w szczegółowym widoku meczu. Zwycięska drużyna jest zaznaczona na zielono. Dodawanie i usuwanie treningów jest podobne do robienia tego na widoku graczy i trenerów, aby ułatwić użytkownikowi obsługę."
+        "description": "Główny widok zawierający wszystkie mecze. Użytkownik może dodać mecz w 3 krokach: dodając wydarzenie -> mecze drużyny -> wyniki zawodników. Obsługa błędów obejmuje każdy błąd wprowadzenia przez użytkownika. W przypadku niepowodzenia użytkownik może dodać brakujące elementy w widoku szczegółów meczu. Zwycięska drużyna jest zaznaczona na zielono. Dodawanie i usuwanie treningów jest podobne do robienia tego w widokach zawodników i trenerów, aby było proste dla użytkownika."
       },
       "singleMatch": {
         "title": "Widok pojedynczego meczu",
-        "description": "Szczegółowy widok meczu. Dwa sortowalne tabele z wynikami graczy, które użytkownik może edytować. Pole wyszukiwania działa na każdym parametrze. W przypadku błędów danych wejściowych, to tutaj użytkownik może dodać brakujące dane. Każde wejście ma swoje zasady."
+        "description": "Szczegółowy widok meczu. Dwie tabele z wynikami zawodników, które można sortować według dowolnego parametru i które są edytowalne przez użytkownika. Pole wyszukiwania działa z każdym parametrem. W przypadku błędu wprowadzenia danych użytkownik może tutaj dodać brakujące informacje. Każde wprowadzenie danych ma swoje zasady."
       },
       "calendar": {
         "title": "Widok kalendarza",
-        "description": "Widok kalendarza, ułatwiający wyszukiwanie nadchodzących wydarzeń. Zawiera treningi, mecze. Użytkownik może dodać po prostu wydarzenie, np. 'spotkanie drużyny'. Użytkownik może zmieniać widok na dzień-4 dni-tydzień-miesiąc, z domyślnym widokiem miesiąca."
+        "description": "Widok kalendarza ułatwiający wyszukiwanie nadchodzących wydarzeń. Zawiera treningi, mecze. Użytkownik może dodać samo wydarzenie, np. 'spotkanie zespołu'. Użytkownik może zmienić widok na dzień-4 dni-tydzień-miesiąc, z domyślnym widokiem miesiąca."
       },
       "knowledgebase": {
         "title": "Baza wiedzy",
-        "description": "Miejsce, w którym użytkownicy mogą uzyskać dostęp do profesjonalnej wiedzy."
+        "description": "Miejsce, gdzie użytkownicy mogą sięgnąć po profesjonalną wiedzę."
       },
       "singleKnowledgebase": {
-        "title": "Pojedynczy artykuł bazy wiedzy",
-        "description": "Widok pojedynczego artykułu, z dodatkowymi szczegółami."
+        "title": "Artykuł bazy wiedzy",
+        "description": "Widok pojedynczego artykułu ze szczegółowymi informacjami."
       },
       "players": {
-        "title": "Lista graczy",
-        "description": "Widok z tabelą, w której znajdują się wszyscy gracze. Wyszukiwanie działa po: imieniu, nazwisku, płci i e-mailu. Tabela jest sortowalna według każdego z parametrów. Zgodnie z zasadą F, przycisk edycji oraz przycisk dodawania są dostępne w prawym górnym rogu."
+        "title": "Lista zawodników",
+        "description": "Widok z tabelą wyświetlającą wszystkich zawodników. Wyszukiwanie działa według: imienia, nazwiska, płci i adresu e-mail. Tabela jest sortowalna według każdego podanego parametru. Zgodnie z zasadą F, przycisk edycji i dodawania jest dostępny w prawym górnym rogu."
       },
       "playersAdd": {
-        "title": "Dodawanie i edytowanie graczy",
-        "description": "Dodawanie graczy ma różne zasady w zależności od drużyny gracza. Jeśli to nasz gracz, użytkownik musi wprowadzić wszystkie dane. Jeśli nie, należy dodać tylko imię i nazwisko oraz płeć. Przycisk edycji dodaje wiersz edycji do tabeli, umożliwiając użytkownikowi usuwanie/edycję graczy."
+        "title": "Dodawanie i edycja zawodników",
+        "description": "Dodawanie zawodników ma różne zasady w zależności od drużyny zawodnika. Jeśli to nasz zawodnik, użytkownik musi wprowadzić wszystkie dane. Jeśli nie, wystarczy dodać imię, nazwisko i płeć. Przycisk edycji dodaje wiersz edycji do tabeli, umożliwiając użytkownikowi usuwanie/edycję zawodników."
       },
       "trainings": {
         "title": "Widok treningów",
-        "description": "Widok zawierający wszystkie treningi. Użytkownik może dodawać i usuwać treningi, klikając w prawym górnym rogu. Sortowanie na podstawie zapytań zostało dodane w wersji beta 0.2, a wersja na żywo nie będzie odzwierciedlać ekranu. Klikając na indywidualny trening, użytkownik przechodzi do widoku pojedynczego treningu."
+        "description": "Widok zawierający wszystkie treningi. Użytkownik może dodawać i usuwać treningi, klikając w prawym górnym rogu. Sortowanie przez zapytanie zostało dodane w wersji beta 0.2, a wersja na żywo nie będzie odzwierciedlać ekranu. Kliknięcie w poszczególny trening przekieruje do widoku pojedynczego treningu."
       },
       "trainingsAdd": {
-        "title": "Dodawanie i edytowanie treningów",
-        "description": "Dodawanie i usuwanie treningów jest podobne do robienia tego na widokach graczy i trenerów, aby uprościć proces dla użytkownika."
+        "title": "Dodawanie i edycja treningów",
+        "description": "Dodawanie i usuwanie treningów jest podobne do robienia tego w widokach zawodników i trenerów, aby było proste dla użytkownika."
       },
       "singleTraining": {
         "title": "Widok pojedynczego treningu",
-        "description": "Tutaj użytkownicy mogą wysyłać powiadomienia do graczy biorących udział w wybranym treningu oraz oglądać więcej szczegółów dotyczących treningu."
+        "description": "Tutaj użytkownicy mogą wysyłać powiadomienia do zawodników biorących udział w wybranym treningu i przeglądać więcej szczegółów dotyczących treningu."
       }
     },
     "sneakerShop": {
-      "mainPage": {
-        "title": "Strona główna",
-        "description": "Starałem się, aby była jak najprostsza. Zgodnie z zasadą F/Z, koszyk i strona logowania znajdują się w prawym górnym rogu. Logo w lewym górnym rogu jest również linkiem do strony głównej. Modele produktów są sortowane według głównych kategorii i modeli."
-      },
-      "productPage": {
-        "title": "Strona produktu",
-        "description": "Strona produktu jest jak najprostsza, aby zapewnić najlepszą czytelność."
-      },
-      "login": {
-        "title": "Logowanie",
-        "description": "Użytkownicy mogą się logować i rejestrować za pomocą e-maila i hasła."
-      },
       "loginFirebase": {
         "title": "Logowanie przez Firebase",
-        "description": "Firebase jest odpowiedzialny za zarządzanie i przechowywanie danych użytkowników. Strona ma funkcję automatycznego logowania, aby nie stracić stanu po odświeżeniu oraz automatycznego wylogowywania po wygaśnięciu tokena."
+        "description": "Firebase odpowiada za zarządzanie i przechowywanie poświadczeń użytkowników. Strona ma automatyczne logowanie, aby nie stracić stanu przy odświeżeniu, oraz automatyczne wylogowanie po wygaśnięciu tokenu."
       },
       "cartNoItem": {
-        "title": "Koszyk (Brak przedmiotów)",
-        "description": "Pusta strona koszyka jest przyjazna dla użytkownika, zawiera tylko 2-elementowy koszyk z animowanymi bąbelkami (czysty CSS) i przycisk zachęcający użytkownika do powrotu do strony głównej i dodania czegoś."
+        "title": "Koszyk (Brak produktów)",
+        "description": "Strona pustego koszyka została zaprojektowana przyjaznie dla użytkownika, zawiera tylko koszyk z 2 animowanymi bańkami (czyste CSS) oraz przycisk zachęcający do powrotu na stronę główną i dodania produktów."
       },
       "cartItem": {
-        "title": "Koszyk (Przedmiot dodany)",
-        "description": "Strona koszyka zawiera sumę przedmiotów, animacje przy usuwaniu, i wiele innych."
+        "title": "Koszyk (Dodano produkty)",
+        "description": "Strona koszyka będzie zawierać sumę produktów, animacje przy usuwaniu i wiele więcej."
       },
       "features": {
         "title": "Funkcje",
-        "description": "Modele produktów są sortowane według głównych kategorii i modeli, dzięki czemu można je łatwo sortować. Zaimplementowano również wyświetlanie informacji o dostępności rozmiarów."
+        "description": "Modele produktów zostały stworzone tak, aby można je było sortować według głównej kategorii i modelu. Zaimplementowałem również wyświetlanie informacji o dostępności rozmiaru."
       },
       "mainPageSm": {
-        "title": "Strona główna (Mobile)",
-        "description": "Strona główna dla wersji mobilnej ma pasek nawigacji przeniesiony z góry na dół, aby był łatwiejszy i bardziej przyjazny dla urządzeń mobilnych."
+        "title": "Strona główna (Wersja mobilna)",
+        "description": "Strona główna dla urządzeń mobilnych ma pasek nawigacyjny przeniesiony z góry na dół, aby była łatwiejsza i bardziej przyjazna dla urządzeń mobilnych."
       },
       "mainPageSmSidebar": {
-        "title": "Pasek boczny strony głównej (Mobile)",
-        "description": "Przyciski paska bocznego przeniesiono do menu po lewej stronie, aktywowanego przez ikonę hamburgera."
+        "title": "Sidebar strony głównej w wersji mobilnej",
+        "description": "Przyciski paska bocznego zostały przeniesione do menu po lewej stronie, aktywowanego przez ikonę hamburger."
       },
       "more": {
-        "title": "Więcej wkrótce...",
-        "description": "Wciąż pracuję nad tym projektem. Przedmioty są teraz przechowywane tylko w pamięci lokalnej, brak danych użytkowników. Celem jest przechowywanie przedmiotów na Firebase, połączenie użytkowników z bazą danych i dodanie płatności. UI nie jest jeszcze ukończone, wymaga dopracowania."
+        "title": "Więcej już wkrótce...",
+        "description": "Nadal pracuję nad tym projektem. Aktualnie przedmioty są przechowywane tylko w lokalnym magazynie, brak danych użytkownika. Celem jest przechowywanie produktów na Firebase, połączenie użytkowników z bazą danych i dodanie płatności. Interfejs użytkownika również nie jest jeszcze ukończony i wymaga dopracowania."
       }
     },
     "stockx": {
       "allItemsWithout": {
         "title": "Wszystkie przedmioty bez filtrów",
-        "description": "Lista wszystkich przedmiotów bez zastosowania filtrów."
+        "description": "Lista wszystkich przedmiotów bez zastosowanych filtrów."
       },
       "allItems": {
-        "title": "Sprawdź wszystkie przedmioty",
-        "description": "Funkcja aktywowana przez kliknięcie lewego przycisku na górnym pasku nawigacji. Wyróżnia przedmioty, gdzie cena użytkownika nie jest najniższą."
+        "title": "Przycisk sprawdzenia wszystkich przedmiotów",
+        "description": "Funkcja aktywowana przez kliknięcie lewego przycisku na górnym pasku nawigacyjnym. Podświetla przedmioty, gdzie cena użytkownika nie jest naprawdę najniższa."
       },
       "itemWithout": {
         "title": "Widok przedmiotu bez rozszerzenia",
-        "description": "Obrazek pokazujący, jak wygląda StockX bez rozszerzeń."
+        "description": "Obraz pokazujący, jak StockX wygląda bez rozszerzenia. Wtyczka po kliknięciu użytkownika dodaje dwa pola."
       },
       "itemWith": {
-        "title": "Widok przedmiotu z rozszerzeniem",
-        "description": "Obrazek pokazujący, jak wygląda StockX po rozszerzeniu, z dodatkowymi funkcjami."
+        "title": "Widok przedmiotu po użyciu rozszerzenia",
+        "description": "Pola dodane przez wtyczkę obliczają rzeczywistą cenę, którą użytkownik powinien wprowadzić, aby uzyskać najniższą ofertę, i wyświetlają ją w DOM. Kolejne pole oblicza wypłatę dla użytkownika, dzięki czemu może natychmiast wiedzieć, czy opłaca się złożyć ofertę."
       }
     },
     "portfolio": {
       "good": {
-        "title": "Cóż...",
-        "description": "Jesteś już na tej stronie :D. Zachęcam do kontaktu i podzielenia się opinią."
+        "title": "No cóż...",
+        "description": "Jesteś już na tej stronie :D. Nie krępuj się przekazać mi swojej opinii."
       },
       "more": {
-        "title": "Więcej wkrótce",
-        "description": "Wciąż pracuję nad tą stroną. Chcę uczynić ją dwujęzyczną za pomocą pipe, dodać więcej animacji, aby była bardziej przyjazna użytkownikowi, poprawić wersje mobilne obrazów, zwiększyć jej widoczność w Google i wiele więcej..."
+        "title": "Więcej już wkrótce",
+        "description": "Nadal pracuję nad tą stroną. Chcę zrobić ją dwujęzyczną za pomocą pipe, dodać więcej animacji, aby była bardziej przyjazna dla użytkownika, popracować nad wersjami mobilnymi obrazów, zwiększyć widoczność w Google i więcej..."
       }
     },
     "comarch": {
       "cdi1": {
-        "title": "Wsparcie dla ubezpieczeń zdrowotnych",
-        "description": "Ułatwia zarządzanie polisami ubezpieczeniowymi, oferując narzędzia dla agentów, brokerów i pracowników biura obsługi."
+        "title": "Wsparcie ubezpieczeń zdrowotnych",
+        "description": "Upraszcza zarządzanie polisami ubezpieczeń zdrowotnych, oferując narzędzia dla agentów, brokerów i pracowników back-office."
       },
       "cdi2": {
-        "title": "Zautomatyzowane przetwarzanie roszczeń",
-        "description": "Integracja z Comarch Insurance Claims pozwala na sprawne zarządzanie roszczeniami."
+        "title": "Automatyczne przetwarzanie roszczeń",
+        "description": "Integracja z Comarch Insurance Claims pozwala na płynną obsługę roszczeń."
       },
       "cdi3": {
         "title": "Zgodność z przepisami",
-        "description": "CDI przestrzega norm branżowych, takich jak RODO, IDD (Dyrektywa o dystrybucji ubezpieczeń) i PRIIPS (Produkty inwestycyjne detaliczne oparte na ubezpieczeniu)."
+        "description": "CDI przestrzega standardów branżowych takich jak RODO, IDD (Dyrektywa Dystrybucyjna Ubezpieczeń) oraz PRIIPS (Pakietowe Detaliczne Produkty Inwestycyjne)."
       },
       "cdi4": {
         "title": "Wdrożenie w chmurze",
         "description": "Platforma może być wdrożona w chmurze, oferując skalowalność i dostępność."
       },
       "cdi5": {
-        "title": "Integracja z AI",
-        "description": "Chociaż AI nie jest bezpośrednio zintegrowane z CDI, Comarch oferuje oddzielny framework AI, który może być używany do podejmowania decyzji opartych na danych i automatyzacji procesów."
+        "title": "Integracja AI",
+        "description": "Chociaż AI nie jest wbudowane bezpośrednio w CDI, Comarch oferuje osobny Framework AI, który może być używany do podejmowania decyzji opartych na danych i automatyzacji procesów."
       }
     },
     "manyMore": {
       "github": {
-        "title": "Odwiedź moje GitHub :D",
-        "description": "Kliknij w link, aby przejść do mojego GitHub."
+        "title": "Odwiedź mojego GitHuba :D",
+        "description": "Kliknij link, aby przejść na mojego GitHuba."
       }
     }
-
   }
 }

@@ -16,6 +16,7 @@
   "LABEL_MESSAGE": "Message",
   "CITY": "City",
   "PHONE": "Phone",
+  "LANGUAGE_CHANGED": "Language changed",
   "TEMPORARY_DISABLED": "Temporary disabled",
   "ENTER_VALID_EMAIL": "Please enter valid email",
   "CONTACT_FORM_TEXT": "Contact form is temporary disabled. Feel free to to contact me any time through email or phone.",
