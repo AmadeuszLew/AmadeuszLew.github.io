@@ -17,7 +17,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '16'
           cache: 'npm'
 
       - name: Install dependencies
@@ -30,8 +30,10 @@ jobs:
         run: npm run build -- --configuration=production
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: angular-cli-ghpages/deploy-gh-pages-action@v0.0.0-next.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/AmadeuszPortfolio/browser
-          keep_files: true
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+          build_configuration: production
+          deploy_branch: gh-pages
+          deploy_dir: dist/portfiolio-a/browser
+          base_href: /portfiolio-a/
