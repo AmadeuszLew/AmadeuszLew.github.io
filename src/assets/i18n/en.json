@@ -8,8 +8,12 @@
   "BUTTON_HOME": "Home",
   "BUTTON_ABOUT": "About",
   "BUTTON_PROJECTS":"Projects",
+  "PROJECTS_TITLE":"Projects",
   "BUTTON_CONTACT_ME": "Contact me",
   "LABEL_CONTACT_ME": "Contact me",
+  "LABEL_COMPANY": "Company",
+  "LABEL_EMAIL": "Email",
+  "LABEL_MESSAGE": "Message",
   "CITY": "City",
   "PHONE": "Phone",
   "TEMPORARY_DISABLED": "Temporary disabled",
@@ -227,5 +231,4 @@
       }
     }
   }
-
 }

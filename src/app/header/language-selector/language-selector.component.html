@@ -1,0 +1,53 @@
+<div class="relative inline-block text-left">
+  <button
+    class="flex items-center justify-between w-24 px-4 py-2 bg-blue-500 border border-black rounded-lg shadow-sm hover:bg-gray-200"
+    type="button"
+    (click)="toggleShow()"
+    (keydown.enter)="toggleShow()"
+    tabindex="0"
+  >
+    <span class="flex items-center space-x-2">
+      <img
+        src="{{'https://flagcdn.com/w40/' + selectedLanguage.flag + '.png'}}"
+        alt="{{selectedLanguage.alt}}"
+        class="w-5 h-5"
+      />
+      <span class="text-sm font-medium text-gray-800 ">{{ selectedLanguage.name }}</span>
+    </span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-4 h-4 text-gray-500"
+      viewBox="0 0 20 20"
+      fill="black"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4 4a.75.75 0 01-1.06 0l-4-4a.75.75 0 01.02-1.06z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  </button>
+
+  <div *ngIf="showSelector"
+    class="absolute right-0 z-10 mt-2 w-18 bg-white border border-gray-300 rounded-lg shadow-lg"
+  >
+    <ul class="py-1 text-sm text-gray-700">
+      <li *ngFor="let language of languages"
+          (click)="switchLanguage(language.name)"
+          (keydown.enter)="switchLanguage(language.name)"
+          tabindex="1">
+        <button
+          class="flex items-center w-full px-4 py-2 hover:bg-gray-100"
+          type="button"
+        >
+          <img
+            src="{{'https://flagcdn.com/w40/' + language.flag + '.png'}}"
+            alt="{{language.alt}}"
+            class="w-5 h-5 mr-2"
+          />
+          {{ language.name }}
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -6,7 +6,7 @@
         <div class="space-y-12">
             <div>
                 <label class="text-white block mb-6 text-xl font-bold">
-                  Company
+                  {{ "LABEL_COMPANY" | translate }}
                   <p *ngIf="!company.valid && company.touched" class="text-rose-800 mt-1">{{ "COMPANY_FORM_DESCRIPTION" | translate }}</p>
                   <input
                       class="w-full border border-input-border bg-input px-4 py-4"
@@ -20,7 +20,7 @@
             </div>
             <div>
                 <label class="text-white block mb-6 text-xl font-bold">
-                  Email
+                  {{ "LABEL_EMAIL" | translate }}
                   <p *ngIf="!email.valid && email.touched" class="text-rose-800">{{ "ENTER_VALID_EMAIL" | translate }}</p>
                   <input
                       class="w-full border border-input-border bg-input px-4 py-4"
@@ -35,7 +35,7 @@
             </div>
             <div>
                 <label class="text-white block mb-6 text-xl font-bold">
-                  Message
+                  {{ "LABEL_MESSAGE" | translate }}
                   <p *ngIf="!message.valid && message.touched" class="text-rose-800">{{ "ENTER_VALID_EMAIL" | translate }}</p>
                   <textarea
                       class="w-full border border-input-border bg-input px-4 py-4 h-56 resize-none"
@@ -52,7 +52,7 @@
                 class="px-6 py-2 bg-theme text-white font-bold disabled:opacity-25"
                 type="submit"
                 [disabled]="!f.valid || disableButton"
-            >Contact</button>
+            >{{ "BUTTON_CONTACT_ME" | translate }}</button>
         </div>
     </div>
   </fieldset>

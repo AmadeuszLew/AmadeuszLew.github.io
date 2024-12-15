@@ -3,12 +3,12 @@ import {ProjectDetail} from "./models/projectDetail.model";
 
 export class ProjectsService {
   private projects: Project[] = [
-    new Project('./assets/projects/pogon_mogilno.png', 'TMS- team management system', ['Vue 2', 'Vuetify', 'Axios'], 'projects.TMS-team-management-system.description', 'full description', 'https://tmspanel.grinddev.pl', ['somephotos']),
-    new Project('./assets/projects/lenny_logo.png', 'Sneakers shop', ['UI/UX', 'Angular', 'Bootstrap 5', 'Typescript', 'Firebase', 'RxJS'], "projects.sneakers-shop.description", 'full description', '', ['some photos']),
-    new Project('./assets/projects/stockx.png', 'Stockx Fix Extension', ['JavaScript', 'Tampermonkey', 'DOM manipulation'], "projects.stockx-fix-extension.description", 'full description', '', ['some photos']),
-    new Project('./assets/projects/okay1.png', 'Portfolio site', ['Angular', 'Tailwind', 'Typescript'], "projects.portfolio-site.description", 'full description', '', ['some photos']),
-    new Project('./assets/projects/cdi.png', 'Comarch Digital Insurance', ['Private'], "projects.comarch-digital-insurance.description", 'full description', 'https://www.comarch.pl/finanse/ubezpieczenia/comarch-digital-insurance/', ['somephotos']),
-    new Project('./assets/projects/github.png', 'Many more', ['JavaScript', 'Python', 'Django', 'MySQL', 'C++', 'Angular', 'Bootstrap', 'Typescript'], "projects.many-more.description", 'full description', 'https://github.com/AmadeuszLew', ['somephotos']),
+    new Project('./assets/projects/pogon_mogilno.png', 'TMS- team management system', 'projects.TMS-team-management-system.title', ['Vue 2', 'Vuetify', 'Axios'], 'projects.TMS-team-management-system.description', 'full description', 'https://tmspanel.grinddev.pl', ['somephotos']),
+    new Project('./assets/projects/lenny_logo.png', 'Sneakers shop', "projects.sneakers-shop.title", ['UI/UX', 'Angular', 'Bootstrap 5', 'Typescript', 'Firebase', 'RxJS'], "projects.sneakers-shop.description", 'full description', '', ['some photos']),
+    new Project('./assets/projects/stockx.png', 'Stockx Fix Extension', "projects.stockx-fix-extension.title", ['JavaScript', 'Tampermonkey', 'DOM manipulation'], "projects.stockx-fix-extension.description", 'full description', '', ['some photos']),
+    new Project('./assets/projects/okay1.png', 'Portfolio site', "projects.portfolio-site.title", ['Angular', 'Tailwind', 'Typescript'], "projects.portfolio-site.description", 'full description', '', ['some photos']),
+    new Project('./assets/projects/cdi.png', 'Comarch Digital Insurance', "projects.comarch-digital-insurance.title", ['Private'], "projects.comarch-digital-insurance.description", 'full description', 'https://www.comarch.pl/finanse/ubezpieczenia/comarch-digital-insurance/', ['somephotos']),
+    new Project('./assets/projects/github.png', 'Many more', "projects.many-more.title", ['JavaScript', 'Python', 'Django', 'MySQL', 'C++', 'Angular', 'Bootstrap', 'Typescript'], "projects.many-more.description", 'full description', 'https://github.com/AmadeuszLew', ['somephotos']),
   ]
   private projectsDetail: ProjectDetail[] = [
     new ProjectDetail('TMS- team management system', [

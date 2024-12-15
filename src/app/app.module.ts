@@ -20,6 +20,8 @@ import { SingleProjectComponent } from './projects/single-project/single-project
 import { ProjectsListComponent } from "./projects/projects-list/projects-list.component";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
+import { LanguageSelectorComponent } from './header/language-selector/language-selector.component';
+import {LanguageSelectorProviderService} from "./header/language-selector/language-selector-provider.service";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -39,6 +41,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     DetailComponent,
     ProjectsListComponent,
     SingleProjectComponent,
+    LanguageSelectorComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [AlertsService,ProjectsService],
+  providers: [AlertsService,ProjectsService,LanguageSelectorProviderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
