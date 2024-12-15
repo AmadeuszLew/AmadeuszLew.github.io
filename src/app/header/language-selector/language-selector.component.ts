@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {LanguageSelector} from "./language-selector.model";
 import {TranslateService} from "@ngx-translate/core";
 import {LanguageSelectorProviderService} from "./language-selector-provider.service";
@@ -9,7 +9,7 @@ import {AlertsService} from "../../shared/alert.service";
   templateUrl: './language-selector.component.html',
   styleUrls: ['./language-selector.component.css']
 })
-export class LanguageSelectorComponent {
+export class LanguageSelectorComponent implements OnInit {
   @Input()
   mobile:boolean;
 
@@ -40,14 +40,15 @@ export class LanguageSelectorComponent {
           this.selectedLanguage = this.languages[0];
       }
   }
+  ngOnInit() {
+    this.translate.onLangChange.subscribe(():void => {
+      this.alertsService.riseAlert('success', this.translate.instant('LANGUAGE_CHANGED'));
+    });
+  }
 
   switchLanguage(language: string):void {
     this.translate.use(language.toLowerCase());
     this.changeSelectedLanguage(language);
-    setTimeout(() => {
-      this.alertsService.riseAlert('success', this.translate.instant('LANGUAGE_CHANGED'));
-    }, 100);
-
   }
 
   toggleShow(): void {
