@@ -1,29 +1,37 @@
-name: CI / CD for Angular
+name: CI/CD for Angular Portfolio
+
 on:
   push:
+    branches: [ "master" ]
+  pull_request:
     branches: [ "master" ]
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Set up node.js
-        uses: actions/setup-node@v3.3.0
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
-        run: npx npm i
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
 
       - name: Build
-        run: ng build --configuration=production
+        run: npm run build -- --configuration=production
 
       - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v3
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          target_branch: gh-pages
-          build_dir: dist/
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/AmadeuszPortfolio/browser
+          keep_files: true
