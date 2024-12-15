@@ -3,6 +3,7 @@ import {LanguageSelector} from "./language-selector.model";
 import {TranslateService} from "@ngx-translate/core";
 import {LanguageSelectorProviderService} from "./language-selector-provider.service";
 import {AlertsService} from "../../shared/alert.service";
+import {skip} from "rxjs";
 
 @Component({
   selector: 'app-language-selector',
@@ -22,18 +23,17 @@ export class LanguageSelectorComponent implements OnInit {
   languages: LanguageSelector[];
   selectedLanguage: LanguageSelector;
   showSelector = false;
+  browserLanguage:unknown;
 
   constructor(
     private readonly translate: TranslateService,
     private readonly alertsService: AlertsService,
     private readonly languageSelectorProviderService:LanguageSelectorProviderService) {
       this.languages = this.languageSelectorProviderService.getLanguages();
-      const browserLang:unknown = this.translate.getBrowserLang();
-      if(typeof browserLang === "string" &&
-        this.languages.some((lang:LanguageSelector) => lang.name.toLowerCase() === browserLang.toLowerCase())) {
-          this.translate.setDefaultLang(browserLang);
-          this.translate.use(browserLang);
-          this.changeSelectedLanguage(browserLang);
+      this.browserLanguage = this.translate.getBrowserLang();
+      if(typeof this.browserLanguage === "string" &&
+        this.languages.some((lang:LanguageSelector) => lang.name.toLowerCase() === (this.browserLanguage as string).toLowerCase())) {
+          this.switchLanguage(this.browserLanguage)
       } else {
           this.translate.setDefaultLang('en');
           this.translate.use('en');
@@ -41,7 +41,10 @@ export class LanguageSelectorComponent implements OnInit {
       }
   }
   ngOnInit() {
-    this.translate.onLangChange.subscribe(():void => {
+    this.translate.onLangChange
+      .pipe(
+        skip(this.browserLanguage ? 1 : 0)
+      ).subscribe(():void => {
       this.alertsService.riseAlert('success', this.translate.instant('LANGUAGE_CHANGED'));
     });
   }
