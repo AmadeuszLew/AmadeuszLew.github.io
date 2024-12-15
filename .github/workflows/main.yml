@@ -1,29 +1,33 @@
 name: CI / CD for Angular
+
 on:
   push:
-    branches: [ "master" ]
+    branches:
+      - "master"  # This triggers the workflow only on push to master
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Specifies the OS environment for the job
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3.3.0
         with:
-          node-version: '16'
-          cache: 'npm'
+          node-version: '16'  # Ensure the Node.js version matches your project's requirements
+          cache: 'npm'  # Cache npm dependencies to speed up future builds
 
       - name: Install dependencies
-        run: npm i
+        run: npm install  # Ensure all necessary dependencies are installed
 
-      - name: Build
-        run: ng build --configuration=production
+      - name: Build Angular app
+        run: ng build --configuration production  # Builds the app with production config
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v3
         with:
-          target_branch: gh-pages
-          build_dir: docs/
+          target_branch: gh-pages  # Specifies the branch where the build will be deployed
+          build_dir: dist/your-app-name  # Make sure this matches the output directory of your build
+
