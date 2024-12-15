@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
+import {Meta} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-root',
@@ -8,12 +9,15 @@ import {TranslateService} from "@ngx-translate/core";
 })
 export class AppComponent {
   title = 'portfiolioA';
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, private readonly meta: Meta,) {
     this.translate.setDefaultLang('en');
 
     this.translate.use('en');
-  }
-  switchLanguage(language: string) {
-    this.translate.use(language);
+
+    this.meta.addTags([
+      { name: 'description', content: 'Portfolio Amadeusza Lewandowskiego, programisty z Poznania.' },
+      { name: 'keywords', content: 'Amadeusz Lewandowski, Programista, Poznań, Inowrocław' },
+      { name: 'author', content: 'Amadeusz Lewandowski' },
+    ]);
   }
 }
