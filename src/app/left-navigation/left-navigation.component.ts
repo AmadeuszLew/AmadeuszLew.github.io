@@ -25,8 +25,8 @@ export class LeftNavigationComponent {
         });
     }
 
-    scroll(element: string) {
-        this.navigationService.scroll(element)
+    scroll(element: string): void {
+        this.navigationService.scrollToElement(element)
     }
 
     setActiveSection() {

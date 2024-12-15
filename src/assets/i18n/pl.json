@@ -1,0 +1,223 @@
+{
+  "WELCOME_PAGE_GREETING": "Witaj,",
+  "WELCOME_PAGE_TEXT": "poznajmy się",
+  "VIEW_ABOUT_ME": "Wyświetl mój profil",
+  "LANGUAGE_CHANGED": "Język zmieniony",
+  "LEFT_MENU_BUTTON_ABOUT": "O mnie",
+  "LEFT_MENU_BUTTON_PROJECTS": "Projekty",
+  "LEFT_MENU_BUTTON_CONTACT_ME": "Kontakt",
+  "BUTTON_HOME": "Strona główna",
+  "BUTTON_ABOUT": "O mnie",
+  "BUTTON_PROJECTS": "Projekty",
+  "PROJECTS_TITLE": "Projekty",
+  "BUTTON_CONTACT_ME": "Kontakt",
+  "LABEL_CONTACT_ME": "Skontaktuj się ze mną",
+  "LABEL_COMPANY": "Firma",
+  "LABEL_EMAIL": "E-mail",
+  "LABEL_MESSAGE": "Wiadomość",
+  "CITY": "Miasto",
+  "PHONE": "Telefon",
+  "TEMPORARY_DISABLED": "Tymczasowo wyłączone",
+  "ENTER_VALID_EMAIL": "Proszę wprowadzić poprawny adres e-mail",
+  "CONTACT_FORM_TEXT": "Formularz kontaktowy jest tymczasowo wyłączony. Możesz się ze mną skontaktować w dowolnym momencie przez e-mail lub telefon.",
+  "COMPANY_FORM_DESCRIPTION": "Proszę wprowadzić nazwę firmy",
+  "ABOUT_ME_TITLE": "O mnie",
+  "ABOUT_ME_INTRO": "Cześć! Mam na imię",
+  "ABOUT_ME_NAME": "Amadeus",
+  "ABOUT_ME_PROFESSION": "i jestem doświadczonym specjalistą IT z wykształceniem w dziedzinie",
+  "ABOUT_ME_DEGREE": "Rozwoju Oprogramowania i dyplomem inżynierskim",
+  "ABOUT_ME_EXPERIENCE": "Od 1 grudnia 2023 roku jestem zatrudniony jako programista, rozpoczynając jako",
+  "ABOUT_ME_ANGULAR_ROLE": "Programista Angular",
+  "ABOUT_ME_GROWTH": "i rozwijając się w kierunku",
+  "ABOUT_ME_FULLSTACK_ROLE": "roli fullstack",
+  "ABOUT_ME_CURRENT_ROLE": "Aktualnie specjalizuję się w",
+  "ABOUT_ME_JAVA_SPECIALTY": "Java EE",
+  "ABOUT_ME_PROJECT_DESC": "i współpracuję przy",
+  "ABOUT_ME_PROJECT_CORE": "dużym projekcie bazowym",
+  "ABOUT_ME_CUSTOMER_IMPLEMENTATIONS": "który stanowi podstawę dla różnych wdrożeń klienckich. Mój główny fokus to rozwiązanie opracowane dla",
+  "ABOUT_ME_SWISS_LIFE": "Swiss Life",
+  "ABOUT_ME_AXA_JOURNEY": "choć moja przygoda rozpoczęła się od pracy nad",
+  "ABOUT_ME_AXA_SITE": "AXA",
+  "ABOUT_ME_SKILLS_DEV_1": "Te doświadczenia ukształtowały moje umiejętności zarówno w zakresie",
+  "ABOUT_ME_SKILLS_DEV_2": "frontend, jak i backend, ",
+  "ABOUT_ME_SKILLS_DEV_3": "pozwalając mi mierzyć się z różnymi wyzwaniami w dziedzinie tworzenia aplikacji webowych.",
+  "ABOUT_ME_THANK_YOU": "Dziękuję za odwiedzenie mojej strony!",
+  "ABOUT_ME_PASSION": "Mam głęboką pasję do programowania, ponieważ pozwala mi to uwolnić kreatywność i ożywiać nowe pomysły.",
+  "ABOUT_ME_EXPERIENCE_IMPACT": "Przez lata moja wiedza rozrosła się, obejmując zarówno",
+  "ABOUT_ME_FRONTEND": "frontend",
+  "ABOUT_ME_AND": "jak i",
+  "ABOUT_ME_BACKEND": "backend",
+  "ABOUT_ME_LARGE_PROJECTS": "rozwój, umożliwiając mi pracę przy",
+  "ABOUT_ME_CORE_PROJECTS": "dużych projektach bazowych",
+  "ABOUT_ME_CORE_PROJECTS_IMPACT": " o rzeczywistym wpływie. ",
+  "ABOUT_ME_FOCUS_TECH": "Mój główny fokus obejmuje technologie takie jak HTML, CSS, JavaScript, MongoDB, TypeScript, Tailwind, Angular i Java EE, mam również doświadczenie w frameworkach takich jak Bootstrap i Vue.",
+  "ABOUT_ME_NETWORK_EXP": "Poza programowaniem pracowałem również jako specjalista ds. sieci w branży IT, zdobywając cenne spostrzeżenia dotyczące infrastruktury systemowej.",
+  "ABOUT_ME_CODING_PASSION": "Jednak moją prawdziwą radością jest programowanie, gdzie odkrywam nieograniczone możliwości, współpracuję z utalentowanymi zespołami i nieustannie rozwijam swoje umiejętności, podejmując nowe wyzwania.",
+  "SEE_MORE_PROJECT": "Aby zobaczyć więcej informacji o projekcie, który Cię interesuje, po prostu kliknij go!",
+  "FOR_LIFE_VERSION": "aby zobaczyć wersję na żywo, kliknij link, zostaniesz przekierowany",
+  "VIEW_FULL_IMAGE": "Aby wyświetlić obraz w pełnym rozmiarze, kliknij go :D",
+  "projects": {
+    "TMS-team-management-system": {
+      "title": "TMS - System Zarządzania Zespołem",
+      "description": "Stworzony przez czteroosobowy zespół. Dwóch z nas odpowiadało za frontend, a dwóch za backend. Niestety, mój kolega od frontendu był chory na COVID podczas tworzenia wersji beta, która jest już dostępna. To wersja MVP, która sprawdza się u klientów zajmujących się zarządzaniem zespołem."
+    },
+    "sneakers-shop": {
+      "title": "Sklep z Butami",
+      "description": "Prosty sklep stworzony dla małych sprzedawców specjalizujących się w limitowanych sneakersach. W wersji beta klienci mogą się zalogować, dodawać produkty do koszyka i finalizować zakup z opcją płatności przez PayPal. W przyszłości planujemy dodać więcej funkcji."
+    },
+    "stockx-fix-extension": {
+      "title": "Rozszerzenie StockX Fix",
+      "description": "Małe rozszerzenie Tampermonkey, które poprawia układ StockX, automatycznie ukrywając sekcje strony. Pozwala również dodawać produkty do koszyka ze stron zewnętrznych."
+    },
+    "portfolio-site": {
+      "title": "Strona Portfolio",
+      "description": "To moja osobista strona portfolio prezentująca wszystkie moje poprzednie prace i projekty. Została stworzona przy użyciu Angular i Tailwind CSS, aby utworzyć responsywną i lekką stronę internetową."
+    },
+    "comarch-digital-insurance": {
+      "title": "Comarch Cyfrowe Ubezpieczenia",
+      "description": "Comarch Cyfrowe Ubezpieczenia (CDI) to kompleksowa cyfrowa platforma przeznaczona dla branży ubezpieczeniowej. Umożliwia firmom ubezpieczeniowym usprawnienie działalności poprzez automatyzację procesów takich jak tworzenie polis, underwriting, zarządzanie roszczeniami i obsługa klienta. CDI jest wysoce konfigurowalne i może być zintegrowane z usługami zewnętrznymi, takimi jak podpisy cyfrowe, identyfikacja elektroniczna i inne narzędzia, aby zwiększyć jego funkcjonalność."
+    },
+    "many-more": {
+      "title": "Jeszcze więcej projektów",
+      "description": "Kilka innych małych projektów, począwszy od skryptów JavaScript i Python, po aplikacje Angular i nie tylko. Sprawdź mojego GitHuba, aby zobaczyć pełną listę."
+    }
+  },
+  "projectDetail": {
+    "TMS": {
+      "architecture": {
+        "title": "Architektura",
+        "description": "Interfejs użytkownika to kombinacja Vue i Vuetify, zapewniająca wysoką responsywność i czytelność po stronie użytkownika. Strona serwerowa składa się z kilku modułów. Baza danych SQLite odpowiada za przechowywanie danych. Komunikacja z bazą danych odbywa się za pomocą frameworka Django. Używamy rest frameworka do udostępniania i odbierania danych między interfejsem użytkownika a serwerem aplikacji."
+      },
+      "dashboard": {
+        "title": "Deska trenerska",
+        "description": "Widok zawierający 3 ostatnie mecze drużyny po lewej stronie. Obecność na ostatnich treningach po prawej stronie. Tabela ze szczegółowymi informacjami o wyniku każdego zawodnika w wybranym meczu na dole. Ten widok ma pomóc trenerom szybko sprawdzić status ostatnich kilku dni."
+      },
+      "matches": {
+        "title": "Widok meczów",
+        "description": "Główny widok zawierający wszystkie mecze. Użytkownik może dodać mecz w 3 krokach: dodając wydarzenie -> mecze drużyny -> wyniki zawodników. Obsługa błędów obejmuje każdy błąd wprowadzenia przez użytkownika. W przypadku niepowodzenia użytkownik może dodać brakujące elementy w widoku szczegółów meczu. Zwycięska drużyna jest zaznaczona na zielono. Dodawanie i usuwanie treningów jest podobne do robienia tego w widokach zawodników i trenerów, aby było proste dla użytkownika."
+      },
+      "singleMatch": {
+        "title": "Widok pojedynczego meczu",
+        "description": "Szczegółowy widok meczu. Dwie tabele z wynikami zawodników, które można sortować według dowolnego parametru i które są edytowalne przez użytkownika. Pole wyszukiwania działa z każdym parametrem. W przypadku błędu wprowadzenia danych użytkownik może tutaj dodać brakujące informacje. Każde wprowadzenie danych ma swoje zasady."
+      },
+      "calendar": {
+        "title": "Widok kalendarza",
+        "description": "Widok kalendarza ułatwiający wyszukiwanie nadchodzących wydarzeń. Zawiera treningi, mecze. Użytkownik może dodać samo wydarzenie, np. 'spotkanie zespołu'. Użytkownik może zmienić widok na dzień-4 dni-tydzień-miesiąc, z domyślnym widokiem miesiąca."
+      },
+      "knowledgebase": {
+        "title": "Baza wiedzy",
+        "description": "Miejsce, gdzie użytkownicy mogą sięgnąć po profesjonalną wiedzę."
+      },
+      "singleKnowledgebase": {
+        "title": "Artykuł bazy wiedzy",
+        "description": "Widok pojedynczego artykułu ze szczegółowymi informacjami."
+      },
+      "players": {
+        "title": "Lista zawodników",
+        "description": "Widok z tabelą wyświetlającą wszystkich zawodników. Wyszukiwanie działa według: imienia, nazwiska, płci i adresu e-mail. Tabela jest sortowalna według każdego podanego parametru. Zgodnie z zasadą F, przycisk edycji i dodawania jest dostępny w prawym górnym rogu."
+      },
+      "playersAdd": {
+        "title": "Dodawanie i edycja zawodników",
+        "description": "Dodawanie zawodników ma różne zasady w zależności od drużyny zawodnika. Jeśli to nasz zawodnik, użytkownik musi wprowadzić wszystkie dane. Jeśli nie, wystarczy dodać imię, nazwisko i płeć. Przycisk edycji dodaje wiersz edycji do tabeli, umożliwiając użytkownikowi usuwanie/edycję zawodników."
+      },
+      "trainings": {
+        "title": "Widok treningów",
+        "description": "Widok zawierający wszystkie treningi. Użytkownik może dodawać i usuwać treningi, klikając w prawym górnym rogu. Sortowanie przez zapytanie zostało dodane w wersji beta 0.2, a wersja na żywo nie będzie odzwierciedlać ekranu. Kliknięcie w poszczególny trening przekieruje do widoku pojedynczego treningu."
+      },
+      "trainingsAdd": {
+        "title": "Dodawanie i edycja treningów",
+        "description": "Dodawanie i usuwanie treningów jest podobne do robienia tego w widokach zawodników i trenerów, aby było proste dla użytkownika."
+      },
+      "singleTraining": {
+        "title": "Widok pojedynczego treningu",
+        "description": "Tutaj użytkownicy mogą wysyłać powiadomienia do zawodników biorących udział w wybranym treningu i przeglądać więcej szczegółów dotyczących treningu."
+      }
+    },
+    "sneakerShop": {
+      "loginFirebase": {
+        "title": "Logowanie przez Firebase",
+        "description": "Firebase odpowiada za zarządzanie i przechowywanie poświadczeń użytkowników. Strona ma automatyczne logowanie, aby nie stracić stanu przy odświeżeniu, oraz automatyczne wylogowanie po wygaśnięciu tokenu."
+      },
+      "cartNoItem": {
+        "title": "Koszyk (Brak produktów)",
+        "description": "Strona pustego koszyka została zaprojektowana przyjaznie dla użytkownika, zawiera tylko koszyk z 2 animowanymi bańkami (czyste CSS) oraz przycisk zachęcający do powrotu na stronę główną i dodania produktów."
+      },
+      "cartItem": {
+        "title": "Koszyk (Dodano produkty)",
+        "description": "Strona koszyka będzie zawierać sumę produktów, animacje przy usuwaniu i wiele więcej."
+      },
+      "features": {
+        "title": "Funkcje",
+        "description": "Modele produktów zostały stworzone tak, aby można je było sortować według głównej kategorii i modelu. Zaimplementowałem również wyświetlanie informacji o dostępności rozmiaru."
+      },
+      "mainPageSm": {
+        "title": "Strona główna (Wersja mobilna)",
+        "description": "Strona główna dla urządzeń mobilnych ma pasek nawigacyjny przeniesiony z góry na dół, aby była łatwiejsza i bardziej przyjazna dla urządzeń mobilnych."
+      },
+      "mainPageSmSidebar": {
+        "title": "Sidebar strony głównej w wersji mobilnej",
+        "description": "Przyciski paska bocznego zostały przeniesione do menu po lewej stronie, aktywowanego przez ikonę hamburger."
+      },
+      "more": {
+        "title": "Więcej już wkrótce...",
+        "description": "Nadal pracuję nad tym projektem. Aktualnie przedmioty są przechowywane tylko w lokalnym magazynie, brak danych użytkownika. Celem jest przechowywanie produktów na Firebase, połączenie użytkowników z bazą danych i dodanie płatności. Interfejs użytkownika również nie jest jeszcze ukończony i wymaga dopracowania."
+      }
+    },
+    "stockx": {
+      "allItemsWithout": {
+        "title": "Wszystkie przedmioty bez filtrów",
+        "description": "Lista wszystkich przedmiotów bez zastosowanych filtrów."
+      },
+      "allItems": {
+        "title": "Przycisk sprawdzenia wszystkich przedmiotów",
+        "description": "Funkcja aktywowana przez kliknięcie lewego przycisku na górnym pasku nawigacyjnym. Podświetla przedmioty, gdzie cena użytkownika nie jest naprawdę najniższa."
+      },
+      "itemWithout": {
+        "title": "Widok przedmiotu bez rozszerzenia",
+        "description": "Obraz pokazujący, jak StockX wygląda bez rozszerzenia. Wtyczka po kliknięciu użytkownika dodaje dwa pola."
+      },
+      "itemWith": {
+        "title": "Widok przedmiotu po użyciu rozszerzenia",
+        "description": "Pola dodane przez wtyczkę obliczają rzeczywistą cenę, którą użytkownik powinien wprowadzić, aby uzyskać najniższą ofertę, i wyświetlają ją w DOM. Kolejne pole oblicza wypłatę dla użytkownika, dzięki czemu może natychmiast wiedzieć, czy opłaca się złożyć ofertę."
+      }
+    },
+    "portfolio": {
+      "good": {
+        "title": "No cóż...",
+        "description": "Jesteś już na tej stronie :D. Nie krępuj się przekazać mi swojej opinii."
+      },
+      "more": {
+        "title": "Więcej już wkrótce",
+        "description": "Nadal pracuję nad tą stroną. Chcę zrobić ją dwujęzyczną za pomocą pipe, dodać więcej animacji, aby była bardziej przyjazna dla użytkownika, popracować nad wersjami mobilnymi obrazów, zwiększyć widoczność w Google i więcej..."
+      }
+    },
+    "comarch": {
+      "cdi1": {
+        "title": "Wsparcie ubezpieczeń zdrowotnych",
+        "description": "Upraszcza zarządzanie polisami ubezpieczeń zdrowotnych, oferując narzędzia dla agentów, brokerów i pracowników back-office."
+      },
+      "cdi2": {
+        "title": "Automatyczne przetwarzanie roszczeń",
+        "description": "Integracja z Comarch Insurance Claims pozwala na płynną obsługę roszczeń."
+      },
+      "cdi3": {
+        "title": "Zgodność z przepisami",
+        "description": "CDI przestrzega standardów branżowych takich jak RODO, IDD (Dyrektywa Dystrybucyjna Ubezpieczeń) oraz PRIIPS (Pakietowe Detaliczne Produkty Inwestycyjne)."
+      },
+      "cdi4": {
+        "title": "Wdrożenie w chmurze",
+        "description": "Platforma może być wdrożona w chmurze, oferując skalowalność i dostępność."
+      },
+      "cdi5": {
+        "title": "Integracja AI",
+        "description": "Chociaż AI nie jest wbudowane bezpośrednio w CDI, Comarch oferuje osobny Framework AI, który może być używany do podejmowania decyzji opartych na danych i automatyzacji procesów."
+      }
+    },
+    "manyMore": {
+      "github": {
+        "title": "Odwiedź mojego GitHuba :D",
+        "description": "Kliknij link, aby przejść na mojego GitHuba."
+      }
+    }
+  }
+}

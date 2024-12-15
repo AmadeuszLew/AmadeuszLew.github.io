@@ -1,6 +1,6 @@
 import {Component, AfterViewInit, inject} from '@angular/core';
 import {PageSectionNames} from "../shared";
-import {first} from "rxjs";
+import {filter, first} from "rxjs";
 import {ViewportScroller} from "@angular/common";
 import {ActivatedRoute} from "@angular/router";
 
@@ -15,7 +15,8 @@ export class LandingPageComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.activatedRoute.fragment.pipe(
-      first()
-    ).subscribe(fragment => this.viewportScroller.scrollToAnchor(fragment ?? ''));
+      first(),
+      filter((fragment): fragment is string => !!fragment && fragment.trim().length > 0)
+    ).subscribe(fragment => this.viewportScroller.scrollToAnchor(fragment));
   }
 }

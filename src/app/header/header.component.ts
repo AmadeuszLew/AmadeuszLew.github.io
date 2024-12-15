@@ -19,6 +19,12 @@ export class HeaderComponent {
         this.show = false
     }
 
+    hideIfExpanded():void{
+      if(this.show) {
+        this.toggle();
+      }
+    }
+
     toggle(): void {
         this.show = !this.show
     }

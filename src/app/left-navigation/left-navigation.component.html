@@ -8,17 +8,17 @@
     <a (click)="scroll(pageSectionNames.AboutMe)" (keydown.enter)="scroll(pageSectionNames.AboutMe)"
       class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body"
        [ngClass]="activeSection === pageSectionNames.AboutMe ? 'bg-blue-500' : '' " tabindex="1">
-      <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">About</span>
+      <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">{{ "LEFT_MENU_BUTTON_ABOUT" | translate }}</span>
     </a>
     <a (click)="scroll(pageSectionNames.Projects)" (keydown.enter)="scroll(pageSectionNames.Projects)"
        class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body"
        [ngClass]="activeSection === pageSectionNames.Projects ? 'bg-blue-500' : '' " tabindex="2">
-      <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Projects</span>
+      <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">{{ "LEFT_MENU_BUTTON_PROJECTS" | translate }}</span>
     </a>
     <a (click)="scroll(pageSectionNames.ContactMe)" (keydown.enter)="scroll(pageSectionNames.ContactMe)"
        class="nav-dot block w-7 h-7 rounded-full border-4 border-nav"
        [ngClass]="activeSection === pageSectionNames.ContactMe ? 'bg-blue-500' : '' " tabindex="3">
-      <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Contact</span>
+      <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">{{ "LEFT_MENU_BUTTON_CONTACT_ME" | translate }}</span>
     </a>
   </div>
 </nav>

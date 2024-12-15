@@ -1,27 +1,27 @@
 <form (ngSubmit)="onSubmitForm(f)" #f="ngForm">
   <fieldset [disabled]="true">
     <div class="w-full">
-        <h2 class="secondary-title">Contact me</h2>
-        <p class="section-paragraph">Contact form is temporary disabled. Feel free to to contact me any time through email or phone.</p>
+        <h2 class="secondary-title">{{ "LABEL_CONTACT_ME" | translate }}</h2>
+        <p class="section-paragraph">{{ "CONTACT_FORM_TEXT" | translate}}</p>
         <div class="space-y-12">
             <div>
                 <label class="text-white block mb-6 text-xl font-bold">
-                  Company
-                  <p *ngIf="!company.valid && company.touched" class="text-rose-800 mt-1">Please enter company name</p>
+                  {{ "LABEL_COMPANY" | translate }}
+                  <p *ngIf="!company.valid && company.touched" class="text-rose-800 mt-1">{{ "COMPANY_FORM_DESCRIPTION" | translate }}</p>
                   <input
                       class="w-full border border-input-border bg-input px-4 py-4"
                       name="company"
                       required
                       ngModel
                       #company="ngModel"
-                      [placeholder]="'temporary disabled'"
+                      placeholder="{{ 'TEMPORARY_DISABLED' |translate }}"
                   >
                 </label>
             </div>
             <div>
                 <label class="text-white block mb-6 text-xl font-bold">
-                  Email
-                  <p *ngIf="!email.valid && email.touched" class="text-rose-800">Please enter valid email</p>
+                  {{ "LABEL_EMAIL" | translate }}
+                  <p *ngIf="!email.valid && email.touched" class="text-rose-800">{{ "ENTER_VALID_EMAIL" | translate }}</p>
                   <input
                       class="w-full border border-input-border bg-input px-4 py-4"
                       name="email"
@@ -29,21 +29,21 @@
                       ngModel
                       email
                       #email="ngModel"
-                      [placeholder]="'temporary disabled'"
+                      placeholder="{{ 'TEMPORARY_DISABLED' |translate }}"
                   >
                 </label>
             </div>
             <div>
                 <label class="text-white block mb-6 text-xl font-bold">
-                  Message
-                  <p *ngIf="!message.valid && message.touched" class="text-rose-800">Please enter valid email</p>
+                  {{ "LABEL_MESSAGE" | translate }}
+                  <p *ngIf="!message.valid && message.touched" class="text-rose-800">{{ "ENTER_VALID_EMAIL" | translate }}</p>
                   <textarea
                       class="w-full border border-input-border bg-input px-4 py-4 h-56 resize-none"
                       name="message"
                       required
                       ngModel
                       #message="ngModel"
-                      [placeholder]="'temporary disabled'"
+                      placeholder="{{ 'TEMPORARY_DISABLED' |translate }}"
                 ></textarea>
                 </label>
             </div>
@@ -52,7 +52,7 @@
                 class="px-6 py-2 bg-theme text-white font-bold disabled:opacity-25"
                 type="submit"
                 [disabled]="!f.valid || disableButton"
-            >Contact</button>
+            >{{ "BUTTON_CONTACT_ME" | translate }}</button>
         </div>
     </div>
   </fieldset>
