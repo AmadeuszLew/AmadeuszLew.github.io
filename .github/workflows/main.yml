@@ -17,7 +17,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '16'
           cache: 'npm'
 
       - name: Install dependencies
@@ -33,5 +33,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/AmadeuszPortfolio/browser
+          publish_dir: ./dist/portfiolio-a/browser
           keep_files: true
+          full_commit_message: ${{ github.event.head_commit.message }}
