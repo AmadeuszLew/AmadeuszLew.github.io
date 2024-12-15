@@ -29,6 +29,7 @@ export class LanguageSelectorComponent implements OnInit {
     private readonly translate: TranslateService,
     private readonly alertsService: AlertsService,
     private readonly languageSelectorProviderService:LanguageSelectorProviderService) {
+    console.log(new Date(), "LanguageSelectorComponent initialized")
       this.languages = this.languageSelectorProviderService.getLanguages();
       this.browserLanguage = this.translate.getBrowserLang();
       if(typeof this.browserLanguage === "string" &&
@@ -41,9 +42,10 @@ export class LanguageSelectorComponent implements OnInit {
       }
   }
   ngOnInit() {
+    debugger;
     this.translate.onLangChange
       .pipe(
-        skip(this.browserLanguage ? 1 : 0)
+        skip(this.browserLanguage ? 2 : 0)
       ).subscribe(():void => {
       this.alertsService.riseAlert('success', this.translate.instant('LANGUAGE_CHANGED'));
     });
