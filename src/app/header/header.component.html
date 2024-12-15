@@ -9,22 +9,22 @@
                (keydown.enter)="navigateTo(PageSectionNames.Home)"
                tabindex="0"
                class="text-selected-text">
-              <button>Home</button>
+              <button>{{ "BUTTON_HOME" |translate }}</button>
             </a>
             <a (click)="navigateTo(PageSectionNames.AboutMe)"
                (keydown.enter)="navigateTo(PageSectionNames.AboutMe)"
                tabindex="1">
-              <button>About</button>
+              <button>{{ "BUTTON_ABOUT" |translate }}</button>
             </a>
             <a (click)="navigateTo(PageSectionNames.Projects)"
                (keydown.enter)="navigateTo(PageSectionNames.Projects)"
                tabindex="2">
-              <button>Projects</button>
+              <button>{{ "BUTTON_PROJECTS" |translate }}</button>
             </a>
             <a (click)="navigateTo(PageSectionNames.ContactMe)"
                (keydown.enter)="navigateTo(PageSectionNames.ContactMe)"
                tabindex="3">
-              <button class="px-6 py-2 bg-theme font-bold">Contact me</button>
+              <button class="px-6 py-2 bg-theme font-bold">{{ "BUTTON_CONTACT_ME" |translate }}</button>
             </a>
         </div>
         <!-- small screen menu -->
@@ -40,25 +40,25 @@
                      (keydown.enter)="navigateTo(PageSectionNames.Home)"
                      class="py-2 px-2 w-full hover:bg-neutral-600"
                      tabindex="5">
-                    Home
+                  {{ "BUTTON_HOME" |translate }}
                 </div>
                 <div (click)="navigateTo(PageSectionNames.AboutMe)"
                      (keydown.enter)="navigateTo(PageSectionNames.AboutMe)"
                      class="py-2  px-2 w-full hover:bg-neutral-600"
                      tabindex="6">
-                    About
+                  {{ "BUTTON_ABOUT" |translate }}
                 </div>
                 <div (click)="navigateTo(PageSectionNames.Projects)"
                      (keydown.enter)="navigateTo(PageSectionNames.Projects)"
                      class="py-2 px-2 w-full hover:bg-neutral-600"
                      tabindex="7">
-                    Projects
+                  {{ "BUTTON_PROJECTS" |translate }}
                 </div>
                 <div (click)="navigateTo(PageSectionNames.ContactMe)"
                      (keydown.enter)="navigateTo(PageSectionNames.ContactMe)"
                      class="py-2 px-2 w-full hover:bg-neutral-600"
                      tabindex="8">
-                    Contact
+                  {{ "BUTTON_CONTACT_ME" |translate }}
                 </div>
             </div>
         </div>

@@ -1,6 +1,8 @@
 <div class="space-y-12">
   <div *ngFor="let project of projects"
-       routerLink="/{{project.projectTitle}}">
+       tabindex="0"
+       (click)="navigate(project.projectTitle)"
+       (keydown.enter)="navigate(project.projectTitle)">
       <app-single-project [project]="project"></app-single-project>
   </div>
 </div>

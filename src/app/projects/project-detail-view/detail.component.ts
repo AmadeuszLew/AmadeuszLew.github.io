@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, } from '@angular/router';
+import { Location } from '@angular/common';
 
 import { ProjectDetail } from '../models/projectDetail.model';
 import { ProjectsService } from '../projects.service';
@@ -10,15 +11,21 @@ import { ProjectsService } from '../projects.service';
 export class DetailComponent implements OnInit {
   project!:ProjectDetail;
   viewFullSizePhoto: boolean[]=[];
-  constructor(private route: ActivatedRoute,private projectService:ProjectsService) { }
+  constructor(private readonly location: Location,
+              private readonly route: ActivatedRoute,
+              private readonly projectService:ProjectsService) { }
 
   ngOnInit(): void {
     const id=this.route.snapshot.params['id'];
     this.project=this.projectService.getSingleProject(id)!
-     // Creates the array with inactive state initially for all category items.
     this.viewFullSizePhoto = Array(this.project.features.length).fill(false);
   }
+
   viewPhotoFunc(index:number) {
     this.viewFullSizePhoto[index] = !this.viewFullSizePhoto[index];
+  }
+
+  goBack():void{
+    this.location.back();
   }
 }

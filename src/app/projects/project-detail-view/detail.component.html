@@ -1,11 +1,15 @@
 <div class="">
     <section class="w-full">
         <div class="flex items-center justify-between">
-          <h2 class="secondary-title">{{project.projectTitle}}</h2>
-          <img src="../../../assets/projects/left-arrow.png" alt="home" class="w-4 h-4 hover:cursor-pointer" routerLink="/">
+          <h2 class="secondary-title">{{project.projectTitle | translate}}</h2>
+          <img src="../../../assets/projects/left-arrow.png" alt="home" class="w-4 h-4 hover:cursor-pointer"
+               (click)="goBack()"
+               (keydown.enter)="goBack()"
+               tabindex="0"
+          >
         </div>
         <h6 class="text-2xl mt-8">Features:</h6>
-        <span class="text-sm">To view image in full size click it :D</span>
+        <span class="text-sm">{{"VIEW_FULL_IMAGE" | translate }}</span>
         <div *ngFor="let feature of project.features;let i=index;" class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 ">
             <img src="{{feature.featurePhoto}}" alt="feature photo" tabindex="0"
             (click)="viewPhotoFunc(i)" (keydown.enter)="viewPhotoFunc(i)"
@@ -14,8 +18,8 @@
             {{this.viewFullSizePhoto[i]? 'md:col-span-2 md:!h-screen !object-contain ':''}}"
             >
             <div  class="w-full bg-nav  p-2 md:px-6 object-cover bg-slate-700 rounded-2xl transition-all {{this.viewFullSizePhoto[i]? 'md:col-span-2':''}}">
-                <h6 class="text-xl my-2">{{feature.featureTitle}}</h6>
-                <span class="section-paragraph">{{feature.featureDescription}}</span>
+                <h6 class="text-xl my-2">{{feature.featureTitle | translate}}</h6>
+                <span class="section-paragraph">{{feature.featureDescription | translate}}</span>
             </div>
         </div>
     </section>

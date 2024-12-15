@@ -5,11 +5,11 @@ import { NavigationService } from '../shared/navigation.service';
   selector: 'app-home',
   templateUrl: './home.component.html',
 })
-export class HomeComponent {
+export class HomeComponent{
 
   constructor(private navigationService:NavigationService) {}
 
   scroll(element: string) {
-    this.navigationService.scroll(element);
+    this.navigationService.scrollToElement(element);
   }
 }
