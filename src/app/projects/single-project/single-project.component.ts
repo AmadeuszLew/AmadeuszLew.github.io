@@ -1,7 +1,5 @@
 import {Component, Input} from '@angular/core';
 import {Project} from "../models/project.model";
-import {PageSectionNames} from "../../shared";
-import * as url from "node:url";
 
 @Component({
   selector: 'app-single-project',

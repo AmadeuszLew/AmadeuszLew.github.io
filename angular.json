@@ -109,24 +109,7 @@
               "src/**/*.ts",
               "src/**/*.html"
             ],
-            "eslintConfig": {
-              "extends": [
-                "plugin:@angular-eslint/recommended",
-                "plugin:prettier/recommended"
-              ],
-              "rules": {
-                "prettier/prettier": [
-                  "error",
-                  {
-                    "singleQuote": true,
-                    "trailingComma": "all",
-                    "printWidth": 100,
-                    "semi": true,
-                    "tabWidth": 2
-                  }
-                ]
-              }
-            }
+            "eslintConfig": "eslint.config.js"
           }
         },
         "server": {
