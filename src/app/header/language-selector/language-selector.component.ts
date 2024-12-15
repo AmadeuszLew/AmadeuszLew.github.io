@@ -42,7 +42,6 @@ export class LanguageSelectorComponent implements OnInit {
       }
   }
   ngOnInit() {
-    debugger;
     this.translate.onLangChange
       .pipe(
         skip(this.browserLanguage ? 2 : 0)
