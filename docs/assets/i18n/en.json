@@ -1,0 +1,235 @@
+{
+  "WELCOME_PAGE_GREETING": "Welcome,",
+  "WELCOME_PAGE_TEXT": "let's get to know each other",
+  "VIEW_ABOUT_ME": "View about me",
+  "LEFT_MENU_BUTTON_ABOUT": "About",
+  "LEFT_MENU_BUTTON_PROJECTS":"Projects",
+  "LEFT_MENU_BUTTON_CONTACT_ME": "Contact me",
+  "BUTTON_HOME": "Home",
+  "BUTTON_ABOUT": "About",
+  "BUTTON_PROJECTS":"Projects",
+  "PROJECTS_TITLE":"Projects",
+  "BUTTON_CONTACT_ME": "Contact me",
+  "LABEL_CONTACT_ME": "Contact me",
+  "LABEL_COMPANY": "Company",
+  "LABEL_EMAIL": "Email",
+  "LABEL_MESSAGE": "Message",
+  "CITY": "City",
+  "PHONE": "Phone",
+  "LANGUAGE_CHANGED": "Language changed",
+  "TEMPORARY_DISABLED": "Temporary disabled",
+  "ENTER_VALID_EMAIL": "Please enter valid email",
+  "CONTACT_FORM_TEXT": "Contact form is temporary disabled. Feel free to to contact me any time through email or phone.",
+  "COMPANY_FORM_DESCRIPTION": "Please enter company name",
+  "ABOUT_ME_TITLE": "About me",
+  "ABOUT_ME_INTRO": "Greetings! My name is",
+  "ABOUT_ME_NAME": "Amadeus",
+  "ABOUT_ME_PROFESSION": "and I am a seasoned IT professional with a background in",
+  "ABOUT_ME_DEGREE": "Software Development and an engineering degree",
+  "ABOUT_ME_EXPERIENCE": "Since December 1, 2023, I have been employed as a developer, starting as an",
+  "ABOUT_ME_ANGULAR_ROLE": "Angular Developer",
+  "ABOUT_ME_GROWTH": "and growing into a",
+  "ABOUT_ME_FULLSTACK_ROLE": "full-stack role",
+  "ABOUT_ME_CURRENT_ROLE": "Currently, I specialize in",
+  "ABOUT_ME_JAVA_SPECIALTY": "Java EE",
+  "ABOUT_ME_PROJECT_DESC": "and contribute to a",
+  "ABOUT_ME_PROJECT_CORE": "large-scale core project",
+  "ABOUT_ME_CUSTOMER_IMPLEMENTATIONS": "that serves as the foundation for various customer implementations. My primary focus is on a solution developed for",
+  "ABOUT_ME_SWISS_LIFE": "Swiss Life",
+  "ABOUT_ME_AXA_JOURNEY": "though my journey began with contributions to the",
+  "ABOUT_ME_AXA_SITE": "AXA",
+  "ABOUT_ME_SKILLS_DEV_1": "These experiences have honed my skills in both",
+  "ABOUT_ME_SKILLS_DEV_2": "frontend and backend development, ",
+  "ABOUT_ME_SKILLS_DEV_3": "enabling me to tackle diverse challenges in the realm of web application development.",
+  "ABOUT_ME_THANK_YOU": "Thank you for visiting my personal page!",
+  "ABOUT_ME_PASSION": "I have a deep passion for programming as it allows me to unleash my creativity and bring new ideas to life.",
+  "ABOUT_ME_EXPERIENCE_IMPACT": "Over the years, my expertise has grown to encompass both",
+  "ABOUT_ME_FRONTEND": "frontend",
+  "ABOUT_ME_AND": "and",
+  "ABOUT_ME_BACKEND": "backend",
+  "ABOUT_ME_LARGE_PROJECTS": "development, enabling me to work on",
+  "ABOUT_ME_CORE_PROJECTS": "large-scale core projects",
+  "ABOUT_ME_CORE_PROJECTS_IMPACT": " that have a real-world impact. ",
+  "ABOUT_ME_FOCUS_TECH": "My primary focus includes technologies like HTML, CSS, JavaScript, MongoDB, TypeScript, Tailwind, Angular, and Java EE, while also having experience with frameworks like Bootstrap and Vue.",
+  "ABOUT_ME_NETWORK_EXP": "Beyond development, I’ve also worked as a network specialist in the IT industry, gaining valuable insights into system infrastructure.",
+  "ABOUT_ME_CODING_PASSION": "However, my true joy lies in coding, where I explore endless possibilities, collaborate with talented teams, and continually evolve my skills to tackle new challenges.",
+  "SEE_MORE_PROJECT" : "To see more about project You are interested in just click it!",
+  "FOR_LIFE_VERSION" : "for live version click on the link, and You will be redirected to it",
+  "VIEW_FULL_IMAGE": "To view image in full size click it :D",
+  "projects": {
+    "TMS-team-management-system": {
+      "title": "TMS - Team Management System",
+      "description": "Made by a team of four people. Two of us are responsible for the front end, and 2 for the back-end. Unfortunately, my front-end friend had a covid at the time of creating the beta version which is now live. It's an MVP version but works for clients that play the management part of the team."
+    },
+    "sneakers-shop": {
+      "title": "Sneakers Shop",
+      "description": "Simple shop developed for small sellers focused on limited sneakers. In the beta version, clients are able to log in, and add items to the cart and finalize the purchase with an option to pay via PayPal. In the future, we will add more features."
+    },
+    "stockx-fix-extension": {
+      "title": "StockX Fix Extension",
+      "description": "A small Tampermonkey extension that fixes StockX layout by automatically hiding sections of the website. It also allows adding items to a user's cart from external pages."
+    },
+    "portfolio-site": {
+      "title": "Portfolio Site",
+      "description": "This is my personal portfolio showcasing all my previous work and projects. It's made with Angular and Tailwind CSS to create a responsive and lightweight website."
+    },
+    "comarch-digital-insurance": {
+      "title": "Comarch Digital Insurance",
+      "description": "Comarch Digital Insurance (CDI) is a comprehensive digital platform designed for the insurance industry. It enables insurance companies to streamline their operations by automating processes such as policy creation, underwriting, claims management, and customer service. CDI is highly customizable and can be integrated with external services like digital signatures, electronic identification, and other tools to enhance its functionality"
+    },
+    "many-more": {
+      "title": "Many More Projects",
+      "description": "Several other small projects, ranging from JavaScript and Python scripts to Angular apps and more. Check out my GitHub for the full list."
+    }
+  },
+  "projectDetail": {
+    "TMS": {
+      "architecture": {
+        "title": "Architecture",
+        "description": "The UI page is a combination of Vue and Vuetify that provides high user-side responsiveness and readability. The application server side consists of several modules. The SQLite database is responsible for data storage. Communication with the database takes place thanks to the Django framework. We are using the rest framework to share and receive data between the user interface and the application server."
+      },
+      "dashboard": {
+        "title": "Coach Dashboard",
+        "description": "View containing last 3 matches of team on the left. Presence on last trainings on the right. Table with detail info about every players score in selected match on the bottom. This view is made to help coaches quickly check status of last few days."
+      },
+      "matches": {
+        "title": "Matches view",
+        "description": "Main view, containing all the matches. User can add match in 3 steps by adding event->team_games->players score. Error handling contains every user input fault. In case of failure, user can add missing pieces in the detail match view. The winning team is colored green. Adding and deleting trainings is similar to doing it on players and coaches view, to keep it simple for the user."
+      },
+      "singleMatch": {
+        "title": "Single Match view",
+        "description": "Detail match view. Two sortable by every parameter tables with score of players are editable by the user. Search field is working with every parameter. In case of user input fail this is the place where he can add missing data. Every input has rules."
+      },
+      "calendar": {
+        "title": "Calendar view",
+        "description": "Calendar view to easily search upcoming events. It contains trainings, matches. User can add just an event for example 'team meeting'. User can change view for day-4days-week-month with month as default."
+      },
+      "knowledgebase": {
+        "title": "Knowledgebase",
+        "description": "Place where users can reach for professional knowledge."
+      },
+      "singleKnowledgebase": {
+        "title": "Single knowledgebase article",
+        "description": "Single article view, with more details."
+      },
+      "players": {
+        "title": "Players list",
+        "description": "View with table listing all of the players. Search working with: name, last name, gender and email. Table is sortable with every given parameter. Fallowing F rule, button to edit and add button is available at the right top corner."
+      },
+      "playersAdd": {
+        "title": "Adding and editing Players",
+        "description": "Adding players have different ruleset depending on player's team. If it's our player, user have to input all data. If not, we need to add just first and last name + gender. Edit button adds an edit row to the table, enabling user to delete/edit players."
+      },
+      "trainings": {
+        "title": "Trainings view",
+        "description": "View containing all trainings. User is enabled to add and delete trainings by clicking in the right-up corner. Sorting by querying was added on beta 0.2 and live version will not reflect screen. Clicking in individual training will route to single training view."
+      },
+      "trainingsAdd": {
+        "title": "Adding and editing trainings",
+        "description": "Adding and deleting trainings is similar to doing it on players and coaches view, to keep it simple for the user."
+      },
+      "singleTraining": {
+        "title": "Single training view",
+        "description": "Here users can send notifications to players participating in selected training and view more details about the training."
+      }
+    },
+    "sneakerShop": {
+      "mainPage": {
+        "title": "Main Page",
+        "description": "I have tried to keep it as simple as possible. Fallowing F/Z rule, cart and logging page is on the right-up corner. Left up corner logo is also link to homepage. Product models are made to be sortable by main category and model."
+      },
+      "productPage": {
+        "title": "Product Page",
+        "description": "Product page is made as simple as it is possible, for the best readability."
+      },
+      "login": {
+        "title": "Login",
+        "description": "Users can login and register using email and password."
+      },
+      "loginFirebase": {
+        "title": "Login with Firebase",
+        "description": "Firebase is responsible for managing and storing users credentials. Site has auto-login to do not lost state on refresh and auto-logout when token expires."
+      },
+      "cartNoItem": {
+        "title": "Cart (No Items)",
+        "description": "Empty cart page is made to be user friendly, contains only 2 items cart with animated bubbles (pure css), and button encouraging user to get back to main page and add something."
+      },
+      "cartItem": {
+        "title": "Cart (Item Added)",
+        "description": "Cart page will contain sum of items, animations on delete, and many more."
+      },
+      "features": {
+        "title": "Features",
+        "description": "Product models are made to be sortable by main category and model so it can be sortable. I have also implemented viewing information about size availability."
+      },
+      "mainPageSm": {
+        "title": "Main Page (Mobile)",
+        "description": "Main page for the mobile have navbar moved from the top to bottom to be easier and more mobile-friendly."
+      },
+      "mainPageSmSidebar": {
+        "title": "Mobile main page sidebar",
+        "description": "Sidebar buttons are moved to menu on the left, activated by the hamburger-icon."
+      },
+      "more": {
+        "title": "More coming...",
+        "description": "I am still working on this project. Items now are stored just in local storage, there is no user data. The goal is to store items on firebase, connect users to database, and add payment. UI is not finished also, it needs to be polished off."
+      }
+    },
+    "stockx": {
+      "allItemsWithout": {
+        "title": "All Items Without Filters",
+        "description": "A list of all items with no filters applied."
+      },
+      "allItems": {
+        "title": "Check all items button",
+        "description": "Function activated by clicking left button on top navbar. Highlights items where user price is not really the lowest."
+      },
+      "itemWithout": {
+        "title": "Item view without extension",
+        "description": "Image showing how stockx looks without extension. Plugin after user clicking to check adds two fields."
+      },
+      "itemWith": {
+        "title": "Item view after using extension",
+        "description": "Fields added by plugin calculate real price that user should have inserted to get the lowest ask, and displays it on the DOM. Another field is calculating user payout, so he can immediately know is it even worth it to place an ask."
+      }
+    },
+    "portfolio": {
+      "good": {
+        "title": "Well...",
+        "description": "You are already on this site :D. Feel free to contact me with your feedback."
+      },
+      "more": {
+        "title": "More coming",
+        "description": "I am still working on this website. I want to make it dual-language using pipe, add more animations to make it more user-friendly, work on mobile versions of images, make it more visible on Google, and more..."
+      }
+    },
+    "comarch": {
+      "cdi1": {
+        "title": "Health insurance support",
+        "description": "It simplifies the management of health insurance policies by offering tools for agents, brokers, and back-office employee."
+      },
+      "cdi2": {
+        "title": "Automated claims processing",
+        "description": "Integration with Comarch Insurance Claims allows for smooth claim handling."
+      },
+      "cdi3": {
+        "title": "Compliance with regulations",
+        "description": "CDI adheres to industry standards like GDPR, IDD (Insurance Distribution Directive), and PRIIPS (Packaged Retail and Insurance-Based Investment Products)\u200B."
+      },
+      "cdi4": {
+        "title": "Cloud deployment",
+        "description": "The platform can be deployed in the cloud, offering scalability and accessibility\u200B."
+      },
+      "cdi5": {
+        "title": "AI integration",
+        "description": "While AI is not built directly into CDI, Comarch offers a separate AI Framework that can be used for data-driven decisions and process automation."
+      }
+    },
+    "manyMore": {
+      "github": {
+        "title": "Visit my GitHub :D",
+        "description": "Click the link to get to my GitHub."
+      }
+    }
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "WELCOME_PAGE_GREETING": "Willkommen,",
+  "WELCOME_PAGE_TEXT": "Lass uns uns kennenlernen",
+  "VIEW_ABOUT_ME": "Über mich anzeigen",
+  "LEFT_MENU_BUTTON_ABOUT": "Über mich",
+  "LEFT_MENU_BUTTON_PROJECTS": "Projekte",
+  "LEFT_MENU_BUTTON_CONTACT_ME": "Kontakt",
+  "BUTTON_HOME": "Startseite",
+  "BUTTON_ABOUT": "Über mich",
+  "BUTTON_PROJECTS": "Projekte",
+  "PROJECTS_TITLE": "Projekte",
+  "LANGUAGE_CHANGED": "Sprache geändert",
+  "BUTTON_CONTACT_ME": "Kontakt",
+  "LABEL_CONTACT_ME": "Kontaktiere mich",
+  "LABEL_COMPANY": "Unternehmen",
+  "LABEL_EMAIL": "E-Mail",
+  "LABEL_MESSAGE": "Nachricht",
+  "CITY": "Stadt",
+  "PHONE": "Telefon",
+  "TEMPORARY_DISABLED": "Vorübergehend deaktiviert",
+  "ENTER_VALID_EMAIL": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+  "CONTACT_FORM_TEXT": "Das Kontaktformular ist vorübergehend deaktiviert. Sie können mich jederzeit per E-Mail oder Telefon kontaktieren.",
+  "COMPANY_FORM_DESCRIPTION": "Bitte geben Sie den Unternehmensnamen ein",
+  "ABOUT_ME_TITLE": "Über mich",
+  "ABOUT_ME_INTRO": "Hallo! Mein Name ist",
+  "ABOUT_ME_NAME": "Amadeus",
+  "ABOUT_ME_PROFESSION": "und ich bin ein erfahrener IT-Profi mit einem Hintergrund in",
+  "ABOUT_ME_DEGREE": "Softwareentwicklung und einem Ingenieurabschluss",
+  "ABOUT_ME_EXPERIENCE": "Seit dem 1. Dezember 2023 bin ich als Entwickler beschäftigt, beginnend als",
+  "ABOUT_ME_ANGULAR_ROLE": "Angular-Entwickler",
+  "ABOUT_ME_GROWTH": "und entwickle mich weiter zu einer",
+  "ABOUT_ME_FULLSTACK_ROLE": "Full-Stack-Rolle",
+  "ABOUT_ME_CURRENT_ROLE": "Aktuell spezialisiere ich mich auf",
+  "ABOUT_ME_JAVA_SPECIALTY": "Java EE",
+  "ABOUT_ME_PROJECT_DESC": "und arbeite an einem",
+  "ABOUT_ME_PROJECT_CORE": "umfangreichen Kernprojekt",
+  "ABOUT_ME_CUSTOMER_IMPLEMENTATIONS": "das die Grundlage für verschiedene Kundenimplementierungen bildet. Mein Hauptfokus liegt auf einer Lösung, die für",
+  "ABOUT_ME_SWISS_LIFE": "Swiss Life",
+  "ABOUT_ME_AXA_JOURNEY": "entwickelt wurde, wobei meine Reise mit Beiträgen für",
+  "ABOUT_ME_AXA_SITE": "AXA",
+  "ABOUT_ME_SKILLS_DEV_1": "Diese Erfahrungen haben meine Fähigkeiten sowohl im",
+  "ABOUT_ME_SKILLS_DEV_2": "Frontend als auch im Backend",
+  "ABOUT_ME_SKILLS_DEV_3": "geschärft und es mir ermöglicht, verschiedene Herausforderungen in der Webapplikationsentwicklung zu meistern.",
+  "ABOUT_ME_THANK_YOU": "Vielen Dank für den Besuch meiner persönlichen Seite!",
+  "ABOUT_ME_PASSION": "Ich habe eine tiefe Leidenschaft für Programmierung, da sie es mir ermöglicht, meine Kreativität zu entfalten und neue Ideen zum Leben zu erwecken.",
+  "ABOUT_ME_EXPERIENCE_IMPACT": "Im Laufe der Jahre hat sich meine Expertise sowohl im",
+  "ABOUT_ME_FRONTEND": "Frontend",
+  "ABOUT_ME_AND": "als auch im",
+  "ABOUT_ME_BACKEND": "Backend",
+  "ABOUT_ME_LARGE_PROJECTS": "entwickelt, was mir die Arbeit an",
+  "ABOUT_ME_CORE_PROJECTS": "umfangreichen Kernprojekten",
+  "ABOUT_ME_CORE_PROJECTS_IMPACT": " mit realer Wirkung ermöglicht. ",
+  "ABOUT_ME_FOCUS_TECH": "Mein Hauptfokus umfasst Technologien wie HTML, CSS, JavaScript, MongoDB, TypeScript, Tailwind, Angular und Java EE, wobei ich auch Erfahrung mit Frameworks wie Bootstrap und Vue habe.",
+  "ABOUT_ME_NETWORK_EXP": "Neben der Entwicklung habe ich auch als Netzwerkspezialist in der IT-Branche gearbeitet und wertvolle Einblicke in die Systeminfrastruktur gewonnen.",
+  "ABOUT_ME_CODING_PASSION": "Meine wahre Freude liegt jedoch im Programmieren, wo ich endlose Möglichkeiten erkunde, mit talentierten Teams zusammenarbeite und meine Fähigkeiten kontinuierlich weiterentwickle, um neue Herausforderungen zu bewältigen.",
+  "SEE_MORE_PROJECT": "Um mehr über das Projekt zu erfahren, das Sie interessiert, klicken Sie einfach darauf!",
+  "FOR_LIFE_VERSION": "Für die Live-Version klicken Sie auf den Link und werden weitergeleitet",
+  "VIEW_FULL_IMAGE": "Klicken Sie auf das Bild, um es in voller Größe zu sehen :D",
+  "projects": {
+    "TMS-team-management-system": {
+      "title": "TMS - Team-Management-System",
+      "description": "Entwickelt von einem vierköpfigen Team. Zwei von uns waren für das Frontend, zwei für das Backend verantwortlich. Leider war mein Frontend-Kollege zum Zeitpunkt der Erstellung der Beta-Version, die jetzt live ist, an COVID erkrankt. Es ist eine MVP-Version, die für Kunden funktioniert, die das Teammanagement betreffen."
+    },
+    "sneakers-shop": {
+      "title": "Sneakers-Shop",
+      "description": "Ein einfacher Shop für kleine Verkäufer, die sich auf limitierte Sneaker spezialisiert haben. In der Beta-Version können Kunden sich anmelden, Artikel in den Warenkorb legen und den Kauf mit der Option zur PayPal-Zahlung abschließen. In Zukunft werden wir weitere Funktionen hinzufügen."
+    },
+    "stockx-fix-extension": {
+      "title": "StockX Fix Erweiterung",
+      "description": "Eine kleine Tampermonkey-Erweiterung, die das StockX-Layout verbessert, indem sie automatisch Abschnitte der Website ausblendet. Sie ermöglicht auch das Hinzufügen von Artikeln zum Warenkorb von externen Seiten."
+    },
+    "portfolio-site": {
+      "title": "Portfolio-Seite",
+      "description": "Dies ist meine persönliche Portfolio-Seite, die alle meine bisherigen Arbeiten und Projekte präsentiert. Sie wurde mit Angular und Tailwind CSS erstellt, um eine responsive und leichte Website zu gestalten."
+    },
+    "comarch-digital-insurance": {
+      "title": "Comarch Digitale Versicherung",
+      "description": "Comarch Digitale Versicherung (CDI) ist eine umfassende digitale Plattform für die Versicherungsbranche. Sie ermöglicht Versicherungsunternehmen die Optimierung ihrer Abläufe durch Automatisierung von Prozessen wie Polizenerstellung, Underwriting, Schadensmanagement und Kundenservice. CDI ist hochgradig anpassbar und kann mit externen Diensten wie digitalen Signaturen, elektronischer Identifikation und anderen Tools integriert werden, um seine Funktionalität zu erweitern."
+    },
+    "many-more": {
+      "title": "Noch viele mehr Projekte",
+      "description": "Mehrere andere kleine Projekte, von JavaScript- und Python-Skripten bis hin zu Angular-Apps und mehr. Werfen Sie einen Blick auf meinen GitHub für die vollständige Liste."
+    }
+  },
+  "projectDetail": {
+    "TMS": {
+      "architecture": {
+        "title": "Architektur",
+        "description": "Die Benutzeroberfläche ist eine Kombination aus Vue und Vuetify, die eine hohe Benutzerfreundlichkeit und Lesbarkeit bietet. Die Anwendungsseite besteht aus mehreren Modulen. Die SQLite-Datenbank ist für die Datenspeicherung verantwortlich. Die Kommunikation mit der Datenbank erfolgt über das Django-Framework. Wir verwenden das Rest-Framework, um Daten zwischen Benutzeroberfläche und Anwendungsserver auszutauschen."
+      },
+      "dashboard": {
+        "title": "Trainer-Dashboard",
+        "description": "Ansicht mit den letzten 3 Spielen der Mannschaft auf der linken Seite. Anwesenheit bei den letzten Trainings auf der rechten Seite. Tabelle mit detaillierten Informationen über die Punktzahl jedes Spielers im ausgewählten Spiel unten. Diese Ansicht soll Trainern helfen, den Status der letzten Tage schnell zu überprüfen."
+      },
+      "matches": {
+        "title": "Spielansicht",
+        "description": "Hauptansicht mit allen Spielen. Benutzer kann ein Spiel in 3 Schritten hinzufügen: Ereignis hinzufügen -> Mannschaftsspiele -> Spielerpunkte. Fehlerbehandlung umfasst jeden Benutzereingabefehler. Im Falle eines Fehlers kann der Benutzer fehlende Teile in der Detailansicht des Spiels hinzufügen. Das Gewinnerteam wird grün markiert. Hinzufügen und Löschen von Trainings erfolgt ähnlich wie in den Ansichten für Spieler und Trainer, um es für den Benutzer einfach zu halten."
+      },
+      "singleMatch": {
+        "title": "Einzelspiel-Ansicht",
+        "description": "Detaillierte Spielansicht. Zwei nach jedem Parameter sortierbare Tabellen mit Spielerpunkten, die vom Benutzer bearbeitet werden können. Suchfeld funktioniert mit jedem Parameter. Bei Benutzereingabefehlern kann der Benutzer hier fehlende Daten hinzufügen. Jede Eingabe hat Regeln."
+      },
+      "calendar": {
+        "title": "Kalenderansicht",
+        "description": "Kalenderansicht zur einfachen Suche nach kommenden Ereignissen. Enthält Trainings, Spiele. Benutzer kann ein Ereignis wie 'Teamtreffen' hinzufügen. Benutzer kann die Ansicht auf Tag-4 Tage-Woche-Monat ändern, mit Monat als Standardansicht."
+      },
+      "knowledgebase": {
+        "title": "Wissensdatenbank",
+        "description": "Ort, an dem Benutzer professionelles Wissen abrufen können."
+      },
+      "singleKnowledgebase": {
+        "title": "Einzelner Wissensdatenbank-Artikel",
+        "description": "Einzelansicht des Artikels mit mehr Details."
+      },
+      "players": {
+        "title": "Spielerliste",
+        "description": "Ansicht mit Tabelle aller Spieler. Suche funktioniert mit: Name, Nachname, Geschlecht und E-Mail. Tabelle ist nach jedem gegebenen Parameter sortierbar. Gemäß der F-Regel ist der Bearbeitungs- und Hinzufügen-Button oben rechts verfügbar."
+      },
+      "playersAdd": {
+        "title": "Spieler hinzufügen und bearbeiten",
+        "description": "Spieler hinzufügen hat verschiedene Regeln je nach Spielerteam. Wenn es sich um unseren Spieler handelt, muss der Benutzer alle Daten eingeben. Wenn nicht, müssen nur Vor- und Nachname sowie Geschlecht hinzugefügt werden. Der Bearbeitungsbutton fügt eine Bearbeitungszeile in die Tabelle ein und ermöglicht dem Benutzer das Löschen/Bearbeiten von Spielern."
+      },
+      "trainings": {
+        "title": "Trainingsansicht",
+        "description": "Ansicht mit allen Trainings. Benutzer kann Trainings hinzufügen und löschen, indem er oben rechts klickt. Sortieren per Abfrage wurde in Beta 0.2 hinzugefügt und die Live-Version wird den Bildschirm nicht widerspiegeln. Klicken auf ein einzelnes Training führt zur Einzeltrainingsansicht."
+      },
+      "trainingsAdd": {
+        "title": "Trainings hinzufügen und bearbeiten",
+        "description": "Hinzufügen und Löschen von Trainings erfolgt ähnlich wie in den Ansichten für Spieler und Trainer, um es für den Benutzer einfach zu halten."
+      },
+      "singleTraining": {
+        "title": "Einzeltrainings-Ansicht",
+        "description": "Hier können Benutzer Benachrichtigungen an Spieler senden, die an dem ausgewählten Training teilnehmen, und weitere Details zum Training anzeigen."
+      }
+    },
+    "sneakerShop": {
+      "mainPage": {
+        "title": "Hauptseite",
+        "description": "Ich habe versucht, sie so einfach wie möglich zu gestalten. Gemäß der F/Z-Regel befinden sich Warenkorb und Anmeldeseite oben rechts. Das Logo oben links ist ein Link zur Startseite. Produktmodelle sind so gestaltet, dass sie nach Hauptkategorie und Modell sortierbar sind."
+      },
+      "productPage": {
+        "title": "Produktseite",
+        "description": "Die Produktseite wurde so einfach wie möglich gestaltet, für beste Lesbarkeit."
+      },
+      "login": {
+        "title": "Anmeldung",
+        "description": "Benutzer können sich mit E-Mail und Passwort anmelden und registrieren."
+      },
+      "loginFirebase": {
+        "title": "Anmeldung mit Firebase",
+        "description": "Firebase ist verantwortlich für die Verwaltung und Speicherung von Benutzeranmeldedaten. Die Seite verfügt über eine automatische Anmeldung, um den Zustand beim Aktualisieren nicht zu verlieren, und eine automatische Abmeldung, wenn das Token abläuft."
+      },
+      "cartNoItem": {
+        "title": "Warenkorb (Keine Artikel)",
+        "description": "Die leere Warenkorbseite ist benutzerfreundlich gestaltet und enthält nur 2 Artikel im Warenkorb mit animierten Blasen (reines CSS) und einen Button, der den Benutzer ermutigt, zur Hauptseite zurückzukehren und etwas hinzuzufügen."
+      },
+      "cartItem": {
+        "title": "Warenkorb (Artikel hinzugefügt)",
+        "description": "Die Warenkorbseite wird die Summe der Artikel enthalten, Animationen beim Löschen und vieles mehr."
+      },
+      "features": {
+        "title": "Funktionen",
+        "description": "Produktmodelle sind so gestaltet, dass sie nach Hauptkategorie und Modell sortierbar sind. Ich habe auch die Anzeige von Informationen zur Größenverfügbarkeit implementiert."
+      },
+      "mainPageSm": {
+        "title": "Hauptseite (Mobil)",
+        "description": "Die Hauptseite für mobile Geräte hat die Navigationsleiste von oben nach unten verschoben, um sie benutzerfreundlicher zu gestalten."
+      },
+      "mainPageSmSidebar": {
+        "title": "Seitenleiste der mobilen Hauptseite",
+        "description": "Seitenleisten-Buttons sind in ein Menü auf der linken Seite verschoben und werden durch das Hamburger-Icon aktiviert."
+      },
+      "more": {
+        "title": "Mehr kommt...",
+        "description": "Ich arbeite noch an diesem Projekt. Artikel werden derzeit nur im lokalen Speicher gespeichert, es gibt keine Benutzerdaten. Das Ziel ist es, Artikel auf Firebase zu speichern, Benutzer mit der Datenbank zu verbinden und Zahlungen hinzuzufügen. Die Benutzeroberfläche ist noch nicht fertig und muss noch überarbeitet werden."
+      }
+    },
+    "stockx": {
+      "allItemsWithout": {
+        "title": "Alle Artikel ohne Filter",
+        "description": "Eine Liste aller Artikel ohne angewendete Filter."
+      },
+      "allItems": {
+        "title": "Alle Artikel prüfen Button",
+        "description": "Funktion, die durch Klicken auf den linken Button in der oberen Navigationsleiste aktiviert wird. Hebt Artikel hervor, bei denen der Benutzerpreis nicht wirklich der niedrigste ist."
+      },
+      "itemWithout": {
+        "title": "Artikelansicht ohne Erweiterung",
+        "description": "Bild, das zeigt, wie StockX ohne Erweiterung aussieht. Plugin fügt nach Benutzerklick zwei Felder hinzu."
+      },
+      "itemWith": {
+        "title": "Artikelansicht nach Verwendung der Erweiterung",
+        "description": "Vom Plugin hinzugefügte Felder berechnen den tatsächlichen Preis, den der Benutzer eingeben sollte, um den niedrigsten Preis zu erhalten, und zeigen ihn im DOM an. Ein weiteres Feld berechnet die Auszahlung für den Benutzer, sodass er sofort weiß, ob es sich überhaupt lohnt, ein Angebot zu machen."
+      }
+    },
+    "portfolio": {
+      "good": {
+        "title": "Nun...",
+        "description": "Sie sind bereits auf dieser Seite :D. Zögern Sie nicht, mir Ihr Feedback zu geben."
+      },
+      "more": {
+        "title": "Mehr kommt",
+        "description": "Ich arbeite noch an dieser Website. Ich möchte sie zweisprachig mit Pipe machen, mehr Animationen hinzufügen, um sie benutzerfreundlicher zu gestalten, mobile Versionen von Bildern optimieren, die Sichtbarkeit in Google verbessern und mehr..."
+      }
+    },
+    "comarch": {
+      "cdi1": {
+        "title": "Krankenversicherungsunterstützung",
+        "description": "Es vereinfacht die Verwaltung von Krankenversicherungspolicen durch Tools für Agenten, Makler und Backoffice-Mitarbeiter."
+      },
+      "cdi2": {
+        "title": "Automatisierte Schadensbearbeitung",
+        "description": "Integration mit Comarch Insurance Claims ermöglicht eine reibungslose Schadenbearbeitung."
+      },
+      "cdi3": {
+        "title": "Einhaltung von Vorschriften",
+        "description": "CDI hält sich an Branchenstandards wie DSGVO, IDD (Insurance Distribution Directive) und PRIIPS (Packaged Retail and Insurance-Based Investment Products)​."
+      },
+      "cdi4": {
+        "title": "Cloud-Bereitstellung",
+        "description": "Die Plattform kann in der Cloud bereitgestellt werden und bietet Skalierbarkeit und Zugänglichkeit​."
+      },
+      "cdi5": {
+        "title": "KI-Integration",
+        "description": "Während KI nicht direkt in CDI integriert ist, bietet Comarch einen separaten KI-Rahmen, der für datengesteuerte Entscheidungen und Prozessautomatisierung genutzt werden kann."
+      }
+    },
+    "manyMore": {
+      "github": {
+        "title": "Besuchen Sie mein GitHub :D",
+        "description": "Klicken Sie auf den Link, um zu meinem GitHub zu gelangen."
+      }
+    }
+  }
+}
