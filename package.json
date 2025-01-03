@@ -8,6 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
+    "build:deploy": "ng build --output-path=docs --base-href=/",
     "dev:ssr": "ng run AmadeuszPortfolio:serve-ssr",
     "serve:ssr": "node dist/AmadeuszPortfolio/server/main.js",
     "build:ssr": "ng build && ng run AmadeuszPortfolio:server",
