@@ -51,7 +51,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/portfiolio-a/"
+              "baseHref": "/"
             },
             "development": {
               "buildOptimizer": false,
@@ -116,7 +116,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/AmadeuszPortfolio/browser",
+            "outputPath": "dist/AmadeuszPortfolio/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json"
           },
