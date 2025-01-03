@@ -40,7 +40,7 @@ export class LeftNavigationComponent {
         if (!homeSection || !aboutMeSection || !projectsSection || !contactMeSection) {
             return;
         }
-        const homePos: number = homeSection.offsetTop;
+        const homePos = 0;
         const aboutMePos: number = aboutMeSection.offsetTop;
         const projectsPos: number = projectsSection.offsetTop;
         const contactMePos: number = contactMeSection.offsetTop;
@@ -64,7 +64,7 @@ export class LeftNavigationComponent {
     }
 
     private isSectionActive = (sectionPos: number, sectionHeight: number, scrollPos: number) => {
-        return scrollPos + window.innerHeight > sectionPos + sectionHeight / 2 && scrollPos < sectionPos + sectionHeight / 2;
+        return scrollPos + window.innerHeight >= sectionPos + sectionHeight / 2 && scrollPos < sectionPos + sectionHeight / 2;
     };
 
 }
