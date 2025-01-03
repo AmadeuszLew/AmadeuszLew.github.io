@@ -9,7 +9,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -23,8 +23,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build SSR
-        run: npm run build:ssr
+      - name: Build Angular App
+        run: npm run build --prod
         env:
           NODE_OPTIONS: '--max_old_space_size=4096'
 
@@ -32,6 +32,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/AmadeuszPortfolio/server
+          publish_dir: ./dist/AmadeuszPortfolio/browser
           keep_files: false
           full_commit_message: ${{ github.event.head_commit.message }}
