@@ -1,7 +1,7 @@
 {
   "WELCOME_PAGE_GREETING": "Witaj,",
   "WELCOME_PAGE_TEXT": "poznajmy się",
-  "VIEW_ABOUT_ME": "Wyświetl mój profil",
+  "VIEW_ABOUT_ME": "Wyświetl informacje o mnie",
   "LANGUAGE_CHANGED": "Język zmieniony",
   "LEFT_MENU_BUTTON_ABOUT": "O mnie",
   "LEFT_MENU_BUTTON_PROJECTS": "Projekty",
@@ -23,39 +23,40 @@
   "COMPANY_FORM_DESCRIPTION": "Proszę wprowadzić nazwę firmy",
   "ABOUT_ME_TITLE": "O mnie",
   "ABOUT_ME_INTRO": "Cześć! Mam na imię",
-  "ABOUT_ME_NAME": "Amadeus",
+  "ABOUT_ME_NAME": "Amadeusz",
   "ABOUT_ME_PROFESSION": "i jestem doświadczonym specjalistą IT z wykształceniem w dziedzinie",
   "ABOUT_ME_DEGREE": "Rozwoju Oprogramowania i dyplomem inżynierskim",
   "ABOUT_ME_EXPERIENCE": "Od 1 grudnia 2023 roku jestem zatrudniony jako programista, rozpoczynając jako",
   "ABOUT_ME_ANGULAR_ROLE": "Programista Angular",
   "ABOUT_ME_GROWTH": "i rozwijając się w kierunku",
-  "ABOUT_ME_FULLSTACK_ROLE": "roli fullstack",
+  "ABOUT_ME_FULLSTACK_ROLE": "programisty fullstack",
   "ABOUT_ME_CURRENT_ROLE": "Aktualnie specjalizuję się w",
   "ABOUT_ME_JAVA_SPECIALTY": "Java EE",
   "ABOUT_ME_PROJECT_DESC": "i współpracuję przy",
   "ABOUT_ME_PROJECT_CORE": "dużym projekcie bazowym",
-  "ABOUT_ME_CUSTOMER_IMPLEMENTATIONS": "który stanowi podstawę dla różnych wdrożeń klienckich. Mój główny fokus to rozwiązanie opracowane dla",
+  "ABOUT_ME_CUSTOMER_IMPLEMENTATIONS": "który stanowi podstawę dla różnych wdrożeń klientów. Mój główny fokus to rozwiązanie opracowane dla",
   "ABOUT_ME_SWISS_LIFE": "Swiss Life",
-  "ABOUT_ME_AXA_JOURNEY": "choć moja przygoda rozpoczęła się od pracy nad",
+  "ABOUT_ME_AXA_JOURNEY": "choć moja przygoda rozpoczęła się od pracy nad wdrożeniem dla",
   "ABOUT_ME_AXA_SITE": "AXA",
   "ABOUT_ME_SKILLS_DEV_1": "Te doświadczenia ukształtowały moje umiejętności zarówno w zakresie",
-  "ABOUT_ME_SKILLS_DEV_2": "frontend, jak i backend, ",
+  "ABOUT_ME_SKILLS_DEV_2": "frontendu, jak i backendu, ",
   "ABOUT_ME_SKILLS_DEV_3": "pozwalając mi mierzyć się z różnymi wyzwaniami w dziedzinie tworzenia aplikacji webowych.",
   "ABOUT_ME_THANK_YOU": "Dziękuję za odwiedzenie mojej strony!",
   "ABOUT_ME_PASSION": "Mam głęboką pasję do programowania, ponieważ pozwala mi to uwolnić kreatywność i ożywiać nowe pomysły.",
   "ABOUT_ME_EXPERIENCE_IMPACT": "Przez lata moja wiedza rozrosła się, obejmując zarówno",
   "ABOUT_ME_FRONTEND": "frontend",
   "ABOUT_ME_AND": "jak i",
-  "ABOUT_ME_BACKEND": "backend",
-  "ABOUT_ME_LARGE_PROJECTS": "rozwój, umożliwiając mi pracę przy",
-  "ABOUT_ME_CORE_PROJECTS": "dużych projektach bazowych",
+  "ABOUT_ME_BACKEND": "backend. ",
+  "ABOUT_ME_LARGE_PROJECTS": "Rozwój ten umożliwił mi pracę przy",
+  "ABOUT_ME_CORE_PROJECTS": "dużych projektach",
   "ABOUT_ME_CORE_PROJECTS_IMPACT": " o rzeczywistym wpływie. ",
   "ABOUT_ME_FOCUS_TECH": "Mój główny fokus obejmuje technologie takie jak HTML, CSS, JavaScript, MongoDB, TypeScript, Tailwind, Angular i Java EE, mam również doświadczenie w frameworkach takich jak Bootstrap i Vue.",
-  "ABOUT_ME_NETWORK_EXP": "Poza programowaniem pracowałem również jako specjalista ds. sieci w branży IT, zdobywając cenne spostrzeżenia dotyczące infrastruktury systemowej.",
+  "ABOUT_ME_NETWORK_EXP": "Poza programowaniem miałem okazję pracować jako specjalista ds. sieci w branży IT, co pozwoliło mi zdobyć cenne doświadczenie związane z infrastrukturą systemową. Wykorzystuję również umiejętności zdobyte poza IT – praca jako sprzedawca w RTV EURO AGD znacząco poprawiła moje zdolności komunikacyjne i współpracę w zespole. Dodatkowo, pracując w Dublinie dla linii Ryanair, odpowiadałem za prawidłowe uzupełnianie wózków barowych, co nauczyło mnie dbałości o szczegóły i pracy w międzynarodowym środowisku.",
   "ABOUT_ME_CODING_PASSION": "Jednak moją prawdziwą radością jest programowanie, gdzie odkrywam nieograniczone możliwości, współpracuję z utalentowanymi zespołami i nieustannie rozwijam swoje umiejętności, podejmując nowe wyzwania.",
   "SEE_MORE_PROJECT": "Aby zobaczyć więcej informacji o projekcie, który Cię interesuje, po prostu kliknij go!",
   "FOR_LIFE_VERSION": "aby zobaczyć wersję na żywo, kliknij link, zostaniesz przekierowany",
   "VIEW_FULL_IMAGE": "Aby wyświetlić obraz w pełnym rozmiarze, kliknij go :D",
+  "FEATURES": "Funkcjonalności: ",
   "projects": {
     "TMS-team-management-system": {
       "title": "TMS - System Zarządzania Zespołem",
@@ -216,7 +217,7 @@
     "manyMore": {
       "github": {
         "title": "Odwiedź mojego GitHuba :D",
-        "description": "Kliknij link, aby przejść na mojego GitHuba."
+        "description": ""
       }
     }
   }
