@@ -56,6 +56,7 @@
   "SEE_MORE_PROJECT" : "To see more about project You are interested in just click it!",
   "FOR_LIFE_VERSION" : "for live version click on the link, and You will be redirected to it",
   "VIEW_FULL_IMAGE": "To view image in full size click it :D",
+  "FEATURES": "Features: ",
   "projects": {
     "TMS-team-management-system": {
       "title": "TMS - Team Management System",
@@ -228,7 +229,7 @@
     "manyMore": {
       "github": {
         "title": "Visit my GitHub :D",
-        "description": "Click the link to get to my GitHub."
+        "description": ""
       }
     }
   }
