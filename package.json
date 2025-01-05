@@ -4,11 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "build:deploy": "ng build --output-path=docs --base-href=/",
+    "build": "ng build --output-path=docs --base-href=/",
+    "postbuild": "node 404forGHpages.js",
     "dev:ssr": "ng run AmadeuszPortfolio:serve-ssr",
     "serve:ssr": "node dist/AmadeuszPortfolio/server/main.js",
     "build:ssr": "ng build && ng run AmadeuszPortfolio:server",
