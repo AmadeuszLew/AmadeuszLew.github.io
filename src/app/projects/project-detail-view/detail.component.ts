@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ActivatedRoute, } from '@angular/router';
 import { Location } from '@angular/common';
 
@@ -10,7 +10,9 @@ import { ProjectsService } from '../projects.service';
 })
 export class DetailComponent implements OnInit {
   project!:ProjectDetail;
-  viewFullSizePhoto: boolean[]=[];
+   modalOpen = false;
+  selectedImageIndex: number | null = null;
+
   constructor(private readonly location: Location,
               private readonly route: ActivatedRoute,
               private readonly projectService:ProjectsService) { }
@@ -18,11 +20,21 @@ export class DetailComponent implements OnInit {
   ngOnInit(): void {
     const id=this.route.snapshot.params['id'];
     this.project=this.projectService.getSingleProject(id)!
-    this.viewFullSizePhoto = Array(this.project.features.length).fill(false);
   }
 
-  viewPhotoFunc(index:number) {
-    this.viewFullSizePhoto[index] = !this.viewFullSizePhoto[index];
+  openImage(index: number) {
+    this.selectedImageIndex = index;
+    this.modalOpen = true;
+  }
+
+  closeModal() {
+    this.modalOpen = false;
+    this.selectedImageIndex = null;
+  }
+
+  @HostListener('document:keydown.escape')
+  onEsc() {
+    if (this.modalOpen) this.closeModal();
   }
 
   goBack():void{

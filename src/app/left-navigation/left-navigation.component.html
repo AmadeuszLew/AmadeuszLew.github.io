@@ -1,5 +1,5 @@
-<nav class="inline-block md:mr-24 md:w-4 fixed left-percentage hidden md:block">
-  <div class="absolute left-50 transform -translate-x-1/2 space-y-6 mt-36">
+<nav class="fixed hidden md:block left-0 top-1/2 -translate-y-1/2 w-16 z-40">
+  <div class="flex flex-col items-center space-y-6">
     <a (click)="scroll(pageSectionNames.Home)" (keydown.enter)="scroll(pageSectionNames.Home)"
       class="nav-dot block w-7 h-7 rounded-full border-4 border-nav"
        [ngClass]="activeSection === pageSectionNames.Home ? 'bg-blue-500' : ''" tabindex="0">

@@ -1,5 +1,5 @@
 <header class="py-5">
-    <div class="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+  <div class="site-container flex justify-between items-center w-full">
         <div class="text-2xl mr-24 hover:cursor-pointer" routerLink="/">
             Amadeusz Lewandowski
         </div>
@@ -29,7 +29,7 @@
             <app-language-selector></app-language-selector>
         </div>
         <!-- small screen menu -->
-        <div class="relative md:hidden">
+  <div class="relative md:hidden">
             <div class="relative w-fit py-2 rounded-md flex justify-between items-center cursor-pointer">
                 <app-language-selector [mobile]="true"
                                        [hideExpanded]="show"
@@ -42,7 +42,7 @@
                      alt="mobile menu"
                      class="h-8 w-10"/>
             </div>
-            <div *ngIf="show" class="absolute mx-2 border border-1 border-neutral-400 rounded-md cursor-pointer dropdown bg-body">
+            <div *ngIf="show" class="absolute px-1 border border-1 border-neutral-400 rounded-md cursor-pointer dropdown bg-body">
                 <div (click)="navigateTo(PageSectionNames.Home)"
                      (keydown.enter)="navigateTo(PageSectionNames.Home)"
                      class="py-2 px-2 w-full hover:bg-neutral-600"
