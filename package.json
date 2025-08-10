@@ -9,6 +9,8 @@
     "lint": "ng lint",
     "build": "ng build --output-path=docs --base-href=/",
     "postbuild": "node 404forGHpages.js",
+    "build:prod": "ng build --configuration production --base-href=/",
+    "postbuild:prod": "node 404forGHpages.js",
     "dev:ssr": "ng run AmadeuszPortfolio:serve-ssr",
     "serve:ssr": "node dist/AmadeuszPortfolio/server/main.js",
     "build:ssr": "ng build && ng run AmadeuszPortfolio:server",
