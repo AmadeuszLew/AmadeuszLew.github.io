@@ -2,8 +2,9 @@ import {Component, Input} from '@angular/core';
 import {Project} from "../models/project.model";
 
 @Component({
-  selector: 'app-single-project',
-  templateUrl: './single-project.component.html',
+    selector: 'app-single-project',
+    templateUrl: './single-project.component.html',
+    standalone: false
 })
 export class SingleProjectComponent {
   @Input() project: Project;

@@ -5,8 +5,9 @@ import { AlertsService } from 'src/app/shared/alert.service';
 import { ContactPost } from '../model/form.model';
 
 @Component({
-  selector: 'app-form',
-  templateUrl: './form.component.html',
+    selector: 'app-form',
+    templateUrl: './form.component.html',
+    standalone: false
 })
 export class FormComponent implements OnInit{
   @Input() contactFormActive = false;

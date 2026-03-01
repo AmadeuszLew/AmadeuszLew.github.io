@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { NavigationService } from '../shared/navigation.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    standalone: false
 })
 export class HomeComponent{
 

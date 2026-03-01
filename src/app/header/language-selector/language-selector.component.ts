@@ -6,9 +6,10 @@ import {AlertsService} from "../../shared/alert.service";
 import {skip} from "rxjs";
 
 @Component({
-  selector: 'app-language-selector',
-  templateUrl: './language-selector.component.html',
-  styleUrls: ['./language-selector.component.css']
+    selector: 'app-language-selector',
+    templateUrl: './language-selector.component.html',
+    styleUrls: ['./language-selector.component.css'],
+    standalone: false
 })
 export class LanguageSelectorComponent implements OnInit {
   @Input()

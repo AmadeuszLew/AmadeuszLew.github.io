@@ -5,8 +5,9 @@ import { Location } from '@angular/common';
 import { ProjectDetail } from '../models/projectDetail.model';
 import { ProjectsService } from '../projects.service';
 @Component({
-  selector: 'app-detail',
-  templateUrl: './detail.component.html',
+    selector: 'app-detail',
+    templateUrl: './detail.component.html',
+    standalone: false
 })
 export class DetailComponent implements OnInit {
   project!:ProjectDetail;

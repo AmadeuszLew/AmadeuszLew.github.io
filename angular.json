@@ -11,12 +11,15 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/AmadeuszPortfolio/browser",
+            "outputPath": {
+              "base": "dist/AmadeuszPortfolio"
+            },
             "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": [
+              "src/polyfills.ts"
+            ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
@@ -27,8 +30,13 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "serviceWorker": true,
-            "ngswConfigPath": "ngsw-config.json"
+            "serviceWorker": "ngsw-config.json",
+            "browser": "src/main.ts",
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -54,9 +62,7 @@
               "baseHref": "/"
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
@@ -68,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "AmadeuszPortfolio:build:production"
+              "buildTarget": "AmadeuszPortfolio:build:production"
             },
             "development": {
-              "browserTarget": "AmadeuszPortfolio:build:development"
+              "buildTarget": "AmadeuszPortfolio:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AmadeuszPortfolio:build"
+            "buildTarget": "AmadeuszPortfolio:build"
           }
         },
         "test": {
@@ -112,65 +118,6 @@
             ],
             "eslintConfig": "eslint.config.js"
           }
-        },
-        "server": {
-          "builder": "@angular-devkit/build-angular:server",
-          "options": {
-            "outputPath": "dist/AmadeuszPortfolio/server",
-            "main": "server.ts",
-            "tsConfig": "tsconfig.server.json"
-          },
-          "configurations": {
-            "production": {
-              "outputHashing": "media",
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ]
-            },
-            "development": {
-              "buildOptimizer": false,
-              "optimization": false,
-              "sourceMap": true,
-              "extractLicenses": false,
-              "vendorChunk": true
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "serve-ssr": {
-          "builder": "@nguniversal/builders:ssr-dev-server",
-          "configurations": {
-            "development": {
-              "browserTarget": "AmadeuszPortfolio:build:development",
-              "serverTarget": "AmadeuszPortfolio:server:development"
-            },
-            "production": {
-              "browserTarget": "AmadeuszPortfolio:build:production",
-              "serverTarget": "AmadeuszPortfolio:server:production"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "prerender": {
-          "builder": "@nguniversal/builders:prerender",
-          "options": {
-            "browserTarget": "your-app-name:build:production",
-            "routes": ["/", "/TMS", "/sneakers-shop", "/stockx-fix-extension", "/portfolio", "/'comarch-digital-insurance", "/github"]
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "AmadeuszPortfolio:build:production",
-              "serverTarget": "AmadeuszPortfolio:server:production"
-            },
-            "development": {
-              "browserTarget": "AmadeuszPortfolio:build:development",
-              "serverTarget": "AmadeuszPortfolio:server:development"
-            }
-          },
-          "defaultConfiguration": "production"
         }
       }
     }

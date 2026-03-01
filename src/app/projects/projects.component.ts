@@ -3,8 +3,9 @@ import {ProjectsService} from './projects.service';
 import {Project} from "./models/project.model";
 
 @Component({
-  selector: 'app-projects',
-  templateUrl: './projects.component.html'
+    selector: 'app-projects',
+    templateUrl: './projects.component.html',
+    standalone: false
 })
 export class ProjectsComponent {
   projects: Project[]

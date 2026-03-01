@@ -5,8 +5,9 @@ import {ViewportScroller} from "@angular/common";
 import {ActivatedRoute} from "@angular/router";
 
 @Component({
-  selector: 'app-body',
-  templateUrl: './landing-page.component.html',
+    selector: 'app-body',
+    templateUrl: './landing-page.component.html',
+    standalone: false
 })
 export class LandingPageComponent implements AfterViewInit {
   private viewportScroller: ViewportScroller = inject(ViewportScroller);
