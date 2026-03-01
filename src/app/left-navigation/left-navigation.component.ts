@@ -35,19 +35,22 @@ export class LeftNavigationComponent {
         const scrollPos: number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         const homeSection = document.getElementById(this.pageSectionNames.Home);
         const aboutMeSection = document.getElementById(this.pageSectionNames.AboutMe);
+        const aiExpertSection = document.getElementById(this.pageSectionNames.AiExpert);
         const projectsSection = document.getElementById(this.pageSectionNames.Projects);
         const contactMeSection = document.getElementById(this.pageSectionNames.ContactMe);
 
-        if (!homeSection || !aboutMeSection || !projectsSection || !contactMeSection) {
+        if (!homeSection || !aboutMeSection || !aiExpertSection || !projectsSection || !contactMeSection) {
             return;
         }
         const homePos = 0;
         const aboutMePos: number = aboutMeSection.offsetTop;
+        const aiExpertPos: number = aiExpertSection.offsetTop;
         const projectsPos: number = projectsSection.offsetTop;
         const contactMePos: number = contactMeSection.offsetTop;
 
         const homeHeight: number = homeSection.offsetHeight;
         const aboutMeHeight: number = aboutMeSection.offsetHeight;
+        const aiExpertHeight: number = aiExpertSection.offsetHeight;
         const projectsHeight: number = projectsSection.offsetHeight;
         const contactMeHeight: number = contactMeSection.offsetHeight;
 
@@ -55,6 +58,8 @@ export class LeftNavigationComponent {
             this.activeSection = this.pageSectionNames.Home;
         } else if (this.isSectionActive(aboutMePos, aboutMeHeight, scrollPos)) {
             this.activeSection = this.pageSectionNames.AboutMe;
+        } else if (this.isSectionActive(aiExpertPos, aiExpertHeight, scrollPos)) {
+            this.activeSection = this.pageSectionNames.AiExpert;
         } else if (this.isSectionActive(projectsPos, projectsHeight, scrollPos)) {
             this.activeSection = this.pageSectionNames.Projects;
         } else if (this.isSectionActive(contactMePos, contactMeHeight, scrollPos)) {

@@ -16,14 +16,19 @@
                tabindex="1">
               <button>{{ "BUTTON_ABOUT" |translate }}</button>
             </a>
+            <a (click)="navigateTo(PageSectionNames.AiExpert)"
+               (keydown.enter)="navigateTo(PageSectionNames.AiExpert)"
+               tabindex="2">
+              <button>{{ "BUTTON_AI" |translate }}</button>
+            </a>
             <a (click)="navigateTo(PageSectionNames.Projects)"
                (keydown.enter)="navigateTo(PageSectionNames.Projects)"
-               tabindex="2">
+               tabindex="3">
               <button>{{ "BUTTON_PROJECTS" |translate }}</button>
             </a>
             <a (click)="navigateTo(PageSectionNames.ContactMe)"
                (keydown.enter)="navigateTo(PageSectionNames.ContactMe)"
-               tabindex="3">
+               tabindex="4">
               <button class="px-6 py-2 bg-theme font-bold">{{ "BUTTON_CONTACT_ME" |translate }}</button>
             </a>
             <app-language-selector></app-language-selector>
@@ -55,16 +60,22 @@
                      tabindex="6">
                   {{ "BUTTON_ABOUT" |translate }}
                 </div>
+                <div (click)="navigateTo(PageSectionNames.AiExpert)"
+                     (keydown.enter)="navigateTo(PageSectionNames.AiExpert)"
+                     class="py-2 px-2 w-full hover:bg-neutral-600"
+                     tabindex="7">
+                  {{ "BUTTON_AI" |translate }}
+                </div>
                 <div (click)="navigateTo(PageSectionNames.Projects)"
                      (keydown.enter)="navigateTo(PageSectionNames.Projects)"
                      class="py-2 px-2 w-full hover:bg-neutral-600"
-                     tabindex="7">
+                     tabindex="8">
                   {{ "BUTTON_PROJECTS" |translate }}
                 </div>
                 <div (click)="navigateTo(PageSectionNames.ContactMe)"
                      (keydown.enter)="navigateTo(PageSectionNames.ContactMe)"
                      class="py-2 px-2 w-full hover:bg-neutral-600"
-                     tabindex="8">
+                     tabindex="9">
                   {{ "BUTTON_CONTACT_ME" |translate }}
                 </div>
             </div>

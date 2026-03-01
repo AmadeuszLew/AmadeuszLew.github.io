@@ -21,6 +21,7 @@ import { ProjectsListComponent } from "./projects/projects-list/projects-list.co
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import { LanguageSelectorComponent } from './header/language-selector/language-selector.component';
+import { AiExpertComponent } from './ai-expert/ai-expert.component';
 import {LanguageSelectorProviderService} from "./header/language-selector/language-selector-provider.service";
 import { ServiceWorkerModule } from '@angular/service-worker';
 
@@ -42,6 +43,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         ProjectsListComponent,
         SingleProjectComponent,
         LanguageSelectorComponent,
+        AiExpertComponent
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
         AppRoutingModule,
