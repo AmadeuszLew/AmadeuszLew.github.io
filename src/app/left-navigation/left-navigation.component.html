@@ -14,16 +14,23 @@
         {{ "LEFT_MENU_BUTTON_ABOUT" | translate }}
       </span>
     </a>
+    <a (click)="scroll(pageSectionNames.AiExpert)" (keydown.enter)="scroll(pageSectionNames.AiExpert)"
+      class="nav-dot block w-7 h-7 rounded-full border-4 border-nav"
+       [ngClass]="activeSection === pageSectionNames.AiExpert ? 'bg-blue-500' : '' " tabindex="2">
+      <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0 whitespace-nowrap">
+        {{ "LEFT_MENU_BUTTON_AI" | translate }}
+      </span>
+    </a>
     <a (click)="scroll(pageSectionNames.Projects)" (keydown.enter)="scroll(pageSectionNames.Projects)"
        class="nav-dot block w-7 h-7 rounded-full border-4 border-nav"
-       [ngClass]="activeSection === pageSectionNames.Projects ? 'bg-blue-500' : '' " tabindex="2">
+       [ngClass]="activeSection === pageSectionNames.Projects ? 'bg-blue-500' : '' " tabindex="3">
       <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0 whitespace-nowrap">
         {{ "LEFT_MENU_BUTTON_PROJECTS" | translate }}
       </span>
     </a>
     <a (click)="scroll(pageSectionNames.ContactMe)" (keydown.enter)="scroll(pageSectionNames.ContactMe)"
        class="nav-dot block w-7 h-7 rounded-full border-4 border-nav"
-       [ngClass]="activeSection === pageSectionNames.ContactMe ? 'bg-blue-500' : '' " tabindex="3">
+       [ngClass]="activeSection === pageSectionNames.ContactMe ? 'bg-blue-500' : '' " tabindex="4">
       <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0 whitespace-nowrap">
         {{ "LEFT_MENU_BUTTON_CONTACT_ME" | translate }}
       </span>

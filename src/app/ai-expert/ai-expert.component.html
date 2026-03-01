@@ -1,0 +1,21 @@
+<section class="w-full">
+  <h2 class="secondary-title">{{ 'AI_EXPERT_TITLE' | translate }}</h2>
+  <p
+    class="mt-2 text-white text-justify"
+    [innerHTML]="'AI_EXPERT_DESCRIPTION' | translate"
+  ></p>
+
+  <div class="mt-8 flex flex-col items-center gap-6">
+    <a [href]="googleAiCertUrl" target="_blank" rel="noopener noreferrer"
+       class="block group relative w-fit">
+      <img
+        src="../../assets/ai_certificate.png"
+        [alt]="'AI_CERTIFICATE_ALT' | translate"
+        class="max-w-full md:max-w-xl lg:max-w-2xl rounded-md shadow-lg transition-opacity duration-200 group-hover:opacity-80 cursor-pointer"
+      />
+      <span class="block text-center text-sm text-gray-400 mt-2">
+        {{ 'VIEW_FULL_IMAGE' | translate }}
+      </span>
+    </a>
+  </div>
+</section>

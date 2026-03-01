@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Inject, PLATFORM_ID} from '@angular/core';
 import { NgForm} from '@angular/forms'
+import { isPlatformBrowser } from '@angular/common';
 import { AlertsService } from 'src/app/shared/alert.service';
 import { ContactPost } from '../model/form.model';
 
@@ -13,8 +14,11 @@ export class FormComponent implements OnInit{
   @Input() contactFormActive = false;
   disableButton=false;
   error=null;
+  private isBrowser: boolean;
 
-  constructor(private http:HttpClient, private alertService:AlertsService) { }
+  constructor(private http:HttpClient, private alertService:AlertsService, @Inject(PLATFORM_ID) platformId: Object) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
 
   ngOnInit(): void {
     this.onInitCheck()
@@ -24,7 +28,7 @@ export class FormComponent implements OnInit{
     this.disableSpamButtonFunc();
     this.onCreatePost(form.value)
   }
-  //storing contact
+
   onCreatePost(post:ContactPost){
     this.http.post(
       'https://amadeuszportfolio-default-rtdb.europe-west1.firebasedatabase.app/contact.json',
@@ -40,6 +44,9 @@ export class FormComponent implements OnInit{
 
   //managing spam attempts by little
   disableSpamButtonFunc(){
+    if (!this.isBrowser) {
+      return
+    }
     const spam=localStorage.getItem('Irregardless')
     if(spam !== null){//if there was item in local storage
       if (+spam>3){
@@ -53,6 +60,9 @@ export class FormComponent implements OnInit{
     }
   }
   onInitCheck(){
+    if (!this.isBrowser) {
+      return
+    }
     if(localStorage.getItem('Irregardless')!==null){
       if(Number(localStorage.getItem('Irregardless'))>=4){
         this.disableButton=true
