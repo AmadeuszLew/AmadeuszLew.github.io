@@ -7,6 +7,7 @@ import {debounceTime, Subject} from "rxjs";
 @Component({
     selector: 'app-nav',
     templateUrl: './left-navigation.component.html',
+    standalone: false
 })
 export class LeftNavigationComponent {
     pageSectionNames = PageSectionNames;

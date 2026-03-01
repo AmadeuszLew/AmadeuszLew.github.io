@@ -3,8 +3,9 @@ import { Project } from '../models/project.model';
 import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-projects-list',
-  templateUrl: './projects-list.component.html',
+    selector: 'app-projects-list',
+    templateUrl: './projects-list.component.html',
+    standalone: false
 })
 export class ProjectsListComponent{
   @Input() projects: Project[];
