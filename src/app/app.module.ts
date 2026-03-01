@@ -1,7 +1,7 @@
 import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import {HttpClient, HttpClientModule} from '@angular/common/http'
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -28,43 +28,36 @@ export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    LandingPageComponent,
-    AboutComponent,
-    ContactComponent,
-    ProjectsComponent,
-    HomeComponent,
-    LeftNavigationComponent,
-    FormComponent,
-    DetailComponent,
-    ProjectsListComponent,
-    SingleProjectComponent,
-    LanguageSelectorComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    MatIconModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    }),
-    ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: !isDevMode(),
-      // Register the ServiceWorker as soon as the application is stable
-      // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
-    })
-  ],
-  providers: [AlertsService,ProjectsService,LanguageSelectorProviderService],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HeaderComponent,
+        LandingPageComponent,
+        AboutComponent,
+        ContactComponent,
+        ProjectsComponent,
+        HomeComponent,
+        LeftNavigationComponent,
+        FormComponent,
+        DetailComponent,
+        ProjectsListComponent,
+        SingleProjectComponent,
+        LanguageSelectorComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        MatIconModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        }),
+        ServiceWorkerModule.register('ngsw-worker.js', {
+            enabled: !isDevMode(),
+            // Register the ServiceWorker as soon as the application is stable
+            // or after 30 seconds (whichever comes first).
+            registrationStrategy: 'registerWhenStable:30000'
+        })], providers: [AlertsService, ProjectsService, LanguageSelectorProviderService, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
