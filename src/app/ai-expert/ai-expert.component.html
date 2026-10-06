@@ -5,7 +5,10 @@
     [innerHTML]="'AI_EXPERT_DESCRIPTION' | translate"
   ></p>
 
-  <div class="mt-8 flex flex-col items-center gap-6">
+  <h3 class="mt-10 text-xl font-semibold text-white text-center">
+    {{ 'GOOGLE_CERTIFICATE_TITLE' | translate }}
+  </h3>
+  <div class="mt-4 flex flex-col items-center gap-6">
     <a [href]="googleAiCertUrl" target="_blank" rel="noopener noreferrer"
        class="block group relative w-fit">
       <img
@@ -17,5 +20,39 @@
         {{ 'VIEW_FULL_IMAGE' | translate }}
       </span>
     </a>
+  </div>
+
+  <h3 class="mt-10 text-xl font-semibold text-white text-center">
+    {{ 'ANTHROPIC_CERTIFICATES_TITLE' | translate }}
+  </h3>
+  <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    @for (cert of anthropicCertificates; track cert.verifyUrl) {
+      <div class="flex flex-col justify-between rounded-md border border-gray-700 bg-gray-800/50 p-4 shadow-lg">
+        <a [href]="cert.pdfPath" target="_blank" rel="noopener noreferrer" class="block group mb-4">
+          <img
+            [src]="cert.imagePath"
+            [alt]="cert.title"
+            loading="lazy"
+            class="w-full rounded-md transition-opacity duration-200 group-hover:opacity-80"
+          />
+        </a>
+        <div>
+          <p class="font-semibold text-orange-400">{{ cert.title }}</p>
+          <p class="text-sm text-gray-400">Anthropic</p>
+        </div>
+        <div class="mt-4 flex gap-4 text-sm">
+          <a [href]="cert.verifyUrl" target="_blank" rel="noopener noreferrer"
+             [attr.aria-label]="('CERTIFICATE_VERIFY' | translate) + ': ' + cert.title"
+             class="text-teal-400 hover:underline">
+            {{ 'CERTIFICATE_VERIFY' | translate }}
+          </a>
+          <a [href]="cert.pdfPath" target="_blank" rel="noopener noreferrer"
+             [attr.aria-label]="('CERTIFICATE_PDF' | translate) + ': ' + cert.title"
+             class="text-teal-400 hover:underline">
+            {{ 'CERTIFICATE_PDF' | translate }}
+          </a>
+        </div>
+      </div>
+    }
   </div>
 </section>
