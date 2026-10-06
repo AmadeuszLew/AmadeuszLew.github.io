@@ -233,5 +233,11 @@
         "description": ""
       }
     }
+  },
+  "HOME_ROLE": "Full-Stack- & KI-Entwickler · Posen",
+  "AVATAR_ALT": "Avatar von Amadeusz Lewandowski",
+  "SEO": {
+    "HOME_TITLE": "Amadeusz Lewandowski – KI- und Full-Stack-Entwickler, Posen",
+    "HOME_DESCRIPTION": "Full-Stack-Entwickler aus Posen, der täglich mit Werkzeugen der künstlichen Intelligenz (Claude, LLMs) arbeitet. Angular, TypeScript, Java EE – Projekte und KI-Zertifikate."
   }
 }

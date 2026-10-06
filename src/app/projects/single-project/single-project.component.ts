@@ -8,12 +8,4 @@ import {Project} from "../models/project.model";
 })
 export class SingleProjectComponent {
   @Input() project: Project;
-
-  openInNewTab(event: MouseEvent | null, url: string): void {
-    if (event) {
-      event.preventDefault();
-    }
-    window.open(url, '_blank');
-  }
-
 }

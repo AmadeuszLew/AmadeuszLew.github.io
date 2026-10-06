@@ -22,6 +22,7 @@ import { ProjectLightboxComponent } from '../project-lightbox/project-lightbox.c
 import { OPENED_FROM_LANDING_STATE } from '../project-navigation';
 import { NavigationService } from '../../shared/navigation.service';
 import { PageSectionNames } from '../../shared/page.defs';
+import { SeoService } from '../../shared/seo.service';
 
 @Component({
   selector: 'app-detail',
@@ -36,6 +37,7 @@ export class DetailComponent {
   private readonly projectsService = inject(ProjectsService);
   private readonly navigationService = inject(NavigationService);
   private readonly injector = inject(Injector);
+  private readonly seoService = inject(SeoService);
   private readonly heading = viewChild<ElementRef<HTMLElement>>('heading');
 
   private readonly projectId = toSignal(
@@ -64,6 +66,7 @@ export class DetailComponent {
     let previousProjectId: string | undefined;
     effect(() => {
       const projectId = this.projectId();
+      this.updateSeo(projectId);
       if (previousProjectId !== undefined && previousProjectId !== projectId) {
         // The component is reused between projects, so move focus like a fresh page load would.
         this.lightboxIndex.set(null);
@@ -72,6 +75,26 @@ export class DetailComponent {
         });
       }
       previousProjectId = projectId;
+    });
+  }
+
+  private updateSeo(projectId: string): void {
+    const summary = this.projectsService.getProjectSummary(projectId);
+    if (!this.projectsService.getSingleProject(projectId) || !summary) {
+      this.seoService.setPage({
+        path: `/${projectId}/`,
+        titleKey: 'PROJECT_NOT_FOUND',
+        descriptionKey: 'PROJECT_NOT_FOUND_TEXT',
+        appendSiteName: true,
+        noindex: true,
+      });
+      return;
+    }
+    this.seoService.setPage({
+      path: `/${projectId}/`,
+      titleKey: summary.projectTitle,
+      descriptionKey: summary.descriptionPreview,
+      appendSiteName: true,
     });
   }
 

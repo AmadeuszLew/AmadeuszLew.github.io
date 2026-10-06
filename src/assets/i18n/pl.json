@@ -233,5 +233,11 @@
         "description": ""
       }
     }
+  },
+  "HOME_ROLE": "Programista full-stack i AI · Poznań",
+  "AVATAR_ALT": "Awatar Amadeusza Lewandowskiego",
+  "SEO": {
+    "HOME_TITLE": "Amadeusz Lewandowski – programista AI i full-stack, Poznań",
+    "HOME_DESCRIPTION": "Programista full-stack z Poznania, który na co dzień pracuje z narzędziami sztucznej inteligencji (Claude, LLM). Angular, TypeScript, Java EE – projekty i certyfikaty AI."
   }
 }

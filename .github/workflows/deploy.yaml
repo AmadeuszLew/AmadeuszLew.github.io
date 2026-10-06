@@ -27,11 +27,9 @@ jobs:
 
       - run: npm ci
 
-      # Build production bundle (outputs to dist/AmadeuszPortfolio/browser)
+      # Build production bundle (outputs to dist/AmadeuszPortfolio/browser);
+      # npm runs postbuild:prod afterwards, which writes sitemap.xml
       - run: npm run build:prod
-
-      # Create 404.html for SPA routing
-      - run: npm run postbuild:prod
 
       # Upload static site artifact for Pages
       - uses: actions/upload-pages-artifact@v3

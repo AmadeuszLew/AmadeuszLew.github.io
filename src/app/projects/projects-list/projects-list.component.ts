@@ -1,6 +1,5 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Project } from '../models/project.model';
-import {Router} from "@angular/router";
 import { OPENED_FROM_LANDING_STATE } from "../project-navigation";
 
 @Component({
@@ -11,9 +10,5 @@ import { OPENED_FROM_LANDING_STATE } from "../project-navigation";
 export class ProjectsListComponent{
   @Input() projects: Project[];
 
-  private readonly router: Router = inject(Router);
-
-  navigate(project: string):void{
-    this.router.navigate([`/${project}`], { state: { [OPENED_FROM_LANDING_STATE]: true } });
-  }
+  readonly openedFromLandingState = { [OPENED_FROM_LANDING_STATE]: true };
 }
