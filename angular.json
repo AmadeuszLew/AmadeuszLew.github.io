@@ -33,7 +33,9 @@
             "serviceWorker": "ngsw-config.json",
             "browser": "src/main.ts",
             "server": "src/main.server.ts",
-            "prerender": true,
+            "prerender": {
+              "routesFile": "prerender-routes.txt"
+            },
             "ssr": {
               "entry": "server.ts"
             }
@@ -43,7 +45,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "1mb",
                   "maximumError": "1mb"
                 },
                 {

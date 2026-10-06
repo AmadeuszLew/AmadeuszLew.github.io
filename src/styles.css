@@ -43,6 +43,11 @@ html, body {
 scroll-margin-top: 100px;
 }
 
+/* Sections receive programmatic focus after navigation; the focus move itself is the cue. */
+section[id][tabindex="-1"]:focus {
+    outline: none;
+}
+
 .left-percentage {
     left: 5%;
 }
@@ -59,7 +64,8 @@ scroll-margin-top: 100px;
     @apply border-theme bg-theme;
 }
 
-.nav-dot:hover span {
+.nav-dot:hover span,
+.nav-dot:focus-visible span {
     opacity: 1;
 }
 

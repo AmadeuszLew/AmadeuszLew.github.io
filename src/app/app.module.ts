@@ -13,14 +13,12 @@ import { LeftNavigationComponent } from './left-navigation/left-navigation.compo
 import { FormComponent } from './contact/form/form.component';
 import { FormsModule } from '@angular/forms';
 import { AlertsService } from './shared/alert.service';
-import { DetailComponent } from './projects/project-detail-view/detail.component';
 import { ProjectsService } from './projects/projects.service';
 import { MatIconModule } from '@angular/material/icon';
 import { SingleProjectComponent } from './projects/single-project/single-project.component';
 import { ProjectsListComponent } from "./projects/projects-list/projects-list.component";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
-import { LanguageSelectorComponent } from './header/language-selector/language-selector.component';
 import { AiExpertComponent } from './ai-expert/ai-expert.component';
 import {LanguageSelectorProviderService} from "./header/language-selector/language-selector-provider.service";
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -31,21 +29,19 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({ declarations: [
         AppComponent,
-        HeaderComponent,
         LandingPageComponent,
         AboutComponent,
         ContactComponent,
         ProjectsComponent,
         HomeComponent,
-        LeftNavigationComponent,
         FormComponent,
-        DetailComponent,
         ProjectsListComponent,
         SingleProjectComponent,
-        LanguageSelectorComponent,
         AiExpertComponent
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
+        HeaderComponent,
+        LeftNavigationComponent,
         AppRoutingModule,
         FormsModule,
         MatIconModule,
