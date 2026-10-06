@@ -1,76 +1,74 @@
-import {Component, HostListener} from '@angular/core';
-import {PageSectionNames} from '../shared';
-import {NavigationService} from "../shared/navigation.service";
-import {debounceTime, Subject} from "rxjs";
+import {Component, afterNextRender, inject} from '@angular/core';
+import {DOCUMENT} from '@angular/common';
+import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
+import {TranslatePipe} from '@ngx-translate/core';
+import {debounceTime, Subject} from 'rxjs';
 
+import {PageSectionNames} from '../shared';
+import {NavigationService} from '../shared/navigation.service';
+
+interface NavDot {
+    section: PageSectionNames;
+    label: string;
+}
 
 @Component({
     selector: 'app-nav',
     templateUrl: './left-navigation.component.html',
-    standalone: false
+    standalone: true,
+    imports: [TranslatePipe],
+    host: { '(window:scroll)': 'onWindowScroll()' },
 })
 export class LeftNavigationComponent {
-    pageSectionNames = PageSectionNames;
-    activeSection: string = this.pageSectionNames.Home;
-    previouslyActiveSection: string = this.pageSectionNames.Home;
-    private scrollSubject: Subject<void> = new Subject<void>();
+    private readonly navigationService = inject(NavigationService);
+    private readonly document = inject(DOCUMENT);
+    private readonly scrollSubject = new Subject<void>();
 
-    @HostListener('window:scroll', [])
+    readonly activeSection = this.navigationService.activeSection;
+    readonly dots: readonly NavDot[] = [
+        { section: PageSectionNames.Home, label: 'BUTTON_HOME' },
+        { section: PageSectionNames.AboutMe, label: 'LEFT_MENU_BUTTON_ABOUT' },
+        { section: PageSectionNames.AiExpert, label: 'LEFT_MENU_BUTTON_AI' },
+        { section: PageSectionNames.Projects, label: 'LEFT_MENU_BUTTON_PROJECTS' },
+        { section: PageSectionNames.ContactMe, label: 'LEFT_MENU_BUTTON_CONTACT_ME' },
+    ];
+
+    constructor() {
+        this.scrollSubject.pipe(debounceTime(100), takeUntilDestroyed()).subscribe(() => {
+            this.setActiveSection();
+        });
+        // Returning to the landing page at scroll position 0 fires no scroll event.
+        afterNextRender(() => this.setActiveSection());
+    }
+
     onWindowScroll(): void {
         this.scrollSubject.next();
     }
 
-    constructor(private navigationService: NavigationService) {
-        this.scrollSubject.pipe(debounceTime(100)).subscribe(() => {
-            this.setActiveSection();
-        });
+    navigateTo(event: MouseEvent, section: PageSectionNames): void {
+        if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) {
+            return; // Let the browser open the real href in a new tab/window.
+        }
+        event.preventDefault();
+        this.navigationService.navigateToElementOnMainPage(section);
     }
 
-    scroll(element: string): void {
-        this.navigationService.scrollToElement(element)
-    }
-
-    setActiveSection() {
-        this.previouslyActiveSection = this.activeSection;
-        const scrollPos: number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-        const homeSection = document.getElementById(this.pageSectionNames.Home);
-        const aboutMeSection = document.getElementById(this.pageSectionNames.AboutMe);
-        const aiExpertSection = document.getElementById(this.pageSectionNames.AiExpert);
-        const projectsSection = document.getElementById(this.pageSectionNames.Projects);
-        const contactMeSection = document.getElementById(this.pageSectionNames.ContactMe);
-
-        if (!homeSection || !aboutMeSection || !aiExpertSection || !projectsSection || !contactMeSection) {
+    private setActiveSection(): void {
+        const window = this.document.defaultView;
+        const sections = this.dots
+            .map((dot) => this.document.getElementById(dot.section))
+            .filter((section): section is HTMLElement => section !== null);
+        if (!window || sections.length === 0) {
             return;
         }
-        const homePos = 0;
-        const aboutMePos: number = aboutMeSection.offsetTop;
-        const aiExpertPos: number = aiExpertSection.offsetTop;
-        const projectsPos: number = projectsSection.offsetTop;
-        const contactMePos: number = contactMeSection.offsetTop;
+        const isScrolledToBottom = window.innerHeight + window.scrollY >= this.document.documentElement.scrollHeight - 2;
+        // A section is current once its top passes the middle of the viewport; short final sections never get
+        // there, so the bottom of the page always selects the last one.
+        const viewportMiddle = window.innerHeight / 2;
+        const active = isScrolledToBottom
+            ? sections[sections.length - 1]
+            : [...sections].reverse().find((section) => section.getBoundingClientRect().top <= viewportMiddle) ?? sections[0];
 
-        const homeHeight: number = homeSection.offsetHeight;
-        const aboutMeHeight: number = aboutMeSection.offsetHeight;
-        const aiExpertHeight: number = aiExpertSection.offsetHeight;
-        const projectsHeight: number = projectsSection.offsetHeight;
-        const contactMeHeight: number = contactMeSection.offsetHeight;
-
-        if (this.isSectionActive(homePos, homeHeight, scrollPos)) {
-            this.activeSection = this.pageSectionNames.Home;
-        } else if (this.isSectionActive(aboutMePos, aboutMeHeight, scrollPos)) {
-            this.activeSection = this.pageSectionNames.AboutMe;
-        } else if (this.isSectionActive(aiExpertPos, aiExpertHeight, scrollPos)) {
-            this.activeSection = this.pageSectionNames.AiExpert;
-        } else if (this.isSectionActive(projectsPos, projectsHeight, scrollPos)) {
-            this.activeSection = this.pageSectionNames.Projects;
-        } else if (this.isSectionActive(contactMePos, contactMeHeight, scrollPos)) {
-            this.activeSection = this.pageSectionNames.ContactMe;
-        } else {
-            this.activeSection = this.previouslyActiveSection;
-        }
+        this.navigationService.activeSection.set(active.id as PageSectionNames);
     }
-
-    private isSectionActive = (sectionPos: number, sectionHeight: number, scrollPos: number) => {
-        return scrollPos + window.innerHeight >= sectionPos + sectionHeight / 2 && scrollPos < sectionPos + sectionHeight / 2;
-    };
-
 }

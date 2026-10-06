@@ -1,0 +1,122 @@
+<dialog #dialog
+        tabindex="-1"
+        class="m-0 h-dvh max-h-none w-screen max-w-none overflow-hidden border-0 bg-body p-0 text-white backdrop:bg-black/70"
+        [attr.aria-label]="'LIGHTBOX_LABEL' | translate"
+        (close)="onNativeClose()"
+        (keydown)="onKeydown($event)">
+  @if (current(); as feature) {
+    <div class="flex h-full flex-col">
+      <div class="flex items-center justify-between gap-4 px-4 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))] md:px-6">
+        <span class="hidden text-sm tabular-nums text-secondary md:inline" aria-hidden="true">
+          {{ 'LIGHTBOX_COUNTER' | translate: { current: index()! + 1, total: total() } }}
+        </span>
+        <p class="sr-only" aria-live="polite" aria-atomic="true">
+          {{ 'LIGHTBOX_COUNTER' | translate: { current: index()! + 1, total: total() } }}:
+          {{ feature.featureTitle | translate }}
+        </p>
+        <button type="button"
+                class="ml-auto flex h-11 w-11 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-selected-text"
+                [attr.aria-label]="'LIGHTBOX_CLOSE' | translate"
+                (click)="close()">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Click-outside-to-close is a pointer convenience; Escape and the close button cover keyboard users. -->
+      <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
+      <div class="relative flex min-h-0 flex-1 items-center justify-center px-2 [container-type:size] [touch-action:pan-y_pinch-zoom] md:px-20"
+           (click)="onStageClick($event)"
+           (touchstart)="onTouchStart($event)"
+           (touchend)="onTouchEnd($event)"
+           (touchcancel)="resetSwipe()">
+        @for (item of currentAsList(); track item.featurePhoto.full) {
+          <div class="relative animate-lightbox-in motion-reduce:animate-none"
+               [style.width]="frameWidth(item)"
+               [style.aspect-ratio]="item.featurePhoto.width + ' / ' + item.featurePhoto.height">
+            <img [src]="item.featurePhoto.thumb"
+                 alt=""
+                 class="absolute inset-0 h-full w-full rounded-lg object-contain"
+                 [style.filter]="failedImages().has(item.featurePhoto.full) ? null : 'blur(1px)'"
+                 aria-hidden="true" />
+            <img [src]="item.featurePhoto.full"
+                 [alt]="item.featureTitle | translate"
+                 [width]="item.featurePhoto.width"
+                 [height]="item.featurePhoto.height"
+                 decoding="async"
+                 class="absolute inset-0 h-full w-full rounded-lg object-contain shadow-2xl transition-opacity duration-300 motion-reduce:transition-none"
+                 [class.opacity-0]="!loadedImages().has(item.featurePhoto.full)"
+                 (load)="markLoaded(item.featurePhoto.full)"
+                 (error)="markFailed(item.featurePhoto.full)" />
+            @if (failedImages().has(item.featurePhoto.full)) {
+              <p class="absolute bottom-2 left-1/2 w-max max-w-[90%] -translate-x-1/2 rounded-full bg-body/90 px-3 py-1 text-center text-xs text-secondary">
+                {{ 'FULL_IMAGE_LOAD_ERROR' | translate }}
+              </p>
+            }
+          </div>
+        }
+
+        @if (total() > 1) {
+          <button type="button"
+                  class="absolute left-4 top-1/2 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-body/80 transition-colors hover:bg-nav focus-visible:outline focus-visible:outline-2 focus-visible:outline-selected-text md:flex"
+                  [attr.aria-label]="'LIGHTBOX_PREVIOUS' | translate"
+                  (click)="previous()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+          </button>
+          <button type="button"
+                  class="absolute right-4 top-1/2 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-body/80 transition-colors hover:bg-nav focus-visible:outline focus-visible:outline-2 focus-visible:outline-selected-text md:flex"
+                  [attr.aria-label]="'LIGHTBOX_NEXT' | translate"
+                  (click)="next()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
+        }
+      </div>
+
+      <div class="mx-auto max-h-[30dvh] w-full max-w-3xl overflow-y-auto px-4 pt-4 text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-selected-text md:px-6 md:pb-6"
+           [style.padding-bottom]="total() < 2 ? 'max(1.5rem, env(safe-area-inset-bottom))' : null"
+           tabindex="0"
+           role="region"
+           [attr.aria-label]="feature.featureTitle | translate">
+        <h2 class="text-lg font-bold md:text-xl">{{ feature.featureTitle | translate }}</h2>
+        @if (feature.featureDescription | translate; as description) {
+          <p class="mt-2 text-sm leading-relaxed text-secondary">{{ description }}</p>
+        }
+      </div>
+
+      @if (total() > 1) {
+        <div class="flex items-center justify-between gap-4 px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-3 md:hidden">
+          <button type="button"
+                  class="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 transition-colors active:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-selected-text"
+                  [attr.aria-label]="'LIGHTBOX_PREVIOUS' | translate"
+                  (click)="previous()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+          </button>
+          <span class="text-sm tabular-nums text-secondary" aria-hidden="true">
+            {{ 'LIGHTBOX_COUNTER' | translate: { current: index()! + 1, total: total() } }}
+          </span>
+          <button type="button"
+                  class="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 transition-colors active:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-selected-text"
+                  [attr.aria-label]="'LIGHTBOX_NEXT' | translate"
+                  (click)="next()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
+        </div>
+      }
+    </div>
+  }
+</dialog>

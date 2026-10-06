@@ -1,5 +1,13 @@
 import {Project} from "./models/project.model";
 import {ProjectDetail} from "./models/projectDetail.model";
+import {ProjectImage} from "./models/feature.model";
+
+const screenshot = (path: string, width: number, height: number): ProjectImage => ({
+  thumb: `assets/${path}.thumb.webp`,
+  full: `assets/${path}.webp`,
+  width,
+  height,
+});
 
 export class ProjectsService {
   private projects: Project[] = [
@@ -11,51 +19,51 @@ export class ProjectsService {
     new Project('./assets/projects/github.png', 'github', "projects.many-more.title", ['JavaScript', 'Python', 'Django', 'MySQL', 'C++', 'Angular', 'Bootstrap', 'Typescript'], "projects.many-more.description", 'full description', 'https://github.com/AmadeuszLew', ['somephotos']),
   ]
   private projectsDetail: ProjectDetail[] = [
-    new ProjectDetail('TMS-team-management-system.title', "TMS", [
-      { featurePhoto: '../assets/projects/TMS/architecture.png', featureTitle: `projectDetail.TMS.architecture.title`, featureDescription: `projectDetail.TMS.architecture.description` },
-      { featurePhoto: '../assets/projects/TMS/dashboard.png', featureTitle: `projectDetail.TMS.dashboard.title`, featureDescription: `projectDetail.TMS.dashboard.description` },
-      { featurePhoto: '../assets/projects/TMS/matches.png', featureTitle: `projectDetail.TMS.matches.title`, featureDescription: `projectDetail.TMS.matches.description` },
-      { featurePhoto: '../assets/projects/TMS/single_match.png', featureTitle: `projectDetail.TMS.singleMatch.title`, featureDescription: `projectDetail.TMS.singleMatch.description` },
-      { featurePhoto: '../assets/projects/TMS/calendar.png', featureTitle: `projectDetail.TMS.calendar.title`, featureDescription: `projectDetail.TMS.calendar.description` },
-      { featurePhoto: '../assets/projects/TMS/knowledgebase.png', featureTitle: `projectDetail.TMS.knowledgebase.title`, featureDescription: `projectDetail.TMS.knowledgebase.description` },
-      { featurePhoto: '../assets/projects/TMS/single_knowledgebase.png', featureTitle: `projectDetail.TMS.singleKnowledgebase.title`, featureDescription: `projectDetail.TMS.singleKnowledgebase.description` },
-      { featurePhoto: '../assets/projects/TMS/players.png', featureTitle: `projectDetail.TMS.players.title`, featureDescription: `projectDetail.TMS.players.description` },
-      { featurePhoto: '../assets/projects/TMS/players_add.png', featureTitle: `projectDetail.TMS.playersAdd.title`, featureDescription: `projectDetail.TMS.playersAdd.description` },
-      { featurePhoto: '../assets/projects/TMS/trainings.png', featureTitle: `projectDetail.TMS.trainings.title`, featureDescription: `projectDetail.TMS.trainings.description` },
-      { featurePhoto: '../assets/projects/TMS/trainings_add.png', featureTitle: `projectDetail.TMS.trainingsAdd.title`, featureDescription: `projectDetail.TMS.trainingsAdd.description` },
-      { featurePhoto: '../assets/projects/TMS/single_training.png', featureTitle: `projectDetail.TMS.singleTraining.title`, featureDescription: `projectDetail.TMS.singleTraining.description` },
+    new ProjectDetail('projects.TMS-team-management-system.title', "TMS", [
+      { featurePhoto: screenshot('projects/TMS/architecture', 616, 235), featureTitle: `projectDetail.TMS.architecture.title`, featureDescription: `projectDetail.TMS.architecture.description` },
+      { featurePhoto: screenshot('projects/TMS/dashboard', 1858, 939), featureTitle: `projectDetail.TMS.dashboard.title`, featureDescription: `projectDetail.TMS.dashboard.description` },
+      { featurePhoto: screenshot('projects/TMS/matches', 1877, 935), featureTitle: `projectDetail.TMS.matches.title`, featureDescription: `projectDetail.TMS.matches.description` },
+      { featurePhoto: screenshot('projects/TMS/single_match', 1884, 943), featureTitle: `projectDetail.TMS.singleMatch.title`, featureDescription: `projectDetail.TMS.singleMatch.description` },
+      { featurePhoto: screenshot('projects/TMS/calendar', 1878, 941), featureTitle: `projectDetail.TMS.calendar.title`, featureDescription: `projectDetail.TMS.calendar.description` },
+      { featurePhoto: screenshot('projects/TMS/knowledgebase', 1882, 935), featureTitle: `projectDetail.TMS.knowledgebase.title`, featureDescription: `projectDetail.TMS.knowledgebase.description` },
+      { featurePhoto: screenshot('projects/TMS/single_knowledgebase', 1808, 639), featureTitle: `projectDetail.TMS.singleKnowledgebase.title`, featureDescription: `projectDetail.TMS.singleKnowledgebase.description` },
+      { featurePhoto: screenshot('projects/TMS/players', 1866, 832), featureTitle: `projectDetail.TMS.players.title`, featureDescription: `projectDetail.TMS.players.description` },
+      { featurePhoto: screenshot('projects/TMS/players_add', 1920, 1080), featureTitle: `projectDetail.TMS.playersAdd.title`, featureDescription: `projectDetail.TMS.playersAdd.description` },
+      { featurePhoto: screenshot('projects/TMS/trainings', 1881, 948), featureTitle: `projectDetail.TMS.trainings.title`, featureDescription: `projectDetail.TMS.trainings.description` },
+      { featurePhoto: screenshot('projects/TMS/trainings_add', 1500, 1200), featureTitle: `projectDetail.TMS.trainingsAdd.title`, featureDescription: `projectDetail.TMS.trainingsAdd.description` },
+      { featurePhoto: screenshot('projects/TMS/single_training', 1881, 310), featureTitle: `projectDetail.TMS.singleTraining.title`, featureDescription: `projectDetail.TMS.singleTraining.description` },
     ]),
-    new ProjectDetail('sneakers-shop.title', 'sneakers-shop', [
-      { featurePhoto: '../assets/projects/SneakerShop/main_page.png', featureTitle: `projectDetail.sneakerShop.mainPage.title`, featureDescription: `projectDetail.sneakerShop.mainPage.description` },
-      { featurePhoto: '../assets/projects/SneakerShop/product_page.png', featureTitle: `projectDetail.sneakerShop.productPage.title`, featureDescription: `projectDetail.sneakerShop.productPage.description` },
-      { featurePhoto: '../assets/projects/SneakerShop/login.png', featureTitle: `projectDetail.sneakerShop.login.title`, featureDescription: `projectDetail.sneakerShop.login.description` },
-      { featurePhoto: '../assets/projects/SneakerShop/login_firebase.png', featureTitle: `projectDetail.sneakerShop.loginFirebase.title`, featureDescription: `projectDetail.sneakerShop.loginFirebase.description` },
-      { featurePhoto: '../assets/projects/SneakerShop/cart_no_item.png', featureTitle: `projectDetail.sneakerShop.cartNoItem.title`, featureDescription: `projectDetail.sneakerShop.cartNoItem.description` },
-      { featurePhoto: '../assets/projects/SneakerShop/cart_item.png', featureTitle: `projectDetail.sneakerShop.cartItem.title`, featureDescription: `projectDetail.sneakerShop.cartItem.description` },
-      { featurePhoto: '../assets/projects/SneakerShop/features.png', featureTitle: `projectDetail.sneakerShop.features.title`, featureDescription: `projectDetail.sneakerShop.features.description` },
-      { featurePhoto: '../assets/projects/SneakerShop/main_page_sm.png', featureTitle: `projectDetail.sneakerShop.mainPageSm.title`, featureDescription: `projectDetail.sneakerShop.mainPageSm.description` },
-      { featurePhoto: '../assets/projects/SneakerShop/main_page_sm_sidebar.png', featureTitle: `projectDetail.sneakerShop.mainPageSmSidebar.title`, featureDescription: `projectDetail.sneakerShop.mainPageSmSidebar.description` },
-      { featurePhoto: '../assets/projects/SneakerShop/features.png', featureTitle: `projectDetail.sneakerShop.more.title`, featureDescription: `projectDetail.sneakerShop.more.description` },
+    new ProjectDetail('projects.sneakers-shop.title', 'sneakers-shop', [
+      { featurePhoto: screenshot('projects/SneakerShop/main_page', 1886, 930), featureTitle: `projectDetail.sneakerShop.mainPage.title`, featureDescription: `projectDetail.sneakerShop.mainPage.description` },
+      { featurePhoto: screenshot('projects/SneakerShop/product_page', 1858, 788), featureTitle: `projectDetail.sneakerShop.productPage.title`, featureDescription: `projectDetail.sneakerShop.productPage.description` },
+      { featurePhoto: screenshot('projects/SneakerShop/login', 1903, 934), featureTitle: `projectDetail.sneakerShop.login.title`, featureDescription: `projectDetail.sneakerShop.login.description` },
+      { featurePhoto: screenshot('projects/SneakerShop/login_firebase', 1880, 826), featureTitle: `projectDetail.sneakerShop.loginFirebase.title`, featureDescription: `projectDetail.sneakerShop.loginFirebase.description` },
+      { featurePhoto: screenshot('projects/SneakerShop/cart_no_item', 1880, 937), featureTitle: `projectDetail.sneakerShop.cartNoItem.title`, featureDescription: `projectDetail.sneakerShop.cartNoItem.description` },
+      { featurePhoto: screenshot('projects/SneakerShop/cart_item', 1858, 788), featureTitle: `projectDetail.sneakerShop.cartItem.title`, featureDescription: `projectDetail.sneakerShop.cartItem.description` },
+      { featurePhoto: screenshot('projects/SneakerShop/features', 624, 398), featureTitle: `projectDetail.sneakerShop.features.title`, featureDescription: `projectDetail.sneakerShop.features.description` },
+      { featurePhoto: screenshot('projects/SneakerShop/main_page_sm', 992, 919), featureTitle: `projectDetail.sneakerShop.mainPageSm.title`, featureDescription: `projectDetail.sneakerShop.mainPageSm.description` },
+      { featurePhoto: screenshot('projects/SneakerShop/main_page_sm_sidebar', 979, 942), featureTitle: `projectDetail.sneakerShop.mainPageSmSidebar.title`, featureDescription: `projectDetail.sneakerShop.mainPageSmSidebar.description` },
+      { featurePhoto: screenshot('projects/SneakerShop/features', 624, 398), featureTitle: `projectDetail.sneakerShop.more.title`, featureDescription: `projectDetail.sneakerShop.more.description` },
     ]),
-    new ProjectDetail('stockx-fix-extension.title', 'stockx-fix-extension',[
-      { featurePhoto: '../assets/projects/stockx/all_items_without.png', featureTitle: `projectDetail.stockx.allItemsWithout.title`, featureDescription: `projectDetail.stockx.allItemsWithout.description` },
-      { featurePhoto: '../assets/projects/stockx/all_items.png', featureTitle: `projectDetail.stockx.allItems.title`, featureDescription: `projectDetail.stockx.allItems.description` },
-      { featurePhoto: '../assets/projects/stockx/item_without.png', featureTitle: `projectDetail.stockx.itemWithout.title`, featureDescription: `projectDetail.stockx.itemWithout.description` },
-      { featurePhoto: '../assets/projects/stockx/item_with.png', featureTitle: `projectDetail.stockx.itemWith.title`, featureDescription: `projectDetail.stockx.itemWith.description` }
+    new ProjectDetail('projects.stockx-fix-extension.title', 'stockx-fix-extension',[
+      { featurePhoto: screenshot('projects/stockx/all_items_without', 1898, 964), featureTitle: `projectDetail.stockx.allItemsWithout.title`, featureDescription: `projectDetail.stockx.allItemsWithout.description` },
+      { featurePhoto: screenshot('projects/stockx/all_items', 1881, 731), featureTitle: `projectDetail.stockx.allItems.title`, featureDescription: `projectDetail.stockx.allItems.description` },
+      { featurePhoto: screenshot('projects/stockx/item_without', 1871, 949), featureTitle: `projectDetail.stockx.itemWithout.title`, featureDescription: `projectDetail.stockx.itemWithout.description` },
+      { featurePhoto: screenshot('projects/stockx/item_with', 1900, 889), featureTitle: `projectDetail.stockx.itemWith.title`, featureDescription: `projectDetail.stockx.itemWith.description` }
     ]),
-    new ProjectDetail('portfolio-site.title', 'portfolio', [
-      { featurePhoto: '../assets/projects/ten.png', featureTitle: `projectDetail.portfolio.good.title`, featureDescription: `projectDetail.portfolio.good.description` },
-      { featurePhoto: '../assets/projects/more.jpg', featureTitle: `projectDetail.portfolio.more.title`, featureDescription: `projectDetail.portfolio.more.description` }
+    new ProjectDetail('projects.portfolio-site.title', 'portfolio', [
+      { featurePhoto: screenshot('projects/ten', 600, 600), featureTitle: `projectDetail.portfolio.good.title`, featureDescription: `projectDetail.portfolio.good.description` },
+      { featurePhoto: screenshot('projects/more', 1588, 595), featureTitle: `projectDetail.portfolio.more.title`, featureDescription: `projectDetail.portfolio.more.description` }
     ]),
-    new ProjectDetail('Comarch Digital Insurance', 'comarch-digital-insurance', [
-      { featurePhoto: '../assets/projects/cdi/cdi_1.png', featureTitle: `projectDetail.comarch.cdi1.title`, featureDescription: `projectDetail.comarch.cdi1.description` },
-      { featurePhoto: '../assets/projects/cdi/cdi_2.png', featureTitle: `projectDetail.comarch.cdi2.title`, featureDescription: `projectDetail.comarch.cdi2.description` },
-      { featurePhoto: '../assets/projects/cdi/cdi_3.png', featureTitle: `projectDetail.comarch.cdi3.title`, featureDescription: `projectDetail.comarch.cdi3.description` },
-      { featurePhoto: '../assets/projects/cdi/cdi_4.png', featureTitle: `projectDetail.comarch.cdi4.title`, featureDescription: `projectDetail.comarch.cdi4.description` },
-      { featurePhoto: '../assets/projects/cdi/cdi_5.png', featureTitle: `projectDetail.comarch.cdi5.title`, featureDescription: `projectDetail.comarch.cdi5.description` },
+    new ProjectDetail('projects.comarch-digital-insurance.title', 'comarch-digital-insurance', [
+      { featurePhoto: screenshot('projects/cdi/cdi_1', 798, 553), featureTitle: `projectDetail.comarch.cdi1.title`, featureDescription: `projectDetail.comarch.cdi1.description` },
+      { featurePhoto: screenshot('projects/cdi/cdi_2', 656, 403), featureTitle: `projectDetail.comarch.cdi2.title`, featureDescription: `projectDetail.comarch.cdi2.description` },
+      { featurePhoto: screenshot('projects/cdi/cdi_3', 697, 490), featureTitle: `projectDetail.comarch.cdi3.title`, featureDescription: `projectDetail.comarch.cdi3.description` },
+      { featurePhoto: screenshot('projects/cdi/cdi_4', 616, 230), featureTitle: `projectDetail.comarch.cdi4.title`, featureDescription: `projectDetail.comarch.cdi4.description` },
+      { featurePhoto: screenshot('projects/cdi/cdi_5', 670, 575), featureTitle: `projectDetail.comarch.cdi5.title`, featureDescription: `projectDetail.comarch.cdi5.description` },
     ]),
-    new ProjectDetail('projectDetail.manyMore.github.title', 'github', [
-      { featurePhoto: '../assets/man_icon.png', featureTitle: `projectDetail.manyMore.github.title`, featureDescription: `projectDetail.manyMore.github.description` },
+    new ProjectDetail('projects.many-more.title', 'github', [
+      { featurePhoto: screenshot('man_icon', 512, 512), featureTitle: `projectDetail.manyMore.github.title`, featureDescription: `projectDetail.manyMore.github.description` },
     ])
   ];
 
@@ -65,7 +73,11 @@ export class ProjectsService {
     return this.projects.slice()
   }
 
-  getSingleProject(id: string):ProjectDetail {
-    return this.projectsDetail.find((x:ProjectDetail) => x.projectPage === id) ?? this.projectsDetail[0];
+  getSingleProject(id: string): ProjectDetail | undefined {
+    return this.projectsDetail.find((x: ProjectDetail) => x.projectPage === id);
+  }
+
+  getProjectSummary(id: string): Project | undefined {
+    return this.projects.find((x: Project) => x.projectPage === id);
   }
 }
