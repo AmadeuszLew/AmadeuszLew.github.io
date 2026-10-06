@@ -233,5 +233,11 @@
         "description": ""
       }
     }
+  },
+  "HOME_ROLE": "Desarrollador full-stack e IA · Poznań",
+  "AVATAR_ALT": "Avatar de Amadeusz Lewandowski",
+  "SEO": {
+    "HOME_TITLE": "Amadeusz Lewandowski – Desarrollador de IA y full-stack, Poznań",
+    "HOME_DESCRIPTION": "Desarrollador full-stack de Poznań que trabaja a diario con herramientas de inteligencia artificial (Claude, LLM). Angular, TypeScript, Java EE: proyectos y certificados de IA."
   }
 }

@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
-import {Meta} from "@angular/platform-browser";
+import {SeoService} from "./shared/seo.service";
+import {DEFAULT_LANGUAGE, readStoredLanguage} from "./shared/language";
 
 @Component({
   selector: 'app-root',
@@ -10,15 +11,13 @@ import {Meta} from "@angular/platform-browser";
 })
 export class AppComponent {
   title = 'portfiolioA';
-  constructor(private translate: TranslateService, private readonly meta: Meta,) {
-    this.translate.setDefaultLang('en');
+  // Created before the first language is set so it can mirror it into <html lang>.
+  private readonly seoService = inject(SeoService);
 
-    this.translate.use('en');
-
-    this.meta.addTags([
-      { name: 'description', content: 'Portfolio Amadeusza Lewandowskiego, programisty z Poznania.' },
-      { name: 'keywords', content: 'Amadeusz Lewandowski, Programista, Poznań, Inowrocław' },
-      { name: 'author', content: 'Amadeusz Lewandowski' },
-    ]);
+  constructor(private translate: TranslateService) {
+    const supportedLanguages = ['pl', 'en', 'de', 'es'];
+    const storedLanguage = readStoredLanguage();
+    this.translate.setDefaultLang(DEFAULT_LANGUAGE);
+    this.translate.use(storedLanguage && supportedLanguages.includes(storedLanguage) ? storedLanguage : DEFAULT_LANGUAGE);
   }
 }

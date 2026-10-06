@@ -8,9 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "build": "ng build --output-path=docs --base-href=/",
-    "postbuild": "node 404forGHpages.js",
     "build:prod": "ng build --configuration production --base-href=/",
-    "postbuild:prod": "node 404forGHpages.js",
+    "postbuild:prod": "node scripts/generate-sitemap.js",
     "serve:ssr:AmadeuszPortfolio": "node dist/AmadeuszPortfolio/server/server.mjs"
   },
   "private": true,

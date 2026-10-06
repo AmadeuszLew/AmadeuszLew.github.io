@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amadeuszlewandowski.pl/sitemap.xml

@@ -1,8 +1,8 @@
 <div class="space-y-12">
-  <div *ngFor="let project of projects"
-       tabindex="0"
-       (click)="navigate(project.projectPage)"
-       (keydown.enter)="navigate(project.projectPage)">
+  <a *ngFor="let project of projects"
+     class="block"
+     [routerLink]="['/', project.projectPage]"
+     [state]="openedFromLandingState">
       <app-single-project [project]="project"></app-single-project>
-  </div>
+  </a>
 </div>
