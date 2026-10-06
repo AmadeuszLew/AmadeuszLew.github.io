@@ -7,7 +7,7 @@
   "LEFT_MENU_BUTTON_PROJECTS": "Proyectos",
   "LEFT_MENU_BUTTON_CONTACT_ME": "Contacto",
   "BUTTON_HOME": "Inicio",
-  "LANGUAGE_CHANGED": "el idioma cambió",
+  "LANGUAGE_CHANGED": "Idioma cambiado",
   "BUTTON_ABOUT": "Sobre mí",
   "BUTTON_AI": "IA",
   "BUTTON_PROJECTS": "Proyectos",
@@ -25,16 +25,16 @@
   "COMPANY_FORM_DESCRIPTION": "Por favor, introduce el nombre de la empresa",
   "ABOUT_ME_TITLE": "Sobre mí",
   "AI_EXPERT_TITLE": "IA y Tecnologías Modernas",
-  "AI_EXPERT_DESCRIPTION": "La inteligencia artificial en mi empresa no es solo una tendencia, sino una <span class=\"text-teal-400\">parte fundamental de nuestra cultura de desarrollo</span>. Se nos exige integrar activamente herramientas de IA en nuestros flujos de trabajo diarios, y lo asumo con entusiasmo. Más allá del mandato profesional, invierto mi propio tiempo para profundizar mi comprensión de la IA, manteniéndome al día con la rápida evolución del campo.<br />Este compromiso está respaldado por un <span class=\"text-yellow-400\">certificado de Google en IA</span>, que puedes ver haciendo clic en la imagen a continuación. Ya sea aprovechando <span class=\"text-cyan-400\">asistentes de codificación basados en IA</span>, explorando <span class=\"text-orange-400\">modelos de lenguaje a gran escala</span> o aplicando conceptos de aprendizaje automático a problemas reales, estoy en constante aprendizaje y adaptación.<br />En el trabajo usamos <span class=\"text-teal-400\">Augment</span>, un asistente de programación con IA muy similar a Claude. Por mi cuenta, estoy aprendiendo a usar <span class=\"text-orange-400\">Claude</span>, como confirman los certificados de Anthropic a continuación. Como ambas herramientas son tan parecidas, aprendo en dos lugares a la vez: lo que aprendo en uno se aplica directamente en el otro y me hace más eficaz en ambos.",
+  "AI_EXPERT_DESCRIPTION": "La inteligencia artificial en mi empresa no es solo una tendencia, sino una <span class=\"text-teal-400\">parte fundamental de nuestra cultura de desarrollo</span>. Se nos exige integrar activamente herramientas de IA en nuestros flujos de trabajo diarios, y lo asumo con entusiasmo. Más allá del mandato profesional, invierto mi propio tiempo para profundizar mi comprensión de la IA, manteniéndome al día con la rápida evolución del campo.<br />Este compromiso está respaldado por un <span class=\"text-yellow-400\">certificado de Google en IA</span>, que puedes ver haciendo clic en la imagen a continuación. Ya sea aprovechando <span class=\"text-cyan-400\">asistentes de codificación basados en IA</span>, explorando <span class=\"text-orange-400\">grandes modelos de lenguaje</span> o aplicando conceptos de aprendizaje automático a problemas reales, estoy en constante aprendizaje y adaptación.<br />En el trabajo usamos <span class=\"text-teal-400\">Augment</span>, un asistente de programación con IA muy similar a Claude. Por mi cuenta, estoy aprendiendo a usar <span class=\"text-orange-400\">Claude</span>, como confirman los certificados de Anthropic a continuación. Como ambas herramientas son tan parecidas, aprendo en dos lugares a la vez: lo que aprendo en una se aplica directamente a la otra y me hace más eficaz en ambas.",
   "AI_CERTIFICATE_ALT": "Certificado de Google en IA",
   "GOOGLE_CERTIFICATE_TITLE": "Certificado de Google",
   "ANTHROPIC_CERTIFICATES_TITLE": "Certificados de Anthropic",
   "CERTIFICATE_VERIFY": "Verificar",
   "CERTIFICATE_PDF": "Ver PDF",
-  "ABOUT_ME_RICH_INTRO": "¡Hola! Me llamo <span class=\"text-teal-400\">Amadeus</span>, y soy un experimentado profesional de TI con formación en <span class=\"text-yellow-400\">Desarrollo de Software y un diploma de ingeniería</span>. Desde el 1 de diciembre de 2023 estoy empleado como programador, comenzando como <span class=\"text-cyan-400\">Desarrollador Angular</span> y desarrollándome hacia un <span class=\"text-cyan-400\">rol fullstack</span>.<br />Actualmente me especializo en <span class=\"text-orange-400\">Java EE</span> y colaborando en <span class=\"text-green-400\">un gran proyecto base</span> que sirve como base para diversas implementaciones de clientes. Mi enfoque principal es la solución desarrollada para <span class=\"text-swiss-life\">Swiss Life</span>, aunque mi aventura comenzó trabajando en <span class=\"text-axa\">AXA</span>. Estas experiencias han dado forma a mis habilidades en <span class=\"text-green-500\">frontend y backend</span>, permitiéndome enfrentar diversos desafíos en el desarrollo de aplicaciones web.<br />¡Gracias por visitar mi página!",
-  "ABOUT_ME_RICH_DETAILS": "Tengo una profunda pasión por la programación, ya que me permite liberar mi creatividad y dar vida a nuevas ideas. A lo largo de los años, mi conocimiento ha crecido, abarcando tanto <span class=\"text-cyan-400\">frontend</span> como <span class=\"text-orange-400\">backend</span>, permitiéndome trabajar en <span class=\"text-green-400\">grandes proyectos base</span> con un impacto real. Mi enfoque principal incluye tecnologías como HTML, CSS, JavaScript, MongoDB, TypeScript, Tailwind, Angular y Java EE, y también tengo experiencia en frameworks como Bootstrap y Vue.<br />Además de la programación, también trabajé como especialista en redes en la industria de TI, obteniendo valiosas ideas sobre la infraestructura del sistema. Sin embargo, mi verdadera alegría es la programación, donde descubro posibilidades ilimitadas, colaboro con equipos talentosos y constantemente desarrollo mis habilidades enfrentando nuevos desafíos.",
+  "ABOUT_ME_RICH_INTRO": "¡Hola! Me llamo <span class=\"text-teal-400\">Amadeus</span> y soy un profesional de TI con experiencia, formado en <span class=\"text-yellow-400\">desarrollo de software y con título de ingeniero</span>. Desde el 1 de diciembre de 2022 trabajo como programador: empecé como <span class=\"text-cyan-400\">desarrollador Angular</span> y he evolucionado hacia un <span class=\"text-cyan-400\">rol full-stack</span>.<br />Actualmente me especializo en <span class=\"text-orange-400\">Java EE</span> y colaboro en <span class=\"text-green-400\">un gran proyecto central</span> que sirve de base para diversas implementaciones para clientes. Mi enfoque principal es la solución desarrollada para <span class=\"text-swiss-life\">Swiss Life</span>, aunque mi aventura comenzó trabajando en la implementación para <span class=\"text-axa\">AXA</span>. Estas experiencias han dado forma a mis habilidades en <span class=\"text-green-500\">frontend y backend</span>, permitiéndome afrontar diversos desafíos en el desarrollo de aplicaciones web.<br />¡Gracias por visitar mi página!",
+  "ABOUT_ME_RICH_DETAILS": "Tengo una profunda pasión por la programación, ya que me permite liberar mi creatividad y dar vida a nuevas ideas. A lo largo de los años, mis conocimientos han crecido hasta abarcar tanto el <span class=\"text-cyan-400\">frontend</span> como el <span class=\"text-orange-400\">backend</span>, lo que me permite trabajar en <span class=\"text-green-400\">grandes proyectos centrales</span> con un impacto real. Trabajo principalmente con tecnologías como HTML, CSS, JavaScript, MongoDB, TypeScript, Tailwind, Angular y Java EE, y también tengo experiencia con frameworks como Bootstrap y Vue.<br />Además de la programación, también trabajé como especialista en redes en el sector de TI, lo que me dio un valioso conocimiento de la infraestructura de sistemas. También aprovecho habilidades adquiridas fuera de TI. Trabajar como vendedor en una tienda de electrónica mejoró notablemente mis habilidades de comunicación y de trabajo en equipo, y trabajar en Dublín para Ryanair me enseñó a cuidar los detalles y a trabajar en un entorno internacional. Sin embargo, mi verdadera pasión es programar: descubro posibilidades ilimitadas, colaboro con equipos talentosos y desarrollo constantemente mis habilidades afrontando nuevos desafíos.",
   "SEE_MORE_PROJECT": "¡Para ver más información sobre el proyecto que te interesa, simplemente haz clic en él!",
-  "FOR_LIFE_VERSION": "para ver la versión en vivo, haz clic en el enlace, serás redirigido",
+  "FOR_LIFE_VERSION": "Para ver la versión en vivo, haz clic en el enlace y serás redirigido a ella.",
   "VIEW_FULL_IMAGE": "Para ver la imagen en tamaño completo, haz clic en ella :D",
   "FEATURES": "Características:",
   "projects": {
@@ -44,18 +44,18 @@
     },
     "sneakers-shop": {
       "title": "Tienda de Zapatillas",
-      "description": "Una tienda simple creada para pequeños vendedores especializados en zapatillas limitadas. En la versión beta, los clientes pueden iniciar sesión, agregar productos al carrito y finalizar la compra con la opción de pago a través de PayPal. En el futuro, planeamos agregar más funciones."
+      "description": "Una tienda simple creada para pequeños vendedores especializados en zapatillas limitadas. En la versión beta, los clientes pueden iniciar sesión y agregar productos al carrito. En el futuro, planeamos agregar pagos (por ejemplo, a través de PayPal) y más funciones."
     },
     "stockx-fix-extension": {
-      "title": "Extensión de Corrección de StockX",
+      "title": "Extensión StockX Fix",
       "description": "Una pequeña extensión de Tampermonkey que mejora el diseño de StockX, ocultando automáticamente las secciones de la página. También permite agregar productos al carrito desde páginas externas."
     },
     "portfolio-site": {
       "title": "Sitio de Portafolio",
-      "description": "Este es mi sitio web personal de portafolio que presenta todos mis trabajos y proyectos anteriores. Fue creado utilizando Angular y Tailwind CSS para crear un sitio web responsivo y ligero."
+      "description": "Este es mi sitio web personal de portafolio, que presenta todos mis trabajos y proyectos anteriores. Lo creé con Angular y Tailwind CSS para conseguir un sitio web responsivo y ligero."
     },
     "comarch-digital-insurance": {
-      "title": "Comarch Seguros Digitales",
+      "title": "Comarch Digital Insurance",
       "description": "Comarch Digital Insurance (CDI) es una plataforma digital integral diseñada para la industria de seguros. Permite a las compañías de seguros optimizar sus operaciones mediante la automatización de procesos como la creación de pólizas, suscripción, gestión de reclamaciones y atención al cliente. CDI es altamente configurable y puede integrarse con servicios externos como firmas digitales, identificación electrónica y otras herramientas para aumentar su funcionalidad."
     },
     "many-more": {
@@ -67,7 +67,7 @@
     "TMS": {
       "architecture": {
         "title": "Arquitectura",
-        "description": "La interfaz de usuario es una combinación de Vue y Vuetify, proporcionando alta capacidad de respuesta y legibilidad para el usuario. El lado del servidor consta de varios módulos. La base de datos SQLite es responsable de almacenar datos. La comunicación con la base de datos se realiza a través del framework Django. Usamos el framework rest para proporcionar y recibir datos entre la interfaz de usuario y el servidor de aplicaciones."
+        "description": "La interfaz de usuario está construida con Vue y Vuetify, que proporcionan una alta capacidad de respuesta y buena legibilidad para el usuario. El lado del servidor consta de varios módulos. La base de datos SQLite se encarga de almacenar los datos. La comunicación con la base de datos se realiza a través del framework Django. Usamos Django REST Framework para enviar y recibir datos entre la interfaz de usuario y el servidor de aplicaciones."
       },
       "dashboard": {
         "title": "Panel de Entrenador",
@@ -83,7 +83,7 @@
       },
       "calendar": {
         "title": "Vista de Calendario",
-        "description": "Vista de calendario que facilita la búsqueda de próximos eventos. Incluye entrenamientos, partidos. El usuario puede agregar un evento solo, como 'reunión de equipo'. El usuario puede cambiar la vista a día-4 días-semana-mes, con la vista predeterminada del mes."
+        "description": "Vista de calendario que facilita la consulta de próximos eventos, como entrenamientos y partidos. El usuario también puede agregar un evento independiente, como «reunión de equipo». La vista se puede cambiar entre día, 4 días, semana y mes, siendo el mes la vista predeterminada."
       },
       "knowledgebase": {
         "title": "Base de Conocimientos",
@@ -95,7 +95,7 @@
       },
       "players": {
         "title": "Lista de Jugadores",
-        "description": "Vista con tabla que muestra todos los jugadores. La búsqueda funciona por: nombre, apellido, género y correo electrónico. La tabla se puede ordenar por cualquier parámetro proporcionado. De acuerdo con el principio F, el botón de edición y adición está disponible en la esquina superior derecha."
+        "description": "Vista con una tabla que muestra todos los jugadores. La búsqueda funciona por nombre, apellido, género y correo electrónico. La tabla se puede ordenar por cualquier parámetro. Siguiendo el patrón F, los botones de edición y adición están en la esquina superior derecha."
       },
       "playersAdd": {
         "title": "Agregar y Editar Jugadores",
@@ -103,7 +103,7 @@
       },
       "trainings": {
         "title": "Vista de Entrenamientos",
-        "description": "Vista que contiene todos los entrenamientos. El usuario puede agregar y eliminar entrenamientos haciendo clic en la esquina superior derecha. La clasificación por consulta se agregó en la versión beta 0.2, y la versión en vivo no reflejará la pantalla. Hacer clic en un entrenamiento específico redirigirá a la vista de entrenamiento individual."
+        "description": "Vista que contiene todos los entrenamientos. El usuario puede agregar y eliminar entrenamientos haciendo clic en la esquina superior derecha. La ordenación mediante consultas se agregó en la versión beta 0.2, por lo que la versión en vivo no coincide con esta captura. Al hacer clic en un entrenamiento concreto, se abre la vista de entrenamiento individual."
       },
       "trainingsAdd": {
         "title": "Agregar y Editar Entrenamientos",
@@ -117,7 +117,7 @@
     "sneakerShop": {
       "mainPage": {
         "title": "Página Principal",
-        "description": "He intentado mantenerlo lo más simple posible. Siguiendo la regla F/Z, el carrito y la página de inicio de sesión están en la esquina superior derecha. El logotipo de la esquina superior izquierda también es un enlace a la página de inicio. Los modelos de productos están diseñados para ser ordenados por categoría principal y modelo."
+        "description": "He intentado mantenerla lo más simple posible. Siguiendo el patrón F/Z, el carrito y la página de inicio de sesión están en la esquina superior derecha. El logotipo de la esquina superior izquierda también es un enlace a la página de inicio. Los modelos de productos se pueden ordenar por categoría principal y modelo."
       },
       "productPage": {
         "title": "Página de Producto",
@@ -167,11 +167,11 @@
       },
       "itemWithout": {
         "title": "Vista de Artículo Sin Extensión",
-        "description": "Imagen que muestra cómo se ve StockX sin extensión. El complemento después de que el usuario hace clic para verificar agrega dos campos."
+        "description": "Imagen que muestra cómo se ve StockX sin la extensión. Después de que el usuario hace clic en verificar, el complemento agrega dos campos."
       },
       "itemWith": {
         "title": "Vista de Artículo Después de Usar la Extensión",
-        "description": "Campos agregados por el complemento calculan el precio real que el usuario debería haber insertado para obtener la oferta más baja y lo muestran en el DOM. Otro campo calcula el pago del usuario, para que pueda saber inmediatamente si vale la pena hacer una oferta."
+        "description": "Los campos agregados por el complemento calculan el precio real que el usuario debería haber introducido para tener la oferta de venta más baja (lowest ask) y lo muestran en el DOM. Otro campo calcula lo que recibirá el usuario, para que sepa inmediatamente si vale la pena publicar la oferta."
       }
     },
     "portfolio": {
@@ -181,7 +181,7 @@
       },
       "more": {
         "title": "Más próximamente",
-        "description": "Aún estoy trabajando en este sitio. Quiero hacerlo bilingüe usando pipe, agregar más animaciones para que sea más amigable con el usuario, trabajar en versiones móviles de imágenes, aumentar la visibilidad en Google y más..."
+        "description": "Aún estoy trabajando en este sitio. Quiero agregar más animaciones para que sea más amigable con el usuario, trabajar en versiones móviles de imágenes, aumentar la visibilidad en Google y más..."
       }
     },
     "comarch": {
@@ -191,11 +191,11 @@
       },
       "cdi2": {
         "title": "Procesamiento Automatizado de Reclamaciones",
-        "description": "Integración con Comarch Insurance Claims permite una gestión de reclamaciones fluida."
+        "description": "La integración con Comarch Insurance Claims permite una gestión de reclamaciones fluida."
       },
       "cdi3": {
         "title": "Cumplimiento Normativo",
-        "description": "CDI cumple con estándares de la industria como GDPR, IDD (Directiva de Distribución de Seguros) y PRIIPS (Productos de Inversión Minorista Empaquetados y Basados en Seguros)."
+        "description": "CDI cumple con estándares del sector como el RGPD, la IDD (Directiva de Distribución de Seguros) y los PRIIPs (productos de inversión minorista empaquetados y basados en seguros)."
       },
       "cdi4": {
         "title": "Despliegue en la Nube",
