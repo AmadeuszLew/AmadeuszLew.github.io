@@ -1,11 +1,39 @@
-<div class="w-full border border-nav p-6 md:p-8 lg:p-10 lg:space-x-16 lg:justify-start lg:flex-nowrap flex justify-center flex-wrap cursor-pointer">
+<div class="w-full border p-6 md:p-8 lg:p-10 lg:space-x-16 lg:justify-start lg:flex-nowrap flex justify-center flex-wrap cursor-pointer"
+     [class.border-nav]="!project.live"
+     [class.border-theme]="project.live">
   <div class="mb-6 lg:mb-0 ml-0">
     <img src="{{project.projectLogo}}" alt="" class="md:w-3/5 lg:w-4/5">
   </div>
   <div class="flex-1 flex-wrap justify-center text-center lg:text-left lg:block break-words overflow-hidden p-4">
+    @if (project.live) {
+      <span class="mb-3 inline-flex items-center gap-2 rounded-full border border-green-500/40 bg-green-500/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-green-400">
+        <span class="relative flex h-2 w-2" aria-hidden="true">
+          <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75 motion-reduce:animate-none"></span>
+          <span class="relative inline-flex h-2 w-2 rounded-full bg-green-400"></span>
+        </span>
+        {{ 'LIVE' | translate }}
+      </span>
+    }
     <h3 class="text-white text-3xl font-semibold">{{project.projectTitle | translate }}</h3>
-    <!-- Plain text: the whole card is a link, and the project page has its own "Visit project" link. -->
-    <span class="text-white text-sm">{{project.projectLink}}</span>
+    @if (project.live) {
+      <!-- Sits above the card's overlay link (z-10), so it opens the live site instead of the project page. -->
+      <a [href]="project.projectLink"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="relative z-10 mt-4 inline-flex min-h-11 items-center gap-2 bg-theme px-5 py-2 font-bold text-white transition-colors hover:bg-theme/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-selected-text">
+        {{ 'SEE_LIVE' | translate }}: {{ project.projectLink.replace('https://', '') }}
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M15 3h6v6" />
+          <path d="M10 14 21 3" />
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+        </svg>
+        <span class="sr-only">{{ 'OPENS_IN_NEW_TAB' | translate }}</span>
+      </a>
+    } @else {
+      <!-- Plain text: the whole card is a link, and the project page has its own "Visit project" link. -->
+      <span class="text-white text-sm">{{project.projectLink}}</span>
+    }
     <div  class="w-full lg:w-auto lg:justify-start
           flex flex-wrap justify-center
           gap-3 mt-6 mb-8">
@@ -16,4 +44,3 @@
     </div>
   </div>
 </div>
-

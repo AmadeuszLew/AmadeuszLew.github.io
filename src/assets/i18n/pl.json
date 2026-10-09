@@ -44,6 +44,8 @@
   "BACK_TO_PROJECTS": "Powrót do projektów",
   "VISIT_PROJECT": "Odwiedź projekt",
   "OPENS_IN_NEW_TAB": "(otwiera się w nowej karcie)",
+  "LIVE": "Działa na żywo",
+  "SEE_LIVE": "Zobacz na żywo",
   "TECHNOLOGIES": "Technologie",
   "OPEN_FULL_SIZE": "Otwórz zrzut ekranu w pełnym rozmiarze: {{title}}",
   "IMAGE_LOAD_ERROR": "Nie udało się wczytać zrzutu ekranu",
@@ -59,6 +61,10 @@
   "LIGHTBOX_NEXT": "Następny zrzut ekranu",
   "LIGHTBOX_COUNTER": "{{current}} z {{total}}",
   "projects": {
+    "startwithhabit": {
+      "title": "StartWithHabit – plany treningowe od zera",
+      "description": "Darmowe plany treningowe dla zupełnie początkujących – bieganie, rower, pływanie i triathlon – w 8 językach i bez zakładania konta. Postępy zapisują się tylko w przeglądarce, a cała strona to 864 prerenderowane, statyczne podstrony na samodzielnie utrzymywanym VPS. Zrobiony w pojedynkę: od researchu i treści, przez frontend i testy, po wdrożenie."
+    },
     "TMS-team-management-system": {
       "title": "TMS - System Zarządzania Zespołem",
       "description": "Stworzony przez czteroosobowy zespół. Dwóch z nas odpowiadało za frontend, a dwóch za backend. Niestety, mój kolega od frontendu był chory na COVID podczas tworzenia wersji beta, która jest już dostępna. To wersja MVP, która sprawdza się u klientów zajmujących się zarządzaniem zespołem."
@@ -85,6 +91,52 @@
     }
   },
   "projectDetail": {
+    "startwithhabit": {
+      "home": {
+        "title": "Strona główna",
+        "description": "Wszystkie programy w jednym miejscu – każdy z liczbą tygodni, treningów i celem. Bez presji na tempo, bez konta i bez obietnic bez pokrycia. Pod spodem czysty statyczny HTML bez backendu i bazy danych, serwowany z utwardzonego kontenera Nginx za Caddy (automatyczny HTTPS). Wdrożenie jednym skryptem, który sam wycofuje nową wersję, jeśli nie przejdzie healthchecka; CI w GitHub Actions uruchamia typecheck, testy, build, E2E i smoke test obrazu Dockera."
+      },
+      "program": {
+        "title": "Przegląd programu",
+        "description": "Program biegowy: od marszobiegu do 40 minut ciągłego biegu w 14 etapach. Krótkie „w skrócie”, rozwijane wyjaśnienia ze źródłami dla ciekawych, wybór startu (test albo tydzień 1) i podsumowanie postępów. Każda podstrona ma własny tytuł, opis, canonical i dane strukturalne BreadcrumbList."
+      },
+      "entryTest": {
+        "title": "Test wejściowy",
+        "description": "Test dobiera tydzień startowy: wpisujesz, ile minut udało się biec bez przerwy, a strona proponuje etap planu i pozwala od razu go zapisać. Progi testu, progresja, powtarzanie tygodni i liczenie ukończonych treningów to czysta logika domenowa pokryta testami jednostkowymi (322 testy w Vitest). Bez JavaScriptu tydzień startowy można odczytać z tabeli."
+      },
+      "week": {
+        "title": "Tydzień i treningi",
+        "description": "Każdy tydzień to treningi z rozpisanymi interwałami, wskazówki na dany etap i zasady bezpieczeństwa. Trening oznacza się jako wykonany, częściowy lub pominięty, a tydzień można powtórzyć bez utraty historii. Zachowanie postępu po przeładowaniu i powtarzanie tygodni sprawdzają testy E2E w Playwright (230 testów)."
+      },
+      "planSwitch": {
+        "title": "Warianty planu",
+        "description": "Przełącznik 40 min ↔ 5 km łączy dwa plany jednej dyscypliny: po opanowaniu 40 minut biegu można przejść do 6-tygodniowego planu na pierwsze 5 km. Każdy wariant ma własny test, tygodnie i zapisany postęp."
+      },
+      "guides": {
+        "title": "Strony poradnikowe",
+        "description": "Oprócz planów są poradniki: strefy intensywności na rowerze (Z1–Z3) z testem mowy i kalkulatorem tętna, rozgrzewka i tętno w bieganiu, poziomy pływania oraz pływanie na wodach otwartych w triathlonie."
+      },
+      "triathlon": {
+        "title": "Triathlon",
+        "description": "Zwieńczenie trzech programów: 14-tygodniowy plan na 1/8 Ironmana i 18-tygodniowy na dystans olimpijski. Kwalifikacja podpowiada, czy zacząć od razu, czy najpierw wrócić do któregoś z programów bazowych, a tygodnie łączą trzy dyscypliny i treningi typu brick."
+      },
+      "sources": {
+        "title": "Źródła i sposób pracy",
+        "description": "Plany powstały na bazie raportów deep research (ChatGPT, Gemini), których cytowane badania sprawdziłem w Europe PMC – słabe albo niemożliwe do zweryfikowania zalecenia usunąłem, np. ciężkie interwały dla początkujących rowerzystów. Źródła są wypisane na stronie „O projekcie”. Kod pisałem z Claude Code jako głównym agentem, a każdą większą zmianę niezależnie recenzował OpenAI Codex CLI."
+      },
+      "languages": {
+        "title": "8 języków i SEO",
+        "description": "Polski, angielski, niemiecki, czeski, słowacki, francuski, niderlandzki i hiszpański – każdy pod własnym adresem (/pl/, /en/…), a strona główna przekierowuje według języka przeglądarki. Programy × tygodnie × języki dają 864 prerenderowane strony z przetłumaczonym tytułem i opisem, hreflang, obrazkiem Open Graph i generowaną mapą strony. Tytuły i nagłówki dobierałem na podstawie analizy słów kluczowych (DataForSEO), a nie tylko tłumaczyłem."
+      },
+      "mobile": {
+        "title": "Mobile-first",
+        "description": "Układ projektowany najpierw pod telefon: duże pola dotyku i fonty zastępcze dopasowane metrykami, żeby tekst nie przeskakiwał w trakcie ładowania. Testy E2E pilnują przesunięć układu (CLS < 0,1) na szerokościach 320, 375, 430 i 1280 px."
+      },
+      "progress": {
+        "title": "Postęp bez konta",
+        "description": "Postęp ze wszystkich programów w jednym widoku, zapisany wyłącznie w localStorage na urządzeniu użytkownika – z eksportem, importem i wersjonowanymi migracjami danych. Zero ciasteczek i analityki, restrykcyjny CSP z hashami skryptów dla każdej strony (bez unsafe-inline), a logi serwera celowo nie zawierają adresów IP."
+      }
+    },
     "TMS": {
       "architecture": {
         "title": "Architektura",

@@ -1,8 +1,10 @@
 <div class="space-y-12">
-  <a *ngFor="let project of projects"
-     class="block"
-     [routerLink]="['/', project.projectPage]"
-     [state]="openedFromLandingState">
+  <!-- The overlay link makes the whole card clickable while still allowing real links inside the card. -->
+  <div *ngFor="let project of projects" class="relative">
       <app-single-project [project]="project"></app-single-project>
-  </a>
+      <a class="absolute inset-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-selected-text"
+         [routerLink]="['/', project.projectPage]"
+         [state]="openedFromLandingState"
+         [attr.aria-label]="project.projectTitle | translate"></a>
+  </div>
 </div>

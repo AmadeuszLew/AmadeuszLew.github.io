@@ -12,6 +12,15 @@
 
   @if (project(); as project) {
     <header class="mt-8 max-w-3xl">
+      @if (summary()?.live) {
+        <span class="mb-4 inline-flex items-center gap-2 rounded-full border border-green-500/40 bg-green-500/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-green-400">
+          <span class="relative flex h-2 w-2" aria-hidden="true">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75 motion-reduce:animate-none"></span>
+            <span class="relative inline-flex h-2 w-2 rounded-full bg-green-400"></span>
+          </span>
+          {{ 'LIVE' | translate }}
+        </span>
+      }
       <h1 #heading tabindex="-1" class="secondary-title focus:outline-none">{{ project.projectTitle | translate }}</h1>
 
       @if (summary(); as summary) {
@@ -28,7 +37,11 @@
              target="_blank"
              rel="noopener noreferrer"
              class="mt-8 inline-flex min-h-11 items-center gap-2 bg-theme px-6 py-2 font-bold transition-colors hover:bg-theme/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-selected-text">
-            {{ 'VISIT_PROJECT' | translate }}
+            @if (summary.live) {
+              {{ 'SEE_LIVE' | translate }}: {{ summary.projectLink.replace('https://', '') }}
+            } @else {
+              {{ 'VISIT_PROJECT' | translate }}
+            }
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M15 3h6v6" />

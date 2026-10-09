@@ -44,6 +44,8 @@
   "BACK_TO_PROJECTS": "Volver a los proyectos",
   "VISIT_PROJECT": "Visitar el proyecto",
   "OPENS_IN_NEW_TAB": "(se abre en una pestaña nueva)",
+  "LIVE": "En vivo",
+  "SEE_LIVE": "Ver en vivo",
   "TECHNOLOGIES": "Tecnologías",
   "OPEN_FULL_SIZE": "Abrir la captura a tamaño completo: {{title}}",
   "IMAGE_LOAD_ERROR": "No se pudo cargar la captura",
@@ -59,6 +61,10 @@
   "LIGHTBOX_NEXT": "Captura siguiente",
   "LIGHTBOX_COUNTER": "{{current}} de {{total}}",
   "projects": {
+    "startwithhabit": {
+      "title": "StartWithHabit – planes de entrenamiento desde cero",
+      "description": "Planes de entrenamiento gratuitos para principiantes absolutos – carrera, ciclismo, natación y triatlón – en 8 idiomas y sin crear una cuenta. El progreso se guarda solo en el navegador y todo el sitio son 864 páginas estáticas prerenderizadas en un VPS gestionado por mí. Hecho en solitario: desde la investigación y los contenidos, pasando por el frontend y los tests, hasta el despliegue."
+    },
     "TMS-team-management-system": {
       "title": "TMS - Sistema de Gestión de Equipos",
       "description": "Creado por un equipo de cuatro personas. Dos de nosotros éramos responsables del frontend y dos del backend. Desafortunadamente, mi compañero de frontend estaba enfermo de COVID durante la creación de la versión beta, que ya está disponible. Esta es una versión MVP que funciona con clientes que se dedican a la gestión de equipos."
@@ -85,6 +91,52 @@
     }
   },
   "projectDetail": {
+    "startwithhabit": {
+      "home": {
+        "title": "Página principal",
+        "description": "Todos los programas en un solo lugar, cada uno con su duración, entrenamientos por semana y objetivo. Sin presión por el ritmo, sin cuenta y sin falsas promesas. Por dentro es HTML estático sin backend ni base de datos, servido desde un contenedor Nginx reforzado detrás de Caddy (HTTPS automático). Se despliega con un único script que revierte automáticamente si la nueva versión no pasa el healthcheck; la CI en GitHub Actions ejecuta typecheck, tests, build, E2E y una prueba de humo de la imagen Docker."
+      },
+      "program": {
+        "title": "Resumen del programa",
+        "description": "El programa de carrera: de alternar correr y caminar a 40 minutos de carrera continua en 14 etapas. Un breve resumen, explicaciones desplegables con fuentes para los curiosos, la elección del punto de partida (test o semana 1) y un resumen del progreso. Cada página tiene su propio título, descripción, URL canónica y datos estructurados BreadcrumbList."
+      },
+      "entryTest": {
+        "title": "Test de entrada",
+        "description": "El test elige la semana inicial: introduces cuántos minutos pudiste correr sin parar y el sitio sugiere una etapa del plan que puedes guardar al momento. Los umbrales del test, la progresión, la repetición de semanas y el recuento de entrenamientos completados son lógica de dominio pura cubierta por tests unitarios (322 tests en Vitest). Sin JavaScript, la semana inicial se puede consultar en una tabla."
+      },
+      "week": {
+        "title": "Semana y entrenamientos",
+        "description": "Cada semana incluye entrenamientos con intervalos detallados, consejos para la etapa actual y pautas de seguridad. Un entrenamiento se marca como hecho, parcial u omitido, y una semana se puede repetir sin perder el historial. Que el progreso sobreviva a una recarga y la repetición de semanas están cubiertos por tests E2E en Playwright (230 tests)."
+      },
+      "planSwitch": {
+        "title": "Variantes del plan",
+        "description": "El selector 40 min ↔ 5 km une dos planes de una misma disciplina: cuando ya puedes correr 40 minutos, pasas a un plan de 6 semanas para tus primeros 5 km. Cada variante tiene su propio test, semanas y progreso guardado."
+      },
+      "guides": {
+        "title": "Páginas de guía",
+        "description": "Además de los planes hay guías: zonas de intensidad en ciclismo (Z1–Z3) con test del habla y calculadora de frecuencia cardiaca, calentamiento y frecuencia cardiaca para correr, niveles de natación y natación en aguas abiertas para triatlón."
+      },
+      "triathlon": {
+        "title": "Triatlón",
+        "description": "La culminación de los tres programas: un plan de 14 semanas para 1/8 de Ironman y otro de 18 semanas para la distancia olímpica. Una clasificación indica si empezar ya o volver antes a alguno de los programas base, y las semanas combinan tres disciplinas y entrenamientos encadenados (brick)."
+      },
+      "sources": {
+        "title": "Fuentes y forma de trabajo",
+        "description": "Los planes se basan en informes de deep research (ChatGPT, Gemini) cuyos estudios citados verifiqué en Europe PMC; eliminé las recomendaciones débiles o no verificables, p. ej. intervalos duros para ciclistas principiantes. Todas las fuentes están en la página «Sobre el proyecto». Lo desarrollé con Claude Code como agente principal de programación, mientras OpenAI Codex CLI revisaba de forma independiente cada cambio importante."
+      },
+      "languages": {
+        "title": "8 idiomas y SEO",
+        "description": "Polaco, inglés, alemán, checo, eslovaco, francés, neerlandés y español, cada uno con su propia ruta (/pl/, /en/…); la raíz redirige según el idioma del navegador. Programas × semanas × idiomas suman 864 páginas prerenderizadas, cada una con título y descripción traducidos, hreflang, imagen Open Graph y un sitemap generado. Los títulos y encabezados se eligieron a partir de un análisis de palabras clave (DataForSEO), no solo se tradujeron."
+      },
+      "mobile": {
+        "title": "Mobile-first",
+        "description": "Diseñado primero para el móvil: áreas táctiles grandes y fuentes de respaldo ajustadas por métricas para que el texto no salte al cargar. Los tests E2E vigilan los desplazamientos de diseño (CLS < 0,1) a 320, 375, 430 y 1280 px."
+      },
+      "progress": {
+        "title": "Progreso sin cuenta",
+        "description": "El progreso de todos los programas en una sola vista, guardado únicamente en el localStorage del dispositivo, con exportación, importación y migraciones de datos versionadas. Sin cookies ni analítica, con una CSP estricta con hashes de scripts por página (sin unsafe-inline) y registros del servidor que, a propósito, no contienen direcciones IP."
+      }
+    },
     "TMS": {
       "architecture": {
         "title": "Arquitectura",
