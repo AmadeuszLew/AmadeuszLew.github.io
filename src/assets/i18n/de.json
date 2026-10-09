@@ -102,7 +102,7 @@
       },
       "entryTest": {
         "title": "Einstiegstest",
-        "description": "Der Test bestimmt die Startwoche: Man gibt ein, wie viele Minuten man am Stück laufen konnte, und die Seite schlägt eine Etappe vor, die sich sofort speichern lässt. Testschwellen, Progression, Wochenwiederholungen und das Zählen abgeschlossener Trainings sind reine Domänenlogik mit Unit-Tests (322 Vitest-Tests). Ohne JavaScript lässt sich die Startwoche aus einer Tabelle ablesen."
+        "description": "Der Test bestimmt die Startwoche: Man gibt ein, wie viele Minuten man am Stück laufen konnte, und die Seite schlägt eine Etappe vor, die sich sofort speichern lässt. Testschwellen, Progression, Wochenwiederholungen und das Zählen abgeschlossener Trainings sind reine Domänenlogik mit Unit-Tests (322 Vitest-Tests). Ohne JavaScript lässt sich die Startwoche aus einer Liste unter dem Rechner ablesen."
       },
       "week": {
         "title": "Woche & Trainings",

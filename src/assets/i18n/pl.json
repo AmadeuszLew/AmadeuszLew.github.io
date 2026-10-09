@@ -102,7 +102,7 @@
       },
       "entryTest": {
         "title": "Test wejściowy",
-        "description": "Test dobiera tydzień startowy: wpisujesz, ile minut udało się biec bez przerwy, a strona proponuje etap planu i pozwala od razu go zapisać. Progi testu, progresja, powtarzanie tygodni i liczenie ukończonych treningów to czysta logika domenowa pokryta testami jednostkowymi (322 testy w Vitest). Bez JavaScriptu tydzień startowy można odczytać z tabeli."
+        "description": "Test dobiera tydzień startowy: wpisujesz, ile minut udało się biec bez przerwy, a strona proponuje etap planu i pozwala od razu go zapisać. Progi testu, progresja, powtarzanie tygodni i liczenie ukończonych treningów to czysta logika domenowa pokryta testami jednostkowymi (322 testy w Vitest). Bez JavaScriptu tydzień startowy można odczytać z listy pod kalkulatorem."
       },
       "week": {
         "title": "Tydzień i treningi",

@@ -102,7 +102,7 @@
       },
       "entryTest": {
         "title": "Test de entrada",
-        "description": "El test elige la semana inicial: introduces cuántos minutos pudiste correr sin parar y el sitio sugiere una etapa del plan que puedes guardar al momento. Los umbrales del test, la progresión, la repetición de semanas y el recuento de entrenamientos completados son lógica de dominio pura cubierta por tests unitarios (322 tests en Vitest). Sin JavaScript, la semana inicial se puede consultar en una tabla."
+        "description": "El test elige la semana inicial: introduces cuántos minutos pudiste correr sin parar y el sitio sugiere una etapa del plan que puedes guardar al momento. Los umbrales del test, la progresión, la repetición de semanas y el recuento de entrenamientos completados son lógica de dominio pura cubierta por tests unitarios (322 tests en Vitest). Sin JavaScript, la semana inicial se puede consultar en una lista bajo la calculadora."
       },
       "week": {
         "title": "Semana y entrenamientos",

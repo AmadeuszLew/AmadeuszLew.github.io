@@ -102,7 +102,7 @@
       },
       "entryTest": {
         "title": "Entry test",
-        "description": "The test picks the starting week: you enter how many minutes you could run non-stop, and the site suggests a stage of the plan you can save straight away. Test thresholds, progression, week repeats and completion counting are pure domain logic covered by unit tests (322 Vitest tests). Without JavaScript, the starting week can be read from a table."
+        "description": "The test picks the starting week: you enter how many minutes you could run non-stop, and the site suggests a stage of the plan you can save straight away. Test thresholds, progression, week repeats and completion counting are pure domain logic covered by unit tests (322 Vitest tests). Without JavaScript, the starting week can be read from a list below the calculator."
       },
       "week": {
         "title": "Week & workouts",
