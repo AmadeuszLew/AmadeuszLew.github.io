@@ -44,6 +44,8 @@
   "BACK_TO_PROJECTS": "Zurück zu den Projekten",
   "VISIT_PROJECT": "Projekt besuchen",
   "OPENS_IN_NEW_TAB": "(öffnet in einem neuen Tab)",
+  "LIVE": "Live",
+  "SEE_LIVE": "Live ansehen",
   "TECHNOLOGIES": "Technologien",
   "OPEN_FULL_SIZE": "Screenshot in voller Größe öffnen: {{title}}",
   "IMAGE_LOAD_ERROR": "Screenshot konnte nicht geladen werden",
@@ -59,6 +61,10 @@
   "LIGHTBOX_NEXT": "Nächster Screenshot",
   "LIGHTBOX_COUNTER": "{{current}} von {{total}}",
   "projects": {
+    "startwithhabit": {
+      "title": "StartWithHabit – Trainingspläne für Einsteiger",
+      "description": "Kostenlose Trainingspläne für absolute Anfänger – Laufen, Radfahren, Schwimmen und Triathlon – in 8 Sprachen und ohne Konto. Der Fortschritt wird nur im Browser gespeichert, und die gesamte Website besteht aus 864 vorgerenderten statischen Seiten auf einem selbst verwalteten VPS. Komplett allein umgesetzt: von Recherche und Inhalten über Frontend und Tests bis zum Deployment."
+    },
     "TMS-team-management-system": {
       "title": "TMS - Team-Management-System",
       "description": "Entwickelt von einem vierköpfigen Team. Zwei von uns waren für das Frontend, zwei für das Backend verantwortlich. Leider war mein Frontend-Kollege während der Erstellung der Beta-Version, die jetzt live ist, an COVID erkrankt. Es ist eine MVP-Version, die für Kunden funktioniert, die sich um das Teammanagement kümmern."
@@ -85,6 +91,52 @@
     }
   },
   "projectDetail": {
+    "startwithhabit": {
+      "home": {
+        "title": "Startseite",
+        "description": "Alle Programme an einem Ort, jeweils mit Dauer, Trainings pro Woche und Ziel. Kein Tempodruck, kein Konto, keine leeren Versprechen. Technisch reines statisches HTML ohne Backend und Datenbank, ausgeliefert aus einem gehärteten Nginx-Container hinter Caddy (automatisches HTTPS). Deployment per Skript, das automatisch zurückrollt, wenn die neue Version den Healthcheck nicht besteht; die GitHub-Actions-CI führt Typecheck, Tests, Build, E2E und einen Smoke-Test des Docker-Images aus."
+      },
+      "program": {
+        "title": "Programmübersicht",
+        "description": "Das Laufprogramm: vom Lauf-Geh-Wechsel zu 40 Minuten Dauerlauf in 14 Etappen. Eine kurze Zusammenfassung, aufklappbare Erklärungen mit Quellen, die Wahl des Einstiegs (Test oder Woche 1) und eine Fortschrittsübersicht. Jede Seite hat eigenen Titel, eigene Beschreibung, Canonical-URL und strukturierte BreadcrumbList-Daten."
+      },
+      "entryTest": {
+        "title": "Einstiegstest",
+        "description": "Der Test bestimmt die Startwoche: Man gibt ein, wie viele Minuten man am Stück laufen konnte, und die Seite schlägt eine Etappe vor, die sich sofort speichern lässt. Testschwellen, Progression, Wochenwiederholungen und das Zählen abgeschlossener Trainings sind reine Domänenlogik mit Unit-Tests (322 Vitest-Tests). Ohne JavaScript lässt sich die Startwoche aus einer Liste unter dem Rechner ablesen."
+      },
+      "week": {
+        "title": "Woche & Trainings",
+        "description": "Jede Woche enthält Trainings mit genauen Intervallen, Tipps für die aktuelle Etappe und Sicherheitshinweise. Ein Training lässt sich als erledigt, teilweise oder ausgelassen markieren, und eine Woche kann ohne Verlust des Verlaufs wiederholt werden. Dass der Fortschritt ein Neuladen übersteht und Wochen wiederholt werden können, prüfen Playwright-E2E-Tests (230 Tests)."
+      },
+      "planSwitch": {
+        "title": "Planvarianten",
+        "description": "Der Umschalter 40 min ↔ 5 km verbindet zwei Pläne einer Disziplin: Wer 40 Minuten laufen kann, wechselt zu einem 6-wöchigen Plan für die ersten 5 km. Jede Variante hat eigenen Test, eigene Wochen und eigenen gespeicherten Fortschritt."
+      },
+      "guides": {
+        "title": "Ratgeberseiten",
+        "description": "Neben den Plänen gibt es Ratgeber: Intensitätszonen beim Radfahren (Z1–Z3) mit Sprechtest und Herzfrequenzrechner, Aufwärmen und Herzfrequenz beim Laufen, Schwimmniveaus sowie Freiwasserschwimmen im Triathlon."
+      },
+      "triathlon": {
+        "title": "Triathlon",
+        "description": "Der Abschluss der drei Programme: ein 14-wöchiger Plan für die 1/8-Ironman-Distanz und ein 18-wöchiger für die olympische Distanz. Eine Qualifikation zeigt, ob man sofort starten oder zuerst zu einem Basisprogramm zurückkehren sollte; die Wochen kombinieren drei Disziplinen und Koppeltrainings."
+      },
+      "sources": {
+        "title": "Quellen & Arbeitsweise",
+        "description": "Die Pläne basieren auf Deep-Research-Berichten (ChatGPT, Gemini), deren zitierte Studien ich in Europe PMC überprüft habe – schwache oder nicht überprüfbare Empfehlungen wurden entfernt, z. B. harte Intervalle für Rad-Einsteiger. Alle Quellen stehen auf der Seite „Über das Projekt“. Entwickelt habe ich mit Claude Code als Haupt-Coding-Agent, während OpenAI Codex CLI jede größere Änderung unabhängig reviewt hat."
+      },
+      "languages": {
+        "title": "8 Sprachen & SEO",
+        "description": "Polnisch, Englisch, Deutsch, Tschechisch, Slowakisch, Französisch, Niederländisch und Spanisch – jeweils unter eigenem Pfad (/pl/, /en/…), die Startseite leitet nach Browsersprache weiter. Programme × Wochen × Sprachen ergeben 864 vorgerenderte Seiten mit übersetztem Titel und Beschreibung, hreflang, Open-Graph-Bild und generierter Sitemap. Titel und Überschriften wurden auf Basis einer Keyword-Recherche (DataForSEO) gewählt, nicht nur übersetzt."
+      },
+      "mobile": {
+        "title": "Mobile-first",
+        "description": "Zuerst fürs Smartphone gestaltet: große Touch-Flächen und metrisch angepasste Fallback-Schriften, damit der Text beim Laden nicht springt. E2E-Tests überwachen Layoutverschiebungen (CLS < 0,1) bei 320, 375, 430 und 1280 px."
+      },
+      "progress": {
+        "title": "Fortschritt ohne Konto",
+        "description": "Der Fortschritt aller Programme in einer Ansicht, gespeichert ausschließlich im localStorage des Geräts – mit Export, Import und versionierten Datenmigrationen. Keine Cookies, keine Analytics, eine strikte CSP mit Skript-Hashes pro Seite (ohne unsafe-inline) und Serverlogs, die bewusst keine IP-Adressen enthalten."
+      }
+    },
     "TMS": {
       "architecture": {
         "title": "Architektur",

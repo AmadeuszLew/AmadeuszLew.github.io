@@ -24,6 +24,7 @@ sources=(
   projects/SneakerShop/*.png
   projects/stockx/*.png
   projects/cdi/*.png
+  projects/startwithhabit/*.png
   projects/ten.png
   projects/more.jpg
   man_icon.png

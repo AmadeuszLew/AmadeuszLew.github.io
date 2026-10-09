@@ -44,6 +44,8 @@
   "BACK_TO_PROJECTS": "Back to projects",
   "VISIT_PROJECT": "Visit project",
   "OPENS_IN_NEW_TAB": "(opens in a new tab)",
+  "LIVE": "Live",
+  "SEE_LIVE": "See it live",
   "TECHNOLOGIES": "Technologies",
   "OPEN_FULL_SIZE": "Open full-size screenshot: {{title}}",
   "IMAGE_LOAD_ERROR": "Screenshot could not be loaded",
@@ -59,6 +61,10 @@
   "LIGHTBOX_NEXT": "Next screenshot",
   "LIGHTBOX_COUNTER": "{{current}} of {{total}}",
   "projects": {
+    "startwithhabit": {
+      "title": "StartWithHabit – training plans from scratch",
+      "description": "Free training plans for complete beginners – running, cycling, swimming and triathlon – in 8 languages, with no account needed. Progress is stored only in the browser, and the whole site is 864 prerendered static pages on a self-managed VPS. Built solo: from research and content, through frontend and tests, to deployment."
+    },
     "TMS-team-management-system": {
       "title": "TMS - Team Management System",
       "description": "Made by a team of four people. Two of us were responsible for the front end and two for the back end. Unfortunately, my front-end teammate had COVID while we were building the beta version, which is now live. It's an MVP, but it works for clients who handle the management side of a team."
@@ -85,6 +91,52 @@
     }
   },
   "projectDetail": {
+    "startwithhabit": {
+      "home": {
+        "title": "Home page",
+        "description": "All programmes in one place, each with its length, workouts per week and goal. No pressure on pace, no account and no false promises. Under the hood it is plain static HTML with no backend or database, served from a hardened Nginx container behind Caddy (automatic HTTPS). Deployed with a single script that rolls back automatically if the new version fails its healthcheck; GitHub Actions CI runs typecheck, tests, build, E2E and a Docker image smoke test."
+      },
+      "program": {
+        "title": "Programme overview",
+        "description": "The running programme: from run-walk to 40 minutes of continuous running in 14 stages. A short summary, expandable explanations with sources for the curious, a choice of where to start (test or week 1) and a progress summary. Every page has its own title, description, canonical URL and BreadcrumbList structured data."
+      },
+      "entryTest": {
+        "title": "Entry test",
+        "description": "The test picks the starting week: you enter how many minutes you could run non-stop, and the site suggests a stage of the plan you can save straight away. Test thresholds, progression, week repeats and completion counting are pure domain logic covered by unit tests (322 Vitest tests). Without JavaScript, the starting week can be read from a list below the calculator."
+      },
+      "week": {
+        "title": "Week & workouts",
+        "description": "Each week has workouts with detailed intervals, tips for the current stage and safety guidance. A workout can be marked as done, partial or skipped, and a week can be repeated without losing history. Progress surviving a reload and repeating weeks are covered by Playwright E2E tests (230 tests)."
+      },
+      "planSwitch": {
+        "title": "Plan variants",
+        "description": "The 40 min ↔ 5 km switch connects two plans of one discipline: once you can run for 40 minutes, you move on to a 6-week plan for your first 5 km. Each variant has its own test, weeks and saved progress."
+      },
+      "guides": {
+        "title": "Guide pages",
+        "description": "Besides the plans there are guides: cycling intensity zones (Z1–Z3) with a talk test and heart-rate calculator, running warm-up and heart rate, swimming levels and open-water swimming for triathlon."
+      },
+      "triathlon": {
+        "title": "Triathlon",
+        "description": "The culmination of the three programmes: a 14-week plan for a 1/8 Ironman and an 18-week plan for the olympic distance. A qualification step tells you whether to start now or go back to one of the base programmes first, and the weeks combine three disciplines and brick workouts."
+      },
+      "sources": {
+        "title": "Sources & workflow",
+        "description": "The plans are based on deep-research reports (ChatGPT, Gemini) whose cited studies I checked against Europe PMC – weak or unverifiable recommendations were removed, e.g. hard intervals for beginner cyclists. All sources are listed on the About page. I built it with Claude Code as the main coding agent, with OpenAI Codex CLI independently reviewing every larger change."
+      },
+      "languages": {
+        "title": "8 languages & SEO",
+        "description": "Polish, English, German, Czech, Slovak, French, Dutch and Spanish – each under its own path (/pl/, /en/…), with the root redirecting by browser language. Programmes × weeks × languages add up to 864 prerendered pages, each with a translated title and description, hreflang links, an Open Graph image and a generated sitemap. Titles and headings were chosen from keyword research (DataForSEO), not just translated."
+      },
+      "mobile": {
+        "title": "Mobile-first",
+        "description": "Designed for the phone first: large tap targets and metric-matched fallback fonts so text does not jump while loading. E2E tests guard layout shift (CLS < 0.1) at 320, 375, 430 and 1280 px."
+      },
+      "progress": {
+        "title": "Progress without an account",
+        "description": "Progress across all programmes in one view, stored only in localStorage on the user's device – with export, import and versioned data migrations. No cookies, no analytics, a strict CSP with per-page script hashes (no unsafe-inline), and server logs that deliberately contain no IP addresses."
+      }
+    },
     "TMS": {
       "architecture": {
         "title": "Architecture",

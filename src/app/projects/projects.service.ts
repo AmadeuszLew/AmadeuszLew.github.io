@@ -11,6 +11,7 @@ const screenshot = (path: string, width: number, height: number): ProjectImage =
 
 export class ProjectsService {
   private projects: Project[] = [
+    new Project('./assets/projects/startwithhabit.png', 'startwithhabit', 'projects.startwithhabit.title', ['Angular', 'TypeScript', 'SSG', 'ngx-translate', 'SCSS', 'Vitest', 'Playwright', 'Docker', 'Nginx', 'Caddy', 'GitHub Actions'], 'projects.startwithhabit.description', 'full description', 'https://startwithhabit.com', ['somephotos'], true),
     new Project('./assets/projects/pogon_mogilno.png', 'TMS', 'projects.TMS-team-management-system.title', ['Vue 2', 'Vuetify', 'Axios'], 'projects.TMS-team-management-system.description', 'full description', 'https://tmspanel.grinddev.pl', ['somephotos']),
     new Project('./assets/projects/lenny_logo.png', 'sneakers-shop', "projects.sneakers-shop.title", ['UI/UX', 'Angular', 'Bootstrap 5', 'Typescript', 'Firebase', 'RxJS'], "projects.sneakers-shop.description", 'full description', '', ['some photos']),
     new Project('./assets/projects/stockx.png', 'stockx-fix-extension', "projects.stockx-fix-extension.title", ['JavaScript', 'Tampermonkey', 'DOM manipulation'], "projects.stockx-fix-extension.description", 'full description', '', ['some photos']),
@@ -19,6 +20,19 @@ export class ProjectsService {
     new Project('./assets/projects/github.png', 'github', "projects.many-more.title", ['JavaScript', 'Python', 'Django', 'MySQL', 'C++', 'Angular', 'Bootstrap', 'Typescript'], "projects.many-more.description", 'full description', 'https://github.com/AmadeuszLew', ['somephotos']),
   ]
   private projectsDetail: ProjectDetail[] = [
+    new ProjectDetail('projects.startwithhabit.title', 'startwithhabit', [
+      { featurePhoto: screenshot('projects/startwithhabit/main_page_en', 1186, 1159), featureTitle: `projectDetail.startwithhabit.home.title`, featureDescription: `projectDetail.startwithhabit.home.description` },
+      { featurePhoto: screenshot('projects/startwithhabit/running', 766, 1268), featureTitle: `projectDetail.startwithhabit.program.title`, featureDescription: `projectDetail.startwithhabit.program.description` },
+      { featurePhoto: screenshot('projects/startwithhabit/test', 766, 1268), featureTitle: `projectDetail.startwithhabit.entryTest.title`, featureDescription: `projectDetail.startwithhabit.entryTest.description` },
+      { featurePhoto: screenshot('projects/startwithhabit/week_2', 1036, 1258), featureTitle: `projectDetail.startwithhabit.week.title`, featureDescription: `projectDetail.startwithhabit.week.description` },
+      { featurePhoto: screenshot('projects/startwithhabit/5k', 698, 1046), featureTitle: `projectDetail.startwithhabit.planSwitch.title`, featureDescription: `projectDetail.startwithhabit.planSwitch.description` },
+      { featurePhoto: screenshot('projects/startwithhabit/cycling_zones', 704, 1262), featureTitle: `projectDetail.startwithhabit.guides.title`, featureDescription: `projectDetail.startwithhabit.guides.description` },
+      { featurePhoto: screenshot('projects/startwithhabit/triathlon', 691, 1194), featureTitle: `projectDetail.startwithhabit.triathlon.title`, featureDescription: `projectDetail.startwithhabit.triathlon.description` },
+      { featurePhoto: screenshot('projects/startwithhabit/about', 702, 1230), featureTitle: `projectDetail.startwithhabit.sources.title`, featureDescription: `projectDetail.startwithhabit.sources.description` },
+      { featurePhoto: screenshot('projects/startwithhabit/language_picker', 186, 429), featureTitle: `projectDetail.startwithhabit.languages.title`, featureDescription: `projectDetail.startwithhabit.languages.description` },
+      { featurePhoto: screenshot('projects/startwithhabit/main_page_mobile', 386, 1158), featureTitle: `projectDetail.startwithhabit.mobile.title`, featureDescription: `projectDetail.startwithhabit.mobile.description` },
+      { featurePhoto: screenshot('projects/startwithhabit/mobile_progress', 373, 869), featureTitle: `projectDetail.startwithhabit.progress.title`, featureDescription: `projectDetail.startwithhabit.progress.description` },
+    ]),
     new ProjectDetail('projects.TMS-team-management-system.title', "TMS", [
       { featurePhoto: screenshot('projects/TMS/architecture', 616, 235), featureTitle: `projectDetail.TMS.architecture.title`, featureDescription: `projectDetail.TMS.architecture.description` },
       { featurePhoto: screenshot('projects/TMS/dashboard', 1858, 939), featureTitle: `projectDetail.TMS.dashboard.title`, featureDescription: `projectDetail.TMS.dashboard.description` },

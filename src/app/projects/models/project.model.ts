@@ -7,9 +7,11 @@ export class Project {
     public description:string;
     public projectLink:string;
     public projectPhotos:string[];
+    /** The project is publicly running, so its link is promoted on the card. */
+    public live:boolean;
 
     constructor(projectLogo:string,projectPage:string,projectTitle:string,technologies:string[],descriptionPreview:string,
-        description:string,projectLink:string,projectPhotos:string[]){
+        description:string,projectLink:string,projectPhotos:string[],live=false){
             this.projectLogo=projectLogo;
             this.projectPage=projectPage;
             this.projectTitle=projectTitle;
@@ -18,6 +20,7 @@ export class Project {
             this.description=description;
             this.projectLink=projectLink;
             this.projectPhotos=projectPhotos;
+            this.live=live;
         }
 
 }
